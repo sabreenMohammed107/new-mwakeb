@@ -13,6 +13,7 @@ use App\Models\Country;
 use App\Models\Explore_city;
 use App\Models\Offer;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 use Illuminate\Support\Facades\Lang as Lang;
 class MainController extends Controller
@@ -21,8 +22,9 @@ class MainController extends Controller
     {
         $Company = Company::first();
         $ExploreCities = Explore_city::where("active","=", 1)->get();
-         $Offers = Offer::where("active","=", 1)->where('status','!=','main')->inRandomOrder()->limit(4)->get();
-         $mainOffer=Offer::where("active","=", 1)->where('status','=','main')->first();
+        $Offers = Offer::where("active","=", 1)->where('status','!=','main')->inRandomOrder()->limit(4)->get();
+        // return $Company;
+        $mainOffer = Offer::where("active","=", 1)->where('status','=','main')->first();
         $Counters = Counter::get();
         $Countries = Country::where('flag',1)->get();
         $cities=City::where('country_id',1)->get();

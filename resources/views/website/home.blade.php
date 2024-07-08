@@ -137,50 +137,7 @@
           </div>
          @endif
     </div>
-    <div class="adventure container">
-      <div class="row mx-0">
-        <div class=" col-xl-5 col- md-5 col-sm-12">
-          <img src="{{ asset("/website_assets/images/homePage/$Company->image") }}" alt="why us image">
-        </div>
 
-        <div class=" col-xl-7 col- md-7 col-sm-12">
-         <div class="adventure_info">
-         <div class="heading">
-            @if (LaravelLocalization::getCurrentLocale() === 'en')
-
-            <h2>
-                {{$Company->oveview_entitle}} <br>
-                {{$Company->overview_ensubtitle}}
-              </h2>
-                @else
-                <h2>
-                    {{$Company->oveview_artitle}} <br>
-                    {{$Company->overview_arsubtitle}}
-                  </h2>
-                @endif
-
-          <p>
-            @if (LaravelLocalization::getCurrentLocale() === 'en')
-
-            {{$Company->overview_en}}
-                @else
-                {{$Company->overview_ar}}
-                @endif
-
-          </p>
-          <div class="read">
-            <a href="{{ LaravelLocalization::localizeUrl('/about') }}"> {{ __('links.readMore') }}
-              <i class="fa-solid fa-angle-right"></i>
-              <i class="fa-solid fa-angle-right"></i>
-            </a>
-          </div>
-         </div>
-
-         </div>
-        </div>
-      </div>
-      <img src="{{ asset('/website_assets/images/homePage/birds (2).webp') }}" alt="birds image">
-    </div>
     <!-- <img src="./images/homePage/birds.webp" alt="birds group"> -->
   </section>
 {{-- <x-website.home.offers :offers="$Offers" :title="$Company->limit_offer_endesc" /> --}}
@@ -295,111 +252,7 @@
       </div>
     </div>
 </section>
-<x-website.home.counters :counters="$Counters" />
-  <!-- hotels section -->
-  <section class=" hotel_section">
-    <div class="explore container offers hotels">
-      <div class="titles">
-        <h3>{{ __('links.bestHotels') }} </h3>
-        <p>
-            @if (LaravelLocalization::getCurrentLocale() === 'en')
 
-            {{$Company->best_hotels_en_desc}}
-            @else
-            {{$Company->best_hotels_ar_desc}}
-            @endif
-
-
-        </p>
-      </div>
-      <div class="hotel_details">
-        <div class="row mx-0">
-            @foreach ($BestHotels as $Hotel)
-            <div class="col-sm-12 col-md-6 col-xl-3">
-                <div class="card-content">
-                  <div class=" card hotels_card">
-                    <div class="card_image">
-                        <a href="{{ LaravelLocalization::localizeUrl('/hotels/' . $Hotel->hotel->id) }}">
-                        <div class="image_overlay">
-                    <img src="{{ asset('uploads/hotels') }}/{{$Hotel->hotel->hotel_banner}}" class="w-100" height="250" alt=" hotel image">
-                        </div>
-                        </a>
-                    </div>
-                    <div class="card-body hotel_card_info">
-                      <div class="card_info">
-                        <h5>
-
-  @if (LaravelLocalization::getCurrentLocale() === 'en')
-
-   {{$Hotel->hotel->hotel_enname}}
-  @else
-  {{$Hotel->hotel->hotel_arname}}
-  @endif
-                             </h5>
-                        @if (session()->get('SiteUser'))
-
-
-
-                                            @php
-                                                $favExist = 0;
-                                                $favUser = App\Models\Favorite_hotels_tour::where('hotel_id', $Hotel->hotel->id)
-                                                    ->where('user_id', session()->get('SiteUser')['ID'])
-                                                    ->first();
-                                                if ($favUser) {
-                                                    $favExist = 1;
-                                                }
-                                            @endphp
-
-                                            @else
-                                                @php
-                                                    $favExist=0;
-                                                @endphp
-                                            @endif
-                                            <span >
-                                                @if($favExist==1)
-                                            <a  href="{{ LaravelLocalization::localizeUrl('/removeFavourite/' . $Hotel->hotel->id) }}"  ><i
-                                                     class="fa-regular fa-heart card_info_hover" style="color: #1C4482;font-weight: 600;"></i> </a>
-
-                                                     @else
-
-                                                    <a  href="{{ LaravelLocalization::localizeUrl('/favourite/' . $Hotel->hotel->id) }}"  ><i
-                                                        class="fa-regular fa-heart"></i> </a>
-
-                                                @endif </span>
-                      </div>
-                      <a href="{{ LaravelLocalization::localizeUrl('/hotels/' . $Hotel->hotel->id) }}">
-                      <p style="height: 130px;
-                      overflow: hidden;
-                      line-height: 2;">
-                        @if (LaravelLocalization::getCurrentLocale() === 'en')
-
-                        {{$Hotel->hotel->hotel_enbrief}}
-  @else
-  {{$Hotel->hotel->hotel_arbrief}}
-  @endif
-
-                      </p>
-                      </a>
-                      <div class="location">
-                        <i class="fa-sharp fa-solid fa-location-dot"></i>
-                        <span> {{$Hotel->hotel->details_enaddress}} </span>
-                      </div>
-                      <div class="price">
-                        <span>$ 140 </span>
-                        <span>/{{ __('links.nights') }}</span>
-                      </div>
-                  </div>
-                </div>
-                </div>
-              </div>
-            @endforeach
-      </div>
-      </div>
-    </div>
-    <img src="{{asset("/website_assets/images/homePage/birds (2).webp")}}" alt="birds image">
-    <img src="{{asset("/website_assets/images/homePage/birds (2).webp")}}" alt="birds image">
-    <!-- <img src="./images/homePage/slider-mask.webp" alt="slider mask"> -->
-  </section>
   <!-- booking section -->
   <section class="booking">
 
@@ -434,9 +287,11 @@
 @endif
 
           </p>
-          <a href="{{ LaravelLocalization::localizeUrl('/tours') }}">{{ __('links.readMore') }}
-            <i class="fa-solid fa-angle-right"></i>
-            <i class="fa-solid fa-angle-right"></i>
+          <a href="{{ LaravelLocalization::localizeUrl('/offers') }}">
+            {{-- {{ __('links.readMore') }} --}}
+            عروضنا
+            <i class="fa-solid fa-angle-double-left"></i>
+            {{-- <i class="fa-solid fa-angle-left"></i> --}}
           </a>
         </div>
         </div>
@@ -445,58 +300,6 @@
     </div>
   </section>
 
-  <section class="investigtion car booking">
-    <div class="adventure container">
-      <div class="row mx-0">
-        <div class=" col-xl-6 col- md-6 col-sm-12">
-        <div class="adventure_info">
-        <div class="heading">
-          <h2>
-            @if (LaravelLocalization::getCurrentLocale() === 'en')
-
-            {{$Company->book_transport_en_title}}
-@else
-{{$Company->book_transport_ar_title}}
-@endif
-
-          </h2>
-          <p>
-            @if (LaravelLocalization::getCurrentLocale() === 'en')
-
-            {{$Company->book_transport_en_desc}}
-@else
-{{$Company->book_transport_ar_desc}}
-@endif
-
-        </p>
-          <div class="read">
-            <a href="{{ url('/transfers') }}">{{ __('links.readMore') }}
-              <i class="fa-solid fa-angle-right"></i>
-              <i class="fa-solid fa-angle-right"></i>
-            </a>
-          </div>
-        </div>
-
-        </div>
-        </div>
-        <div class=" col-xl-6 col- md-6 col-sm-12">
-          <div class="images image-2" style="background-image:url('@if($Company->transport_img) {{asset("uploads/company/$Company->transport_img")}} @else {{ asset("/website_assets/images/homePage/slider-mask.webp") }}  @endif') " >
-            <img src="{{ asset('/website_assets/images/homePage/slider-mask.webp') }}" alt="image mask">
-             <img src="{{ asset('/website_assets/images/homePage/slider-mask.webp') }}" alt="image mask">
-
-            <img src="{{ asset('/website_assets/images/homePage/slider-mask.webp') }}" alt="image mask">
-
-            <img src="{{ asset('/website_assets/images/homePage/slider-mask.webp') }}" alt="image mask">
-
-            <button type="button" class="btn js-modal-btn "data-video-url="{{$Company->book_transport_vedio}}" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-              <img src="{{ asset('/website_assets/images/homePage/play_button.webp') }}" alt=" video play button">
-            </button>
-          </div>
-        </div>
-      </div>
-      <!-- <img src="./images/homePage/birds (2).webp" alt="birds image"> -->
-    </div>
-  </section>
   <!-- blog section -->
     <section class="blog_section ">
       <img src="{{ asset('/website_assets/images/homePage/birds (2).webp') }}" alt="birds image">

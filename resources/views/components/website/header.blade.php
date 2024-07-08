@@ -11,7 +11,7 @@ $localVar=LaravelLocalization::getCurrentLocale();
 ?>
 <div class="main-wrapper">
     <nav class="navbar container">
-        <img src="{{ asset('/website_assets/images/logo3.jpg') }}"
+        <img src="{{ asset('/website_assets/images/logo6.png') }}"
         @if (LaravelLocalization::getCurrentLocale() === 'en')
 
         style=" margin: 0 0 0 15px;"
@@ -35,68 +35,18 @@ $localVar=LaravelLocalization::getCurrentLocale();
                 <button class="{{ Request::segment(2)==null? 'offcan_buttons active' : 'offcan_buttons' }} ">
                     <a href="{{ LaravelLocalization::localizeUrl('/') }} ">{{ __('links.home') }}</a>
                 </button>
-                {{-- <button class="{{ Request::segment(2)=='about' ? 'offcan_buttons active' : 'offcan_buttons' }}">
+                <button class="{{ Request::segment(2)=='about' ? 'offcan_buttons active' : 'offcan_buttons' }}">
                     <a href="{{ LaravelLocalization::localizeUrl('/about') }}">{{ __('links.about_us') }}</a>
-                </button> --}}
-                <button class="{{ Request::segment(2)=='hotels' ? 'offcan_buttons active' : 'offcan_buttons' }}">
-                    <a href="{{ LaravelLocalization::localizeUrl('/hotels') }}">{{ __('links.hotels') }}</a>
                 </button>
-                <button class="{{ Request::segment(2)=='tours' ? 'offcan_buttons active' : 'offcan_buttons' }}">
-                    <a href="{{ LaravelLocalization::localizeUrl('/tours') }}">{{ __('links.tours') }}</a>
-                </button>
+
                 <button class="{{ Request::segment(2)=='offers' ? 'offcan_buttons active' : 'offcan_buttons' }}">
                     <a href="{{ LaravelLocalization::localizeUrl('/offers') }}">{{ __('links.offers') }}</a>
                 </button>
-                <button class="{{ Request::segment(2)=='transfers' ? 'offcan_buttons active' : 'offcan_buttons' }}">
-                    <a href="{{ LaravelLocalization::localizeUrl('/transfers') }}">{{ __('links.transfer') }}</a>
-                </button>
-                <button class="{{ Request::segment(2)=='visa' ? 'offcan_buttons active' : 'offcan_buttons' }}">
-                    <a href="{{ LaravelLocalization::localizeUrl('/visa') }}">{{ __('links.visa') }}</a>
-                </button>
 
-                <button class="{{ Request::segment(2)=='blogs' ? 'offcan_buttons active' : 'offcan_buttons' }}">
-                    <a href="{{ LaravelLocalization::localizeUrl('/blogs') }}">{{ __('links.blogs') }}</a>
-                </button>
                 <button class="{{ Request::segment(2)=='contact' ? 'offcan_buttons active' : 'offcan_buttons' }}">
                     <a href="{{ LaravelLocalization::localizeUrl('/contact') }}">{{ __('links.contact_us') }}</a>
                 </button>
 
-                {{-- {{session()->get("SiteUser")["Name"]}} --}}
-                @if (session()->get('SiteUser'))
-                <button class="offcan_buttons">
-                <a href="#">{{ session()->get('SiteUser')['Name'] }}</a>
-            </button>
-                @else
-                <button class="offcan_buttons">
-                    <a href="{{ LaravelLocalization::getLocalizedURL($localVar, route('siteRegister'))}}">{{ __('links.signin') }}</a>
-                </button>
-                <button class="offcan_buttons">
-                    <a href="{{ LaravelLocalization::getLocalizedURL($localVar, route('siteRegister'))}}">{{ __('links.signin_up2') }}</a>
-                </button>
-                @endif
-
-                <button class="offcan_buttons">
-                    @foreach (LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
-                    @if (LaravelLocalization::getCurrentLocale() != 'ar' && $localeCode == 'ar')
-                            <a  rel="alternate" hreflang="{{ $localeCode }}"
-                                href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
-
-                                <!--{{ $properties['native'] }}-->
-<span>عربي</span>
-                                {{-- <img title="عربي" src="{{ asset('website_assets/images/saudi-arabia.png') }}" class="flag-img "> --}}
-
-                            </a>
-                        @endif
-                        @if (LaravelLocalization::getCurrentLocale() != 'en' && $localeCode == 'en')
-                        <a  rel="alternate" hreflang="{{ $localeCode }}"
-                            href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
-
-                            <img title="English" src="{{ asset('website_assets/images/united-states.png') }}" class="flag-img">
-
-                        </a>
-                    @endif
-                    @endforeach
-                </button>
 
 
 
@@ -111,58 +61,19 @@ $localVar=LaravelLocalization::getCurrentLocale();
                 <li>
                     <a href="{{ LaravelLocalization::localizeUrl('/') }} " class="{{ Request::segment(1)==null? 'links hybrid active' : 'links hybrid' }}"> {{ __('links.home') }}</a>
                 </li>
-                {{-- <li>
+                <li>
                     <a href="{{ LaravelLocalization::localizeUrl('/about') }}" class="{{ Request::segment(1)=='about' ? 'links hybrid active' : 'links hybrid' }}">{{ __('links.about_us') }} </a>
-                </li> --}}
-                <li>
-                    <a href="{{ LaravelLocalization::localizeUrl('/hotels') }}" class="{{ Request::segment(1)=='hotels' ? 'links hybrid active' : 'links hybrid' }}">{{ __('links.hotels') }} </a>
-                </li>
-                <li>
-                    <a href="{{ LaravelLocalization::localizeUrl('/tours') }}" class="{{ Request::segment(1)=='tours' ? 'links hybrid active' : 'links hybrid' }}" >{{ __('links.tours') }} </a>
                 </li>
 
                 <li>
                     <a href="{{ LaravelLocalization::localizeUrl('/offers') }}" class="{{ Request::segment(1)=='offers' ? 'links hybrid active' : 'links hybrid' }}" >{{ __('links.offers') }} </a>
                 </li>
-                <li>
-                    <a href="{{ LaravelLocalization::localizeUrl('/transfers') }}" class="{{ Request::segment(1)=='transfers' ? 'links hybrid active' : 'links hybrid' }}" >{{ __('links.transfer') }} </a>
-                </li>
-                <li>
-                    <a href="{{ LaravelLocalization::localizeUrl('/visa') }}" class="{{ Request::segment(1)=='visa' ? 'links hybrid active' : 'links hybrid' }}" >
-                        {{ __('links.visa') }}</a>
-                </li>
-                <li>
-                    <a href="{{ LaravelLocalization::localizeUrl('/blogs') }}" class="{{ Request::segment(1)=='blogs' ? 'links hybrid active' : 'links hybrid' }}">{{ __('links.blogs') }}</a>
-                </li>
+
                 <li>
                     <a href="{{ LaravelLocalization::localizeUrl('/contact') }}" class="{{ Request::segment(1)=='contact' ? 'links hybrid active' : 'links hybrid' }}">{{ __('links.contact_us') }}</a>
                 </li>
-                <li >
-
-                    @foreach (LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
-                    @if (LaravelLocalization::getCurrentLocale() != 'ar' && $localeCode == 'ar')
-                        <a class="links hybrid p-2" rel="alternate" hreflang="{{ $localeCode }}"
-                            href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
-
-                            <!--{{ $properties['native'] }}-->
-                            <span>عربي</span>
-                            {{-- <img title="عربي" src="{{ asset('website_assets/images/saudi-arabia.png') }}" style="width: 40px;height:40px" class="flag-img "> --}}
-
-                        </a>
-                    @endif
-                    @if (LaravelLocalization::getCurrentLocale() != 'en' && $localeCode == 'en')
-                        <a class="links hybrid p-2" rel="alternate" hreflang="{{ $localeCode }}"
-                            href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
-<span>EN</span>
-                           {{-- <img title="English" src="{{ asset('website_assets/images/united-states.png') }}" class="flag-img "> --}}
-                        </a>
-                    @endif
-                    <!--|-->
-                @endforeach
-                        {{-- <a class="links hybrid p-2" href=''> AR </a>
-                    <a class="links hybrid p-2" href=''>EN </a> --}}
-                    </li>
-                <div class="register">
+               
+                {{-- <div class="register">
 
 
                     <ul>
@@ -173,10 +84,6 @@ $localVar=LaravelLocalization::getCurrentLocale();
                                 $userId = session()->get('SiteUser')['ID'];
                                 ?>
 
-                            {{-- <a href="{{ route('siteProfile', $userId) }}" class="links hybrid sign_in">{{
-                                session()->get('SiteUser')['Name'] }}</a> --}}
-
-
                             <a class="links hybrid sign_in already_loged">
                                 {{ session()->get('SiteUser')['Name'] }}
                                 <i class="fa-solid fa-arrow-down-short-wide"></i>
@@ -186,8 +93,6 @@ $localVar=LaravelLocalization::getCurrentLocale();
                                             class="fa-solid fa-user"></i>{{ __('links.my_profile') }}</a></li>
                                 <li><a href="{{ LaravelLocalization::getLocalizedURL($localVar, route('get_cart'))}}" class="links hybrid sign_in"><i class="fa-solid fa-cart-shopping"></i>
                                     {{ __('links.cart') }}</a></li>
-                                {{-- <li><a href="#" class="links hybrid sign_in"><i
-                                            class="fa-solid fa-solid fa-bag-shopping"></i>My Orders</a></li> --}}
                                 <li><a class="links hybrid sign_in" href="{{ route('siteLogout') }}"><i
                                             class="fa-solid fa-right-from-bracket"></i>{{ __('links.logout') }}</a></li>
                             </ul>
@@ -195,9 +100,6 @@ $localVar=LaravelLocalization::getCurrentLocale();
 
 
                         </li>
-                        {{-- <li class="sign_up">
-                            <a href="{{ route('siteLogout') }}" class="links hybrid sign_up">Logout</a>
-                        </li> --}}
                         @else
                         <li class="sign_in">
                             <a href="{{ LaravelLocalization::getLocalizedURL($localVar, route('siteLogin'))}}" class="links hybrid sign_in">{{ __('links.signin') }}</a>
@@ -209,7 +111,7 @@ $localVar=LaravelLocalization::getCurrentLocale();
 
 
                     </ul>
-                </div>
+                </div> --}}
             </ul>
         </div>
         <!-- end of navigation links  -->

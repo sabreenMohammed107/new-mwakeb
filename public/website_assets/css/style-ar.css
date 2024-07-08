@@ -99,7 +99,8 @@ body { direction: rtl ; }
     height: 48px;
     display: block;
     /* new edit */
-    width: 100px;
+    /* width: 100px; */
+    padding: 2px 0;
   }
   .main-wrapper a {
     text-decoration: none;
@@ -844,7 +845,7 @@ body { direction: rtl ; }
 
   /* limited offers */
   .offers {
-    padding-top: 800px;
+    padding-top: 300px;
     padding-bottom: 70px;
   }
    .offers .titles {
