@@ -81,6 +81,26 @@ class MainController extends Controller
 
         ]);
     }
+    public function refund(){
+        $BreadCrumb = [["url" => "/", "name" => "سياسة الاسترجاع"]];
+        $Company = Company::first();
+        return view("website.refund",
+        [
+            "Company" => $Company,
+            "BreadCrumb" => $BreadCrumb,
+
+        ]);
+    }
+    public function replcement(){
+        $BreadCrumb = [["url" => "/", "name" => "سياسة الاستبدال"]];
+        $Company = Company::first();
+        return view("website.replacement",
+        [
+            "Company" => $Company,
+            "BreadCrumb" => $BreadCrumb,
+
+        ]);
+    }
 
 
 

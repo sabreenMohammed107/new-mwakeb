@@ -174,29 +174,26 @@
                                                         <li><i class="fa-solid fa-angle-right"></i><a
                                                                 href="{{ LaravelLocalization::localizeUrl('/about') }}">{{ __('links.about_us') }}
                                                             </a></li>
-                                                        <li><i class="fa-solid fa-angle-right"></i><a
-                                                                href="{{ LaravelLocalization::localizeUrl('/hotels') }}">{{ __('links.hotels') }}
-                                                            </a></li>
                                                             <li><i class="fa-solid fa-angle-right"></i><a
                                                                 href="{{ LaravelLocalization::localizeUrl('/offers') }}">{{ __('links.offers') }}
                                                             </a></li>
-                                                        <li><i class="fa-solid fa-angle-right"></i><a
-                                                                href="{{ LaravelLocalization::localizeUrl('/terms') }}">{{ __('links.term_condation') }}</a></li>
+<li><i class="fa-solid fa-angle-right"></i><a
+                                                                href="{{ LaravelLocalization::localizeUrl('/blogs') }}">{{ __('links.blogs') }}
+                                                            </a></li>
 
                                                     </ul>
                                                 </div>
                                                 <div class="col-6">
                                                     <ul>
-                                                        <li><i class="fa-solid fa-angle-right"></i><a
-                                                                href="{{ LaravelLocalization::localizeUrl('/blogs') }}">{{ __('links.blogs') }}
-                                                            </a></li>
-                                                        <li><i class="fa-solid fa-angle-right"></i><a href="{{ LaravelLocalization::localizeUrl('/tours') }}">{{ __('links.tours') }}
-                                                            </a></li>
-                                                        <li><i class="fa-solid fa-angle-right"></i><a href="{{ LaravelLocalization::localizeUrl('/transfers') }}">{{ __('links.transfer') }}
-                                                            </a></li>
-                                                        <li><i class="fa-solid fa-angle-right"></i><a href="{{ LaravelLocalization::localizeUrl('/visa') }}">{{ __('links.visa') }} </a>
-                                                        </li>
-
+                                                        
+                                                            <li><i class="fa-solid fa-angle-right"></i><a
+                                                                href="{{ LaravelLocalization::localizeUrl('/terms') }}">{{ __('links.term_condation') }}</a></li>
+                                                                
+                                                            <li><i class="fa-solid fa-angle-right"></i><a
+                                                                href="{{ LaravelLocalization::localizeUrl('/policies/refund') }}">سياسة الاستبدال</a></li>
+                                                                
+                                                            <li><i class="fa-solid fa-angle-right"></i><a
+                                                                href="{{ LaravelLocalization::localizeUrl('/policies/replacement') }}">سياسةالاسترجاع</a></li>
 
                                                     </ul>
                                                 </div>

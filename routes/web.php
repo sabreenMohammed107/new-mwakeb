@@ -189,6 +189,8 @@ Route::group([
     Route::get("/safer/room/{id}/book/{cap}", [BookingController::class, 'BookRoom'])->name("bookRoom");
     Route::get("/safer/room/{id}/book/{cap}/exchange", [BookingController::class, 'ExBookRoom'])->name("exBookRoom");
     Route::get("/terms", [MainController::class, 'terms'])->name("terms");
+    Route::get("/policies/refund", [MainController::class, 'refund'])->name("refund");
+    Route::get("/policies/replacement", [MainController::class, 'replacement'])->name("replacement");
 
     /**
      * fast login using social media

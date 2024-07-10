@@ -523,8 +523,6 @@
 @section('adds_js')
 <script>
     $(document).ready(function() {
-
-
 $('.dynamic').change(function() {
 
     if ($(this).val() != '') {

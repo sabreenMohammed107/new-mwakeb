@@ -362,9 +362,10 @@ body { direction: rtl ; }
   /* end of navigation links */
 
   /* start of landing images an slider */
+
   .slider_section {
-   min-height: 100vh;
-    background-image: linear-gradient(rgba(28, 69, 130, 0.81),rgba(28, 69, 130, 0.81)) , url("./../images/homePage/turkey-slider-image.webp");
+   /* min-height: 100vh; */
+    /* background-image: linear-gradient(rgba(28, 69, 130, 0.81),rgba(28, 69, 130, 0.81)) , url("./../images/homePage/turkey-slider-image.webp"); */
     background-size:cover;
     background-repeat: no-repeat;
     position:relative;
@@ -379,7 +380,20 @@ body { direction: rtl ; }
     flex-direction: column;
     height: 90%;
     padding-bottom: 160px;
+    padding: 50px 0;
 
+  }
+  .slider_section .carousel-item{
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .slider_section .carousel-overlay{
+    position: absolute;
+    top:0;left:0;right:0;bottom:0;
+    background: linear-gradient(rgba(28, 69, 130, 0.81),rgba(28, 69, 130, 0.81));
+    z-index: 1;
   }
   .slider_section .slider_details >* {
     display: block;
@@ -3028,9 +3042,10 @@ body { direction: rtl ; }
     right: 17%;
     }
   }
+  
   @media (min-width: 1600px) {
     .slider_section {
-    padding-top:50px;
+    /* padding-top:50px; */
     }
   }
 
