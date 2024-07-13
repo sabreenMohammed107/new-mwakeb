@@ -14,7 +14,7 @@ License: For each use you must have a valid license purchased only from above li
 <!--begin::Head-->
 
 <head>
-    <title>Safer</title>
+    <title>Mwakeb</title>
     <meta charset="utf-8" />
     <meta name="description"
         content="Craft admin dashboard live demo. Check out all the features of the admin panel. A large number of settings, additional services and widgets." />
@@ -55,9 +55,8 @@ License: For each use you must have a valid license purchased only from above li
                     -webkit-transform: translate(-50%, -50%);
                     transform: translate(-50%, -50%);">
    <!--begin::Header-->
-   <div
-   style="background-image: url({{asset('img/logo.jpg')}})
-;background-repeat: no-repeat;background-size: cover;height:300px ">
+   <div style="background-image: url({{ asset('website_assets/images/logo6.png') }})
+;background-repeat: no-repeat;background-size: contain;height:300px ;width:400px">
    <!--begin::Logo-->
 
    <!--end::Description-->
