@@ -71,7 +71,7 @@
                                     <a href="tel:{{ $master->phone }}">  @if (LaravelLocalization::getCurrentLocale() === 'en')
                                         {!! $master->phone !!}
                                     @else
-                                    {!! $master->ar_phone !!}
+                                    {!! $master->phone !!}
                                     @endif</a>
                                 </span>
                                 {{-- <span class="info">
@@ -106,7 +106,7 @@
                 </div>
             </div>
             <div class="col-sm-12 col-md-6 col-xl-4 mt-2"></div>
-            
+
         </div>
     </section>
     <!-- need help section -->
