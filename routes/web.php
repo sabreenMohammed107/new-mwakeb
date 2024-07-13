@@ -8,6 +8,7 @@ use App\Http\Controllers\CarClassController;
 use App\Http\Controllers\CarModelController;
 use App\Http\Controllers\CityController;
 use App\Http\Controllers\CompanyBranchController;
+use App\Http\Controllers\ComPanyBranchesController;
 use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\CounterController;
 use App\Http\Controllers\CountryController;
@@ -276,6 +277,8 @@ Route::group(['middleware' => ['auth', 'user-access:admin'], 'prefix' => 'dashbo
 
     //company
     Route::resource('company', CompanyController::class);
+    //contact Data
+    Route::resource('companyBranch', ComPanyBranchesController::class);
 
     Route::get('/contact', [CompanyController::class, 'contact'])->name('contact');
 
