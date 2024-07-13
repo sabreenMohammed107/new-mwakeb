@@ -117,7 +117,7 @@
 
                                             <a href="#" class="text-gray-800 text-hover-primary fs-5 fw-bolder mb-1"
                                                 data-kt-ecommerce-category-filter="category_name">
-                                                {{ $row->city->en_city  ?? ''}}</a>
+                                                {{ $row->city->ar_city  ?? ''}}</a>
 
 
                                         </div>
@@ -127,7 +127,7 @@
                                         <div class="d-flex">
 
 
-                                                {{ $row->subtitle_en }}</a>
+                                                {{ $row->subtitle_ar }}</a>
 
 
                                         </div>
@@ -276,36 +276,18 @@
                 <option value="{{ $city->id }}"
                     {{ $row->city_id == $city->id ? 'selected' : '' }}>
 
-                        {{ $city->en_city }}
+                        {{ $city->ar_city }}
 
                 </option>
             @endforeach
         </select>
     </div>
-    <!--end::Input group-->
-
-                                                        <div class="d-flex flex-column mb-8 fv-row">
-                                                            <!--begin::Label-->
-                                                            <label class="d-flex align-items-center fs-6 fw-bold mb-2">
-                                                                <span class="required">Explore En Name</span>
-                                                                <i class="fas fa-exclamation-circle ms-2 fs-7"
-                                                                    data-bs-toggle="tooltip"
-                                                                    title="Enter Explore Name"></i>
-                                                            </label>
-                                                            <!--end::Label-->
-                                                            <input type="text" class="form-control form-control-solid"
-                                                                placeholder="Enter Explore En Name"
-                                                                name="subtitle_en"
-                                                                value="{{ $row->subtitle_en }}" />
-                                                        </div>
-                                                        <!--end::Input group-->
-
 
 
                                                         <div class="d-flex flex-column mb-8 fv-row">
                                                             <!--begin::Label-->
                                                             <label class="d-flex align-items-center fs-6 fw-bold mb-2">
-                                                                <span class="required">Explore Ar Name</span>
+                                                                <span class="required">Explore  Name</span>
                                                                 <i class="fas fa-exclamation-circle ms-2 fs-7"
                                                                     data-bs-toggle="tooltip"
                                                                     title="Enter Explore Name"></i>
@@ -470,35 +452,18 @@
                                     <option value="{{ $city->id }}"
                                        >
 
-                                            {{ $city->en_city }}
+                                            {{ $city->ar_city }}
 
                                     </option>
                                 @endforeach
                             </select>
                         </div>
-                        <!--end::Input group-->
-                        <div class="d-flex flex-column mb-8 fv-row">
-                            <!--begin::Label-->
-                            <label class="d-flex align-items-center fs-6 fw-bold mb-2">
-                                <span class="required">Explore En Name</span>
-                                <i class="fas fa-exclamation-circle ms-2 fs-7"
-                                    data-bs-toggle="tooltip"
-                                    title="Enter Explore Name"></i>
-                            </label>
-                            <!--end::Label-->
-                            <input type="text" class="form-control form-control-solid"
-                                placeholder="Enter Explore En Name"
-                                name="subtitle_en"
-                                value="" />
-                        </div>
-                        <!--end::Input group-->
-
 
 
                         <div class="d-flex flex-column mb-8 fv-row">
                             <!--begin::Label-->
                             <label class="d-flex align-items-center fs-6 fw-bold mb-2">
-                                <span class="required">Explore Ar Name</span>
+                                <span class="required">Explore  Name</span>
                                 <i class="fas fa-exclamation-circle ms-2 fs-7"
                                     data-bs-toggle="tooltip"
                                     title="Enter Explore Name"></i>

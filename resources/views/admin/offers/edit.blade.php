@@ -91,23 +91,11 @@
                         <!--end::Card header-->
                         <!--begin::Card body-->
                         <div class="card-body pt-0">
-                            <!--begin::Input group-->
-                            <div class="mb-10 fv-row">
-                                <!--begin::Label-->
-                                <label class="required form-label"> En Title</label>
-                                <!--end::Label-->
-                                <!--begin::Input-->
-                                <input type="text" value="{{$offer->subtitle_en}}" required name="subtitle_en" class="form-control mb-2" placeholder=" En Title"
-                                    value="" />
-
-
-                            </div>
-                            <!--end::Input-->
 
                                <!--begin::Input group-->
                                <div class="mb-10 fv-row">
                                 <!--begin::Label-->
-                                <label class="required form-label"> Ar Title</label>
+                                <label class="required form-label">  Title</label>
                                 <!--end::Label-->
                                 <!--begin::Input-->
                                 <input type="text" value="{{$offer->subtitle_ar}}" name="subtitle_ar" class="form-control mb-2" placeholder=" Ar title"
@@ -132,7 +120,7 @@
                                     @foreach ($cities as $city)
                                         <option value="{{ $city->id }}"
                                             {{ $offer->city_id == $city->id ? 'selected' : '' }}>
-                                            {{ $city->en_city }}
+                                            {{ $city->ar_city }}
                                         </option>
                                     @endforeach
                                 </select>
@@ -151,24 +139,10 @@
     </div>
     <!--end::Input-->
 
-
-
 <!--begin::Input group-->
 <div>
     <!--begin::Label-->
-    <label class="form-label">En Text</label>
-    <!--end::Label-->
-    <!--begin::Editor-->
-    <textarea class="form-select form-select-solid" id="kt_docs_tinymce_basic"  name="offer_enoverview"
-        >{!! $offer->offer_enoverview !!}</textarea>
-    <!--end::Editor-->
-
-</div>
-<!--end::Input group-->
-<!--begin::Input group-->
-<div>
-    <!--begin::Label-->
-    <label class="form-label">Ar Text</label>
+    <label class="form-label"> Text</label>
     <!--end::Label-->
     <!--begin::Editor-->
     <textarea class="tox-target" id="kt_docs_tinymce_basic2"  name="offer_aroverview"

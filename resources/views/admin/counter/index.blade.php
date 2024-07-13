@@ -83,7 +83,7 @@
                                     </div>
                                 </th>
                                 <th class="min-w-250px">id</th>
-                                <th class="min-w-250px">En Name</th>
+                                <th class="min-w-250px"> Name</th>
 
                                 <th class="min-w-250px">Value</th>
                                 <th class="text-end min-w-70px">Actions</th>
@@ -117,7 +117,7 @@
 
                                             <a href="#" class="text-gray-800 text-hover-primary fs-5 fw-bolder mb-1"
                                                 data-kt-ecommerce-category-filter="category_name">
-                                                {{ $row->title_en }}</a>
+                                                {{ $row->title_ar }}</a>
 
 
                                         </div>
@@ -258,28 +258,13 @@
     </div>
     <!--end::Image input wrapper-->
 
-                                                        <div class="d-flex flex-column mb-8 fv-row">
-                                                            <!--begin::Label-->
-                                                            <label class="d-flex align-items-center fs-6 fw-bold mb-2">
-                                                                <span class="required">Counter En Name</span>
-                                                                <i class="fas fa-exclamation-circle ms-2 fs-7"
-                                                                    data-bs-toggle="tooltip"
-                                                                    title="Enter Country Name"></i>
-                                                            </label>
-                                                            <!--end::Label-->
-                                                            <input type="text" class="form-control form-control-solid"
-                                                                placeholder="Enter Counter En Name"
-                                                                name="title_en"
-                                                                value="{{ $row->title_en }}" />
-                                                        </div>
-                                                        <!--end::Input group-->
 
 
 
                                                         <div class="d-flex flex-column mb-8 fv-row">
                                                             <!--begin::Label-->
                                                             <label class="d-flex align-items-center fs-6 fw-bold mb-2">
-                                                                <span class="required">Counter Ar Name</span>
+                                                                <span class="required">Counter  Name</span>
                                                                 <i class="fas fa-exclamation-circle ms-2 fs-7"
                                                                     data-bs-toggle="tooltip"
                                                                     title="Enter Counter Name"></i>
@@ -449,33 +434,12 @@
     </div>
     <!--end::Card body-->
 </div>
-<!--end::Thumbnail settings-->
-
-                        <!--begin::Input group-->
 
 
                         <div class="d-flex flex-column mb-8 fv-row">
                             <!--begin::Label-->
                             <label class="d-flex align-items-center fs-6 fw-bold mb-2">
-                                <span class="required">Counter En Name</span>
-                                <i class="fas fa-exclamation-circle ms-2 fs-7"
-                                    data-bs-toggle="tooltip"
-                                    title="Enter Country Name"></i>
-                            </label>
-                            <!--end::Label-->
-                            <input type="text" class="form-control form-control-solid"
-                                placeholder="Enter Counter En Name"
-                                name="title_en"
-                                value="" />
-                        </div>
-                        <!--end::Input group-->
-
-
-
-                        <div class="d-flex flex-column mb-8 fv-row">
-                            <!--begin::Label-->
-                            <label class="d-flex align-items-center fs-6 fw-bold mb-2">
-                                <span class="required">Counter Ar Name</span>
+                                <span class="required">Counter  Name</span>
                                 <i class="fas fa-exclamation-circle ms-2 fs-7"
                                     data-bs-toggle="tooltip"
                                     title="Enter Counter Name"></i>

@@ -83,9 +83,8 @@
                                     </div>
                                 </th>
                                 <th class="min-w-250px">id</th>
-                                <th class="min-w-250px">En Name</th>
+                                <th class="min-w-250px"> Name</th>
 
-                                <th class="min-w-250px">Ar Name</th>
                                 <th class="text-end min-w-70px">Actions</th>
                             </tr>
                             <!--end::Table row-->
@@ -117,16 +116,6 @@
 
                                             <a href="#" class="text-gray-800 text-hover-primary fs-5 fw-bolder mb-1"
                                                 data-kt-ecommerce-category-filter="category_name">
-                                                {{ $row->en_city }}</a>
-
-
-                                        </div>
-                                    </td>
-                                    <td>
-
-                                        <div class="d-flex">
-
-
                                                 {{ $row->ar_city }}</a>
 
 
@@ -232,26 +221,6 @@
                                                         </div>
                                                         <!--end::Heading-->
 
-
-
-                                                        <div class="d-flex flex-column mb-8 fv-row">
-                                                            <!--begin::Label-->
-                                                            <label class="d-flex align-items-center fs-6 fw-bold mb-2">
-                                                                <span class="required">City En Name</span>
-                                                                <i class="fas fa-exclamation-circle ms-2 fs-7"
-                                                                    data-bs-toggle="tooltip"
-                                                                    title="Enter Country Name"></i>
-                                                            </label>
-                                                            <!--end::Label-->
-                                                            <input type="text" class="form-control form-control-solid"
-                                                                placeholder="Enter City En Name"
-                                                                name="en_city"
-                                                                value="{{ $row->en_city }}" />
-                                                        </div>
-                                                        <!--end::Input group-->
-
-
-
                                                         <div class="d-flex flex-column mb-8 fv-row">
                                                             <!--begin::Label-->
                                                             <label class="d-flex align-items-center fs-6 fw-bold mb-2">
@@ -279,7 +248,7 @@
     <option value="" ></option>
     @foreach($countries as $country)
     <option value="{{$country->id}}" {{$row->country_id == $country->id ? 'selected': ''}}>
-        {{ $country->en_country }}
+        {{ $country->ar_country }}
     </option>
     @endforeach
 </select>
@@ -369,21 +338,6 @@
                         <!--end::Heading-->
 
 
-                        <!--begin::Input group-->
-
-
-                        <div class="d-flex flex-column mb-8 fv-row">
-                            <!--begin::Label-->
-                            <label class="d-flex align-items-center fs-6 fw-bold mb-2">
-                                <span class="required">City En Name</span>
-                                <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
-                                    title="Enter City En Name"></i>
-                            </label>
-                            <!--end::Label-->
-                            <input type="text" class="form-control form-control-solid"
-                                placeholder="Enter City En Name" name="en_city" />
-                        </div>
-                        <!--end::Input group-->
 
                                     <!--begin::Input group-->
 
@@ -391,9 +345,9 @@
                                     <div class="d-flex flex-column mb-8 fv-row">
                                         <!--begin::Label-->
                                         <label class="d-flex align-items-center fs-6 fw-bold mb-2">
-                                            <span class="required">City Ar Name</span>
+                                            <span class="required">City  Name</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
-                                                title="Enter City De Name"></i>
+                                                title="Enter City  Name"></i>
                                         </label>
                                         <!--end::Label-->
                                         <input type="text" class="form-control form-control-solid"
@@ -414,7 +368,7 @@
                 <option value="" ></option>
                 @foreach($countries as $country)
                 <option value="{{$country->id}}"  >
-                    {{ $country->en_country }}
+                    {{ $country->ar_country }}
                </option>
                 @endforeach
             </select>

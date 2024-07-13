@@ -127,19 +127,7 @@
                                     <div class="card-body pt-0">
                                         <!--begin::Input group-->
                                         <div class="d-flex flex-wrap gap-5">
-                                            <!--begin::Input group-->
-                                            <div class="fv-row w-100 flex-md-root">
-                                                <!--begin::Label-->
-                                                <label class="required form-label"> En Title</label>
-                                                <!--end::Label-->
-                                                <!--begin::Input-->
-                                                <input type="text" required name="overview_entitle"
-                                                    class="form-control mb-2" placeholder=" En Title"
-                                                    value="{{ $company->overview_entitle }}" />
 
-
-                                            </div>
-                                            <!--end::Input-->
 
                                             <!--begin::Input group-->
                                             <div class="fv-row w-100 flex-md-root">
@@ -157,19 +145,7 @@
 
                                         <!--begin::Input group-->
                                         <div class="d-flex flex-wrap gap-5">
-                                            <!--begin::Input group-->
-                                            <div class="fv-row w-100 flex-md-root">
-                                                <!--begin::Label-->
-                                                <label class="required form-label"> En Sub Title</label>
-                                                <!--end::Label-->
-                                                <!--begin::Input-->
-                                                <input type="text" required name="overview_ensubtitle"
-                                                    class="form-control mb-2" placeholder=" En Sub Title"
-                                                    value="{{ $company->overview_ensubtitle }}" />
 
-
-                                            </div>
-                                            <!--end::Input-->
 
                                             <!--begin::Input group-->
                                             <div class="fv-row w-100 flex-md-root">
@@ -190,19 +166,7 @@
 {{-- login --}}
  <!--begin::Input group-->
  <div class="d-flex flex-wrap gap-5">
-    <!--begin::Input group-->
-    <div class="fv-row w-100 flex-md-root">
-        <!--begin::Label-->
-        <label class="required form-label">Login En  Title</label>
-        <!--end::Label-->
-        <!--begin::Input-->
-        <input type="text" required name="login_en_title"
-            class="form-control mb-2" placeholder=" En  Title"
-            value="{{ $company->login_en_title }}" />
 
-
-    </div>
-    <!--end::Input-->
 
     <!--begin::Input group-->
     <div class="fv-row w-100 flex-md-root">
@@ -220,19 +184,7 @@
 <!--end::Input-->
  <!--begin::Input group-->
  <div class="d-flex flex-wrap gap-5">
-    <!--begin::Input group-->
-    <div class="fv-row w-100 flex-md-root">
-        <!--begin::Label-->
-        <label class="required form-label">Login En Sub Title</label>
-        <!--end::Label-->
-        <!--begin::Input-->
-        <input type="text" required name="login_en_sub_title"
-            class="form-control mb-2" placeholder=" En Sub Title"
-            value="{{ $company->login_en_sub_title }}" />
 
-
-    </div>
-    <!--end::Input-->
 
     <!--begin::Input group-->
     <div class="fv-row w-100 flex-md-root">
@@ -254,16 +206,7 @@
 
                                         <!--begin::Input group-->
                                         <div class="d-flex flex-wrap gap-5">
-                                            <!--begin::Input group-->
-                                            <div class="fv-row w-100 flex-md-root">
-                                                <!--begin::Label-->
-                                                <label class="form-label">En Overview Text</label>
-                                                <!--end::Label-->
-                                                <!--begin::Editor-->
-                                                <textarea class="form-select form-select-solid" id="kt_docs_tinymce_basic" name="overview_en">{{ $company->overview_en }}</textarea>
-                                                <!--end::Editor-->
 
-                                            </div>
                                             <!--end::Input group-->
                                             <!--begin::Input group-->
                                             <div class="fv-row w-100 flex-md-root">
@@ -282,17 +225,7 @@
 
                                         <!--begin::Input group-->
                                         <div class="d-flex flex-wrap gap-5">
-                                            <!--begin::Input group-->
-                                            <div class="fv-row w-100 flex-md-root">
-                                                <!--begin::Label-->
-                                                <label class="form-label">En Mission Text</label>
-                                                <!--end::Label-->
-                                                <!--begin::Editor-->
-                                                <textarea class="form-select form-select-solid" id="kt_docs_tinymce_basic" name="mission_en">{{ $company->mission_en }}</textarea>
-                                                <!--end::Editor-->
 
-                                            </div>
-                                            <!--end::Input group-->
                                             <!--begin::Input group-->
                                             <div class="fv-row w-100 flex-md-root">
                                                 <!--begin::Label-->
@@ -310,17 +243,7 @@
 
                                         <!--begin::Input group-->
                                         <div class="d-flex flex-wrap gap-5">
-                                            <!--begin::Input group-->
-                                            <div class="fv-row w-100 flex-md-root">
-                                                <!--begin::Label-->
-                                                <label class="form-label">En vision Text</label>
-                                                <!--end::Label-->
-                                                <!--begin::Editor-->
-                                                <textarea class="form-select form-select-solid" id="kt_docs_tinymce_basic" name="vision_en">{{ $company->vision_en }}</textarea>
-                                                <!--end::Editor-->
 
-                                            </div>
-                                            <!--end::Input group-->
                                             <!--begin::Input group-->
                                             <div class="fv-row w-100 flex-md-root">
                                                 <!--begin::Label-->
@@ -451,19 +374,7 @@
                                     <div class="card-body pt-0">
                                         <!--begin::Input group-->
                                         <div class="d-flex flex-wrap gap-5">
-                                            <!--begin::Input group-->
-                                            <div class="fv-row w-100 flex-md-root">
-                                                <!--begin::Label-->
-                                                <label class="required form-label"> Banner En Title</label>
-                                                <!--end::Label-->
-                                                <!--begin::Input-->
-                                                <input type="text" required name="master_page_entitle"
-                                                    class="form-control mb-2" placeholder=" En Title"
-                                                    value="{{ $company->master_page_entitle }}" />
 
-
-                                            </div>
-                                            <!--end::Input-->
 
                                             <!--begin::Input group-->
                                             <div class="fv-row w-100 flex-md-root">
@@ -482,19 +393,7 @@
 
                                         <!--begin::Input group-->
                                         <div class="d-flex flex-wrap gap-5">
-                                            <!--begin::Input group-->
-                                            <div class="fv-row w-100 flex-md-root">
-                                                <!--begin::Label-->
-                                                <label class="required form-label">Banner En Sub Title</label>
-                                                <!--end::Label-->
-                                                <!--begin::Input-->
-                                                <input type="text" required name="master_page_ensubtitle"
-                                                    class="form-control mb-2" placeholder=" En Sub Title"
-                                                    value="{{ $company->master_page_ensubtitle }}" />
 
-
-                                            </div>
-                                            <!--end::Input-->
 
                                             <!--begin::Input group-->
                                             <div class="fv-row w-100 flex-md-root">
@@ -517,17 +416,7 @@
 
                                         <!--begin::Input group-->
                                         <div class="d-flex flex-wrap gap-5">
-                                            <!--begin::Input group-->
-                                            <div class="fv-row w-100 flex-md-root">
-                                                <!--begin::Label-->
-                                                <label class="form-label">Banner En Text</label>
-                                                <!--end::Label-->
-                                                <!--begin::Editor-->
-                                                <textarea class="form-select form-select-solid" id="kt_docs_tinymce_basic" name="master_page_entext">{{ $company->master_page_entext }}</textarea>
-                                                <!--end::Editor-->
 
-                                            </div>
-                                            <!--end::Input group-->
                                             <!--begin::Input group-->
                                             <div class="fv-row w-100 flex-md-root">
                                                 <!--begin::Label-->
@@ -598,17 +487,7 @@
 
                                         <!--begin::Input group-->
                                         <div class="d-flex flex-wrap gap-5">
-                                            <!--begin::Input group-->
-                                            <div class="fv-row w-100 flex-md-root">
-                                                <!--begin::Label-->
-                                                <label class="form-label">Limit Offer Endesc</label>
-                                                <!--end::Label-->
-                                                <!--begin::Editor-->
-                                                <textarea class="form-select form-select-solid" id="kt_docs_tinymce_basic" name="limit_offer_endesc">{{ $company->limit_offer_endesc }}</textarea>
-                                                <!--end::Editor-->
 
-                                            </div>
-                                            <!--end::Input group-->
                                             <!--begin::Input group-->
                                             <div class="fv-row w-100 flex-md-root">
                                                 <!--begin::Label-->
@@ -626,17 +505,7 @@
 
                                         <!--begin::Input group-->
                                         <div class="d-flex flex-wrap gap-5">
-                                            <!--begin::Input group-->
-                                            <div class="fv-row w-100 flex-md-root">
-                                                <!--begin::Label-->
-                                                <label class="form-label">Best Hotels En Desc</label>
-                                                <!--end::Label-->
-                                                <!--begin::Editor-->
-                                                <textarea class="form-select form-select-solid" id="kt_docs_tinymce_basic" name="best_hotels_en_desc">{{ $company->best_hotels_en_desc }}</textarea>
-                                                <!--end::Editor-->
 
-                                            </div>
-                                            <!--end::Input group-->
                                             <!--begin::Input group-->
                                             <div class="fv-row w-100 flex-md-root">
                                                 <!--begin::Label-->
@@ -653,17 +522,7 @@
 
                                         <!--begin::Input group-->
                                         <div class="d-flex flex-wrap gap-5">
-                                            <!--begin::Input group-->
-                                            <div class="fv-row w-100 flex-md-root">
-                                                <!--begin::Label-->
-                                                <label class="form-label">Book Tour En Desc</label>
-                                                <!--end::Label-->
-                                                <!--begin::Editor-->
-                                                <textarea class="form-select form-select-solid" id="kt_docs_tinymce_basic" name="book_tour_en_desc">{{ $company->book_tour_en_desc }}</textarea>
-                                                <!--end::Editor-->
 
-                                            </div>
-                                            <!--end::Input group-->
                                             <!--begin::Input group-->
                                             <div class="fv-row w-100 flex-md-root">
                                                 <!--begin::Label-->
@@ -679,19 +538,7 @@
                                         </div>
                                         <!--begin::Input group-->
                                         <div class="d-flex flex-wrap gap-5 mt-4">
-                                            <!--begin::Input group-->
-                                            <div class="fv-row w-100 flex-md-root">
-                                                <!--begin::Label-->
-                                                <label class="required form-label"> Book Tour En Title</label>
-                                                <!--end::Label-->
-                                                <!--begin::Input-->
-                                                <input type="text" required name="book_tour_en_title"
-                                                    class="form-control mb-2" placeholder=" En Title"
-                                                    value="{{ $company->book_tour_en_title }}" />
 
-
-                                            </div>
-                                            <!--end::Input-->
 
                                             <!--begin::Input group-->
                                             <div class="fv-row w-100 flex-md-root">
@@ -710,17 +557,7 @@
                                         {{-- ABOUT NEW --}}
                                          <!--begin::Input group-->
                                          <div class="d-flex flex-wrap gap-5">
-                                            <!--begin::Input group-->
-                                            <div class="fv-row w-100 flex-md-root">
-                                                <!--begin::Label-->
-                                                <label class="form-label">Why Us En Desc</label>
-                                                <!--end::Label-->
-                                                <!--begin::Editor-->
-                                                <textarea class="form-select form-select-solid" id="kt_docs_tinymce_basic" name="why_us_entext">{{ $company->why_us_entext }}</textarea>
-                                                <!--end::Editor-->
 
-                                            </div>
-                                            <!--end::Input group-->
                                             <!--begin::Input group-->
                                             <div class="fv-row w-100 flex-md-root">
                                                 <!--begin::Label-->
@@ -736,19 +573,7 @@
                                         </div>
                                         <!--begin::Input group-->
                                         <div class="d-flex flex-wrap gap-5 mt-4">
-                                            <!--begin::Input group-->
-                                            <div class="fv-row w-100 flex-md-root">
-                                                <!--begin::Label-->
-                                                <label class="required form-label"> Why Us En Title</label>
-                                                <!--end::Label-->
-                                                <!--begin::Input-->
-                                                <input type="text" required name="why_us_entitle"
-                                                    class="form-control mb-2" placeholder=" En Title"
-                                                    value="{{ $company->why_us_entitle }}" />
 
-
-                                            </div>
-                                            <!--end::Input-->
 
                                             <!--begin::Input group-->
                                             <div class="fv-row w-100 flex-md-root">
@@ -766,19 +591,7 @@
                                         {{-- visa data --}}
                                          <!--begin::Input group-->
                                          <div class="d-flex flex-wrap gap-5 mt-4">
-                                            <!--begin::Input group-->
-                                            <div class="fv-row w-100 flex-md-root">
-                                                <!--begin::Label-->
-                                                <label class="required form-label"> Visa video En Title</label>
-                                                <!--end::Label-->
-                                                <!--begin::Input-->
-                                                <input type="text" required name="visa_en_title"
-                                                    class="form-control mb-2" placeholder=" En Title"
-                                                    value="{{ $company->visa_en_title }}" />
 
-
-                                            </div>
-                                            <!--end::Input-->
 
                                             <!--begin::Input group-->
                                             <div class="fv-row w-100 flex-md-root">
@@ -794,17 +607,7 @@
                                         </div>
                                          <!--begin::Input group-->
                                          <div class="d-flex flex-wrap gap-5">
-                                            <!--begin::Input group-->
-                                            <div class="fv-row w-100 flex-md-root">
-                                                <!--begin::Label-->
-                                                <label class="form-label">Visa video En Desc</label>
-                                                <!--end::Label-->
-                                                <!--begin::Editor-->
-                                                <textarea class="form-select form-select-solid" id="kt_docs_tinymce_basic" name="visa_en_text">{{ $company->visa_en_text }}</textarea>
-                                                <!--end::Editor-->
 
-                                            </div>
-                                            <!--end::Input group-->
                                             <!--begin::Input group-->
                                             <div class="fv-row w-100 flex-md-root">
                                                 <!--begin::Label-->
@@ -835,19 +638,7 @@
                                         </div>
                                         {{-- end visa data --}}
                                         <div class="d-flex flex-wrap gap-5">
-                                            <!--begin::Input group-->
-                                            <div class="fv-row w-100 flex-md-root">
-                                                <!--begin::Label-->
-                                                <label class="required form-label"> Book Tour Vedio</label>
-                                                <!--end::Label-->
-                                                <!--begin::Input-->
-                                                <input type="text" required name="book_tour_vedio"
-                                                    class="form-control mb-2" placeholder=" En Title"
-                                                    value="{{ $company->book_tour_vedio }}" />
 
-
-                                            </div>
-                                            <!--end::Input-->
                                         </div>
                                         <div class="d-flex flex-wrap gap-5">
                                             <!--begin::Input group-->
@@ -872,17 +663,7 @@
 
                                         <!--begin::Input group-->
                                         <div class="d-flex flex-wrap gap-5">
-                                            <!--begin::Input group-->
-                                            <div class="fv-row w-100 flex-md-root">
-                                                <!--begin::Label-->
-                                                <label class="form-label">Book Transport En Desc</label>
-                                                <!--end::Label-->
-                                                <!--begin::Editor-->
-                                                <textarea class="form-select form-select-solid" id="kt_docs_tinymce_basic" name="book_transport_en_desc">{{ $company->book_transport_en_desc }}</textarea>
-                                                <!--end::Editor-->
 
-                                            </div>
-                                            <!--end::Input group-->
                                             <!--begin::Input group-->
                                             <div class="fv-row w-100 flex-md-root">
                                                 <!--begin::Label-->
@@ -898,19 +679,6 @@
                                         </div>
                                         <!--begin::Input group-->
                                         <div class="d-flex flex-wrap gap-5 mt-4">
-                                            <!--begin::Input group-->
-                                            <div class="fv-row w-100 flex-md-root">
-                                                <!--begin::Label-->
-                                                <label class="required form-label"> Book Transport En Title</label>
-                                                <!--end::Label-->
-                                                <!--begin::Input-->
-                                                <input type="text" required name="book_transport_en_title"
-                                                    class="form-control mb-2" placeholder=" En Title"
-                                                    value="{{ $company->book_transport_en_title }}" />
-
-
-                                            </div>
-                                            <!--end::Input-->
 
                                             <!--begin::Input group-->
                                             <div class="fv-row w-100 flex-md-root">
@@ -926,19 +694,7 @@
                                         </div>
 
                                         <div class="d-flex flex-wrap gap-5">
-                                            <!--begin::Input group-->
-                                            <div class="fv-row w-100 flex-md-root">
-                                                <!--begin::Label-->
-                                                <label class="required form-label"> Book Transport Vedio</label>
-                                                <!--end::Label-->
-                                                <!--begin::Input-->
-                                                <input type="text" required name="book_transport_vedio"
-                                                    class="form-control mb-2" placeholder=" En Title"
-                                                    value="{{ $company->book_transport_vedio }}" />
 
-
-                                            </div>
-                                            <!--end::Input-->
                                         </div>
                                         <!--end::Input-->
 

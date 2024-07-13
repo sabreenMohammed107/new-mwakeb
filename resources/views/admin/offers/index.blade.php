@@ -123,7 +123,7 @@
 
                                             <a href="#" class="text-gray-800 text-hover-primary fs-5 fw-bolder mb-1"
                                                 data-kt-ecommerce-category-filter="category_name">
-                                                {{ $row->city->en_city ?? '' }}</a>
+                                                {{ $row->city->ar_city ?? '' }}</a>
 
 
                                         </div>
@@ -136,7 +136,7 @@
                                             <input type="hidden" name="" id=""
                                                 data-kt-ecommerce-category-filter="category_id" value="{{ $row->id }}">
 
-                                            <span class="symbol-label">{{ $row->subtitle_en }}</span>
+                                            <span class="symbol-label">{{ $row->subtitle_ar }}</span>
 
                                         </div>
 
@@ -293,12 +293,6 @@
 
 
                                                         <div class="d-flex flex-column mb-8 fv-row">
-                                                            <!--begin::Input group-->
-                                                            <div class="d-flex flex-column mb-8">
-                                                                <label class="fs-6 fw-bold mb-2">En Sub Tilte</label>
-                                                                <textarea class="form-control form-control-solid" rows="3" name="subtitle_en" placeholder="Type En Sub Title">{{ $row->subtitle_en }}</textarea>
-                                                            </div>
-                                                            <!--end::Input group-->
 
                                                             <!--begin::Input group-->
                                                             <div class="d-flex flex-column mb-8">
@@ -321,7 +315,7 @@
                                                                     @foreach ($cities as $city)
                                                                         <option value="{{ $city->id }}"
                                                                             {{ $row->city_id == $city->id ? 'selected' : '' }}>
-                                                                            {{ $city->en_city }}
+                                                                            {{ $city->ar_city }}
                                                                         </option>
                                                                     @endforeach
                                                                 </select>
@@ -485,12 +479,7 @@
 
 
                         <div class="d-flex flex-column mb-8 fv-row">
-                            <!--begin::Input group-->
-                            <div class="d-flex flex-column mb-8">
-                                <label class="fs-6 fw-bold mb-2">En Sub Title</label>
-                                <textarea class="form-control form-control-solid" rows="3" name="subtitle_en" placeholder="Type En Sub Title"></textarea>
-                            </div>
-                            <!--end::Input group-->
+
 
                             <!--begin::Input group-->
                             <div class="d-flex flex-column mb-8">
@@ -513,7 +502,7 @@
                                     @foreach ($cities as $city)
                                         <option value="{{ $city->id }}"
                                            >
-                                            {{ $city->en_city }}
+                                            {{ $city->ar_city }}
                                         </option>
                                     @endforeach
                                 </select>

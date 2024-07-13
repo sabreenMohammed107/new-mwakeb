@@ -83,9 +83,9 @@
                                     </div>
                                 </th>
                                 <th class="min-w-250px">id</th>
-                                <th class="min-w-250px">En Name</th>
+                                <th class="min-w-250px"> Name</th>
 
-                                <th class="min-w-250px">Ar Name</th>
+
                                 <th class="text-end min-w-70px">Actions</th>
                             </tr>
                             <!--end::Table row-->
@@ -117,16 +117,6 @@
 
                                             <a href="#" class="text-gray-800 text-hover-primary fs-5 fw-bolder mb-1"
                                                 data-kt-ecommerce-category-filter="category_name">
-                                                {{ $row->en_country }}</a>
-
-
-                                        </div>
-                                    </td>
-                                    <td>
-
-                                        <div class="d-flex">
-
-
                                                 {{ $row->ar_country }}</a>
 
 
@@ -232,30 +222,10 @@
                                                         </div>
                                                         <!--end::Heading-->
 
-
-
                                                         <div class="d-flex flex-column mb-8 fv-row">
                                                             <!--begin::Label-->
                                                             <label class="d-flex align-items-center fs-6 fw-bold mb-2">
-                                                                <span class="required"> En Name</span>
-                                                                <i class="fas fa-exclamation-circle ms-2 fs-7"
-                                                                    data-bs-toggle="tooltip"
-                                                                    title="Enter Country Name"></i>
-                                                            </label>
-                                                            <!--end::Label-->
-                                                            <input type="text" class="form-control form-control-solid"
-                                                                placeholder="Enter  En Name"
-                                                                name="en_country"
-                                                                value="{{ $row->en_country }}" />
-                                                        </div>
-                                                        <!--end::Input group-->
-
-
-
-                                                        <div class="d-flex flex-column mb-8 fv-row">
-                                                            <!--begin::Label-->
-                                                            <label class="d-flex align-items-center fs-6 fw-bold mb-2">
-                                                                <span class="required"> Ar Name</span>
+                                                                <span class="required">  Name</span>
                                                                 <i class="fas fa-exclamation-circle ms-2 fs-7"
                                                                     data-bs-toggle="tooltip"
                                                                     title="Enter Country Name"></i>
@@ -352,31 +322,13 @@
 
                         </div>
                         <!--end::Heading-->
-
-
-                        <!--begin::Input group-->
-
-
-                        <div class="d-flex flex-column mb-8 fv-row">
-                            <!--begin::Label-->
-                            <label class="d-flex align-items-center fs-6 fw-bold mb-2">
-                                <span class="required"> En Name</span>
-                                <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
-                                    title="Enter  En Name"></i>
-                            </label>
-                            <!--end::Label-->
-                            <input type="text" class="form-control form-control-solid"
-                                placeholder="Enter  En Name" name="en_country" />
-                        </div>
-                        <!--end::Input group-->
-
                                     <!--begin::Input group-->
 
 
                                     <div class="d-flex flex-column mb-8 fv-row">
                                         <!--begin::Label-->
                                         <label class="d-flex align-items-center fs-6 fw-bold mb-2">
-                                            <span class="required"> Ar Name</span>
+                                            <span class="required"> Name</span>
                                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                 title="Enter  Ar Name"></i>
                                         </label>

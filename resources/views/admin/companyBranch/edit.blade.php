@@ -62,19 +62,7 @@
                                     <div class="card-body pt-0">
                                         <!--begin::Input group-->
                                         <div class="d-flex flex-wrap gap-5">
-                                            <!--begin::Input group-->
-                                            <div class="fv-row w-100 flex-md-root">
-                                                <!--begin::Label-->
-                                                <label class="required form-label"> En Address</label>
-                                                <!--end::Label-->
-                                                <!--begin::Input-->
-                                                <input type="text" required name="detailed_address_en"
-                                                    class="form-control mb-2" placeholder=" En address"
-                                                    value="{{ $companyBranch->detailed_address_en }}" />
 
-
-                                            </div>
-                                            <!--end::Input-->
 
                                             <!--begin::Input group-->
                                             <div class="fv-row w-100 flex-md-root">
