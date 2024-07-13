@@ -7,10 +7,10 @@
     <div class="aside-logo flex-column-auto pt-9 pb-5" id="kt_aside_logo">
         <!--begin::Logo-->
         <a href="#">
-            <img alt="Logo" src="{{ asset('img/logo.jpg') }}" class="max-h-50px logo-default "
-                style="height: 120px" />
-            <img alt="Logo" src="{{ asset('img/logo.jpg') }}" class="max-h-50px logo-minimize "
-                style="height: 120px" />
+            <img alt="Logo" src="{{ asset('website_assets/images/logo6.png') }}" class="max-h-50px logo-default "
+                style="height: 120px ;width:100%" />
+            <img alt="Logo" src="{{ asset('website_assets/images/logo6.png') }}" class="max-h-50px logo-minimize "
+                style="height: 120px ;width:100%" />
         </a>
         <!--end::Logo-->
     </div>
@@ -92,7 +92,6 @@
                     </div>
                 </div>
                 <!-- start basics -->
-                @if (Auth::user()->hasRole('admin'))
 
                 <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
                     <span class="menu-link">
@@ -227,7 +226,6 @@
 
                     </div>
                 </div>
-                @endif
                 <!-- End basics -->
                 <!-- organizers -->
                 {{-- <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
@@ -265,7 +263,6 @@
 
 
                 <!-- end organizers -->
-                @if (Auth::user()->hasRole('admin'))
                     <!-- start blog -->
                     <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
                         <span class="menu-link">
@@ -324,9 +321,8 @@
                         </div>
                     </div>
                     <!-- end blog -->
-                @endif
 
-                @if (Auth::user()->hasRole('admin'))
+
                 <!-- start Event -->
                 <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
                     <span class="menu-link">
@@ -358,8 +354,7 @@
                     </div>
                 </div>
                 <!-- end Event -->
-            @endif
-                @if (Auth::user()->hasRole('admin'))
+
                     <!-- start Event -->
                     <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
                         <span class="menu-link">
@@ -410,8 +405,7 @@
                         </div>
                     </div>
                     <!-- end Event -->
-                @endif
-                @if (Auth::user()->hasRole('admin'))
+
                     <!-- start Event -->
                     <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
                         <span class="menu-link">
@@ -489,8 +483,7 @@
                         </div>
                     </div>
                     <!-- end Event -->
-                @endif
-                @if (Auth::user()->hasRole('admin'))
+
                     <!-- start transportation -->
                     <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
                         <span class="menu-link">
@@ -555,8 +548,7 @@
                         </div>
                     </div>
                     <!-- end transportation -->
-                @endif
-                @if (Auth::user()->hasRole('admin'))
+
                     <!-- start Visa -->
                     <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
                         <span class="menu-link">
@@ -615,8 +607,7 @@
                         </div>
                     </div>
                     <!-- end Visa -->
-                @endif
-                @if (Auth::user()->hasRole('admin'))
+
                     <!-- start blog -->
                     <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
                         <span class="menu-link">
@@ -656,8 +647,7 @@
                         </div>
                     </div>
                     <!-- end blog -->
-                @endif
-                @if (Auth::user()->hasRole('admin'))
+
                     <!-- start user data -->
                     <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
                         <span class="menu-link">
@@ -689,9 +679,7 @@
                             </div>
                         </div>
                     </div>
-                @endif
-                <!-- end user data  dd($user->roles) -->
-                @if (Auth::user()->hasRole('admin') || Auth::user()->hasRole('seller'))
+
                     <div class="menu-item">
                         <a class="menu-link" href="{{ route('users-orders.index') }}">
                             <span class="menu-icon">
@@ -712,8 +700,7 @@
                             <span class="menu-title">Order Data</span>
                         </a>
                     </div>
-                @endif
-                @if (Auth::user()->hasRole('admin'))
+
                     <div class="menu-item">
                         <a class="menu-link" href="{{ route('company.edit', 1) }}">
                             <span class="menu-icon">
@@ -755,7 +742,7 @@
                             <span class="menu-title">Contact Us</span>
                         </a>
                     </div>
-                @endif
+
                 <div class="menu-item">
                     <div class="menu-content">
                         <div class="separator mx-1 my-4"></div>
