@@ -132,11 +132,11 @@
                                             <!--begin::Input group-->
                                             <div class="fv-row w-100 flex-md-root">
                                                 <!--begin::Label-->
-                                                <label class="required form-label"> Ar Title</label>
+                                                <label class="required form-label"> Title</label>
                                                 <!--end::Label-->
                                                 <!--begin::Input-->
                                                 <input type="text" name="overview_artitle" class="form-control mb-2"
-                                                    placeholder=" Ar title" value="{{ $company->overview_artitle }}" />
+                                                    placeholder=" title" value="{{ $company->overview_artitle }}" />
 
 
                                             </div>
@@ -150,11 +150,11 @@
                                             <!--begin::Input group-->
                                             <div class="fv-row w-100 flex-md-root">
                                                 <!--begin::Label-->
-                                                <label class="required form-label"> Ar Sub Title</label>
+                                                <label class="required form-label"> Sub Title</label>
                                                 <!--end::Label-->
                                                 <!--begin::Input-->
                                                 <input type="text" name="overview_arsubtitle" class="form-control mb-2"
-                                                    placeholder=" Ar Sub title"
+                                                    placeholder=" Sub title"
                                                     value="{{ $company->overview_arsubtitle }}" />
 
 
@@ -171,11 +171,11 @@
     <!--begin::Input group-->
     <div class="fv-row w-100 flex-md-root">
         <!--begin::Label-->
-        <label class="required form-label">Login Ar  Title</label>
+        <label class="required form-label">Login  Title</label>
         <!--end::Label-->
         <!--begin::Input-->
         <input type="text" name="login_ar_title" class="form-control mb-2"
-            placeholder=" Ar  title"
+            placeholder="  title"
             value="{{ $company->login_ar_title }}" />
 
 
@@ -189,11 +189,11 @@
     <!--begin::Input group-->
     <div class="fv-row w-100 flex-md-root">
         <!--begin::Label-->
-        <label class="required form-label"> Login Ar Sub Title</label>
+        <label class="required form-label"> Login Sub Title</label>
         <!--end::Label-->
         <!--begin::Input-->
         <input type="text" name="login_ar_sub_title" class="form-control mb-2"
-            placeholder=" Ar Sub title"
+            placeholder=" Sub title"
             value="{{ $company->login_ar_sub_title }}" />
 
 
@@ -211,7 +211,7 @@
                                             <!--begin::Input group-->
                                             <div class="fv-row w-100 flex-md-root">
                                                 <!--begin::Label-->
-                                                <label class="form-label">Ar Overview Text</label>
+                                                <label class="form-label">Overview Text</label>
                                                 <!--end::Label-->
                                                 <!--begin::Editor-->
                                                 <textarea class="form-select form-select-solid" id="kt_docs_tinymce_basic2" name="overview_ar">{{ $company->overview_ar }}</textarea>
@@ -229,7 +229,7 @@
                                             <!--begin::Input group-->
                                             <div class="fv-row w-100 flex-md-root">
                                                 <!--begin::Label-->
-                                                <label class="form-label">Ar Mission Text</label>
+                                                <label class="form-label">Mission Text</label>
                                                 <!--end::Label-->
                                                 <!--begin::Editor-->
                                                 <textarea class="form-select form-select-solid" id="kt_docs_tinymce_basic2" name="mission_ar">{{ $company->mission_ar }}</textarea>
@@ -247,7 +247,7 @@
                                             <!--begin::Input group-->
                                             <div class="fv-row w-100 flex-md-root">
                                                 <!--begin::Label-->
-                                                <label class="form-label">Ar vision Text</label>
+                                                <label class="form-label">vision Text</label>
                                                 <!--end::Label-->
                                                 <!--begin::Editor-->
                                                 <textarea class="form-select form-select-solid" id="kt_docs_tinymce_basic2" name="vision_ar">{{ $company->vision_ar }}</textarea>
@@ -379,11 +379,11 @@
                                             <!--begin::Input group-->
                                             <div class="fv-row w-100 flex-md-root">
                                                 <!--begin::Label-->
-                                                <label class="required form-label">Banner Ar Title</label>
+                                                <label class="required form-label">Banner Title</label>
                                                 <!--end::Label-->
                                                 <!--begin::Input-->
                                                 <input type="text" name="master_page_artitle"
-                                                    class="form-control mb-2" placeholder=" Ar title"
+                                                    class="form-control mb-2" placeholder=" title"
                                                     value="{{ $company->master_page_artitle }}" />
 
 
@@ -398,11 +398,11 @@
                                             <!--begin::Input group-->
                                             <div class="fv-row w-100 flex-md-root">
                                                 <!--begin::Label-->
-                                                <label class="required form-label">Banner Ar Sub Title</label>
+                                                <label class="required form-label">Banner Sub Title</label>
                                                 <!--end::Label-->
                                                 <!--begin::Input-->
                                                 <input type="text" name="master_page_arsubtitle"
-                                                    class="form-control mb-2" placeholder=" Ar Sub title"
+                                                    class="form-control mb-2" placeholder=" Sub title"
                                                     value="{{ $company->master_page_arsubtitle }}" />
 
 
@@ -420,7 +420,7 @@
                                             <!--begin::Input group-->
                                             <div class="fv-row w-100 flex-md-root">
                                                 <!--begin::Label-->
-                                                <label class="form-label">Banner Ar Text</label>
+                                                <label class="form-label">Banner Text</label>
                                                 <!--end::Label-->
                                                 <!--begin::Editor-->
                                                 <textarea class="form-select form-select-solid" id="kt_docs_tinymce_basic2" name="master_page_artext">{{ $company->master_page_artext }}</textarea>
@@ -509,7 +509,7 @@
                                             <!--begin::Input group-->
                                             <div class="fv-row w-100 flex-md-root">
                                                 <!--begin::Label-->
-                                                <label class="form-label">Best Hotels Ar Desc</label>
+                                                <label class="form-label">Best Hotels Desc</label>
                                                 <!--end::Label-->
                                                 <!--begin::Editor-->
                                                 <textarea class="form-select form-select-solid" id="kt_docs_tinymce_basic2" name="best_hotels_ar_desc">{{ $company->best_hotels_ar_desc }}</textarea>
@@ -526,7 +526,7 @@
                                             <!--begin::Input group-->
                                             <div class="fv-row w-100 flex-md-root">
                                                 <!--begin::Label-->
-                                                <label class="form-label">Book Tour Ar Desc</label>
+                                                <label class="form-label">Book Tour Desc</label>
                                                 <!--end::Label-->
                                                 <!--begin::Editor-->
                                                 <textarea class="form-select form-select-solid" id="kt_docs_tinymce_basic2" name="book_tour_ar_desc">{{ $company->book_tour_ar_desc }}</textarea>
@@ -543,11 +543,11 @@
                                             <!--begin::Input group-->
                                             <div class="fv-row w-100 flex-md-root">
                                                 <!--begin::Label-->
-                                                <label class="required form-label">Book Tour Ar Title</label>
+                                                <label class="required form-label">Book Tour Title</label>
                                                 <!--end::Label-->
                                                 <!--begin::Input-->
                                                 <input type="text" name="book_tour_ar_title" class="form-control mb-2"
-                                                    placeholder=" Ar title" value="{{ $company->book_tour_ar_title }}" />
+                                                    placeholder=" title" value="{{ $company->book_tour_ar_title }}" />
 
 
                                             </div>
@@ -561,7 +561,7 @@
                                             <!--begin::Input group-->
                                             <div class="fv-row w-100 flex-md-root">
                                                 <!--begin::Label-->
-                                                <label class="form-label">Why Us Ar Desc</label>
+                                                <label class="form-label">Why Us Desc</label>
                                                 <!--end::Label-->
                                                 <!--begin::Editor-->
                                                 <textarea class="form-select form-select-solid" id="kt_docs_tinymce_basic2" name="why_us_artext">{{ $company->why_us_artext }}</textarea>
@@ -578,11 +578,11 @@
                                             <!--begin::Input group-->
                                             <div class="fv-row w-100 flex-md-root">
                                                 <!--begin::Label-->
-                                                <label class="required form-label">Why Us Ar Title</label>
+                                                <label class="required form-label">Why Us Title</label>
                                                 <!--end::Label-->
                                                 <!--begin::Input-->
                                                 <input type="text" name="why_us_artitle" class="form-control mb-2"
-                                                    placeholder=" Ar title" value="{{ $company->why_us_artitle }}" />
+                                                    placeholder=" title" value="{{ $company->why_us_artitle }}" />
 
 
                                             </div>
@@ -596,11 +596,11 @@
                                             <!--begin::Input group-->
                                             <div class="fv-row w-100 flex-md-root">
                                                 <!--begin::Label-->
-                                                <label class="required form-label">Visa video Ar Title</label>
+                                                <label class="required form-label">Visa video Title</label>
                                                 <!--end::Label-->
                                                 <!--begin::Input-->
                                                 <input type="text" name="visa_ar_title" class="form-control mb-2"
-                                                    placeholder=" Ar title" value="{{ $company->visa_ar_title }}" />
+                                                    placeholder=" title" value="{{ $company->visa_ar_title }}" />
 
 
                                             </div>
@@ -611,7 +611,7 @@
                                             <!--begin::Input group-->
                                             <div class="fv-row w-100 flex-md-root">
                                                 <!--begin::Label-->
-                                                <label class="form-label">Visa video Ar Desc</label>
+                                                <label class="form-label">Visa video Desc</label>
                                                 <!--end::Label-->
                                                 <!--begin::Editor-->
                                                 <textarea class="form-select form-select-solid" id="kt_docs_tinymce_basic2" name="visa_ar_text">{{ $company->visa_ar_text }}</textarea>
@@ -667,7 +667,7 @@
                                             <!--begin::Input group-->
                                             <div class="fv-row w-100 flex-md-root">
                                                 <!--begin::Label-->
-                                                <label class="form-label">Book Transport Ar Desc</label>
+                                                <label class="form-label">Book Transport Desc</label>
                                                 <!--end::Label-->
                                                 <!--begin::Editor-->
                                                 <textarea class="form-select form-select-solid" id="kt_docs_tinymce_basic2" name="book_transport_ar_desc">{{ $company->book_transport_ar_desc }}</textarea>
@@ -687,7 +687,7 @@
                                                 <!--end::Label-->
                                                 <!--begin::Input-->
                                                 <input type="text" name="book_transport_ar_title" class="form-control mb-2"
-                                                    placeholder=" Ar title" value="{{ $company->book_transport_ar_title }}" />
+                                                    placeholder=" title" value="{{ $company->book_transport_ar_title }}" />
 
 
                                             </div>
