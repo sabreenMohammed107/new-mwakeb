@@ -91,7 +91,7 @@ class MainController extends Controller
 
         ]);
     }
-    public function replcement(){
+    public function replacement(){
         $BreadCrumb = [["url" => "/", "name" => "سياسة الاستبدال"]];
         $Company = Company::first();
         return view("website.replacement",

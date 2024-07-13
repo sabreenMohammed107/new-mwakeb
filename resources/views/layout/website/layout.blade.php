@@ -302,14 +302,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                             <div class="contact_info qr-code-custome" >
 
-
-                                                       <div style="position: relative">
-                                                       <img src="{{ asset('/website_assets/images/Dijital.png') }}" width="270"  alt="Dijital">
-
-
-                                            </div>
 
 
                                             </div>
