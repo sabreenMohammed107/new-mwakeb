@@ -2,7 +2,7 @@
 
 return [
     /*----header*/
-    'safer'=>'سافر',
+    'safer'=>'مواكب',
 'register'=>'تسجيل دخول',
     'address' => 'العنوان',
     'phone' => 'الهاتف',

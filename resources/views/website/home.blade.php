@@ -1,4 +1,4 @@
-@extends("layout.website.layout", ["Company" => $Company,"title"=>"Safer | Home"])
+@extends("layout.website.layout", ["Company" => $Company,"title"=>"مواكب | الرئيسيه"])
 
 @section("bottom-header")
 <x-website.header.home :company="$Company" :countries="$Countries" :cities="$cities" />
