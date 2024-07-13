@@ -124,7 +124,7 @@ $localVar=LaravelLocalization::getCurrentLocale();
         <div class='header-chat'>
           <div class='head-home'>
             <div class='info-avatar'>
-                <img src="{{asset("/website_assets/images/llogo.JPG")}}" alt="profile picture "></div>
+                <img src="{{ asset('/website_assets/images/homePage/2.png') }}" alt="profile picture "></div>
             <p><span class="whatsapp-name">{{ __('links.safer') }}</span><br><small>
                 @if (LaravelLocalization::getCurrentLocale() === 'en')
 
