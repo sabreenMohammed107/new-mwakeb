@@ -84,7 +84,7 @@ License: For each use you must have a valid license purchased only from above li
                             <!--begin::Heading-->
                             <div class="text-center mb-10">
                                 <!--begin::Title-->
-                                <h1 class="text-dark mb-3">Sign In to Safer</h1>
+                                <h1 class="text-dark mb-3">Sign In to mwakeb</h1>
                                 <!--end::Title-->
                                 <!--begin::Link-->
                                 {{-- <div class="text-gray-400 fw-bold fs-4">New Here?
