@@ -78,7 +78,7 @@
     <link rel="stylesheet" href="{{ asset('/website_assets/css/owl.theme.default.css') }}">
     {{-- owl Carousel links --}}
     <!-- icon -->
-    <link rel="icon" href="{{ asset('/website_assets/images/homePage/logo.webp') }}">
+    <link rel="icon" href="{{ asset('/website_assets/images/homePage/2.png') }}">
     <link rel="stylesheet" href="{{ asset('/website_assets/css/whatsappStyle.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker3.min.css">
 
