@@ -185,13 +185,13 @@
                                                 </div>
                                                 <div class="col-6">
                                                     <ul>
-                                                        
+
                                                             <li><i class="fa-solid fa-angle-right"></i><a
                                                                 href="{{ LaravelLocalization::localizeUrl('/terms') }}">{{ __('links.term_condation') }}</a></li>
-                                                                
+
                                                             <li><i class="fa-solid fa-angle-right"></i><a
                                                                 href="{{ LaravelLocalization::localizeUrl('/policies/replacement') }}">سياسة الاستبدال</a></li>
-                                                                
+
                                                             <li><i class="fa-solid fa-angle-right"></i><a
                                                                 href="{{ LaravelLocalization::localizeUrl('/policies/refund') }}">سياسةالاسترجاع</a></li>
 
@@ -252,7 +252,7 @@
                                                 <div class="info" style="margin-left: 25px;">
 
                                                     <span >
-                                                        00905521501111 -  00905016451111 </span>
+                                                        0556437988 - 0533372512 </span>
                                                 </div>
                                             </div>
                                              <div class="contact_info" style="margin-bottom: 10px;">
@@ -261,10 +261,10 @@
                                                     @if (LaravelLocalization::getCurrentLocale() === 'en')
 
                                                     <span>
-                                                        For companies: 00905445019185</span>
+                                                        For companies: 0533372512</span>
                                                     @else
                                                     <span>
-                                                        للشركات: 00905445019185 </span>
+                                                        للشركات: 0533372512 </span>
                                                     @endif
 
                                                 </div>
@@ -272,7 +272,7 @@
                                             <div class="contact_info" style="margin-bottom: 10px;">
                                                 <div class="info">
                                                     <i class="fa-solid fa-envelope"></i>
-                                                    <span>Info@Safer.Travel</span>
+                                                    <span>info@mwakeb.com</span>
                                                 </div>
                                             </div>
                                             <div class="contact_info" style="margin-bottom: 10px;">
@@ -280,11 +280,11 @@
                                                     <i class="fa-solid fa-location-dot"></i>
                                                     @if (LaravelLocalization::getCurrentLocale() === 'en')
 
-                                                    <span>Sixth floor above Kababji Mahmoud Restaurant - Watan Square - Al-Fateh - Istanbul - Turkey</span>
+                                                    <span>طريق ال 100 - مخرج 15 - الروابي - السعودية، الرياض</span>
 
                                                     @else
                                                     <span>
-                                                        الطابق السادس فوق مطعم كبابجي محمود - ساحة الوطن - الفاتح - اسطنبول - تركيا</span>
+                                                        طريق ال 100 - مخرج 15 - الروابي - السعودية، الرياض</span>
                                                     @endif
                                                 </div>
                                             </div>
@@ -321,7 +321,7 @@
         <input type="hidden" id="chat_whatsapp" value="{{ $Company->chat_whatsapp }}" >
         @if (LaravelLocalization::getCurrentLocale() === 'en')
 
-        <h6>All copyrights reserved to safer 2022 </h6>
+        <h6>All copyrights reserved to mwakeb 2024 </h6>
 
         @else
         <span>
