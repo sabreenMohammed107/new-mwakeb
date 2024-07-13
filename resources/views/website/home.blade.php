@@ -187,15 +187,15 @@
                  </p>
                 <div class="start">
                   <span></span>
-                  <h6>@if (LaravelLocalization::getCurrentLocale() === 'en')
+                  {{-- <h6>@if (LaravelLocalization::getCurrentLocale() === 'en')
                     start from
 
                       @else
                    يبدأ من
-                      @endif</h6>
+                      @endif</h6> --}}
                   <span></span>
                 </div>
-                  <span> {{$mainOffer->cost}} $</span>
+                  {{-- <span> {{$mainOffer->cost}} $</span> --}}
                   <button class="btn">
                     <a href="{{ LaravelLocalization::localizeUrl('/offers') }}">  @if (LaravelLocalization::getCurrentLocale() === 'en')
                         Go to offers
@@ -234,9 +234,6 @@
                                 @else
                               {{$offer->subtitle_ar}}
                                 @endif
-                            </span>
-                            <span>
-                                {{$offer->cost}} $
                             </span>
                           </div>
 
@@ -300,224 +297,7 @@
     </div>
   </section>
 
-  <!-- blog section -->
-    <section class="blog_section ">
-      <img src="{{ asset('/website_assets/images/homePage/birds (2).webp') }}" alt="birds image">
 
-      <div class="blog_titles container">
-        <div class="title_info">
-          <h4>{{ __('links.blogs') }}</h4>
-          <p>
-            @if (LaravelLocalization::getCurrentLocale() === 'en')
-
-            Increase your knowledge with articles and interesting stories.
-@else
-زيادة معرفتك بالمقالات والقصص الشيقة.
-@endif
-
-          </p>
-        </div>
-        <div class="blog_filters ms-auto">
-          <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-            <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="pills-all-tab" data-bs-toggle="pill" data-bs-target="#pills-all" type="button" role="tab" aria-controls="pills-all" aria-selected="true"> <a> @if (LaravelLocalization::getCurrentLocale() === 'en')
-
-                    all
-                    @else
-                  الكل
-                    @endif</a></button>
-            </li>
-            @foreach ($BlogsCategories as $key => $Category)
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link @if($key == $BlogsCategories->count() - 1) nav-link-4 @endif" id="pills-all-tab{{$Category->id}}" data-bs-toggle="pill" data-bs-target="#pills-all{{$Category->id}}" type="button" role="tab" aria-controls="pills-all{{$Category->id}}" aria-selected="true"> <a> @if (LaravelLocalization::getCurrentLocale() === 'en')
-
-                        {{$Category->en_category}}
-                        @else
-                        {{$Category->ar_category}}
-                        @endif</a></button>
-                </li>
-            @endforeach
-        </ul>
-        </div>
-
-      </div>
-      <div class="filtred_data container">
-        <div class="tab-content" id="pills-tabContent">
-        @if($AllBlogs->count() > 0)
-        <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab">
-            <div class="row mx-0">
-              <div class="col-sm-12 col-md-12 col-xl-6">
-                <div class="blog_side">
-                  <div class="blog_image left_image" style="background-image: url({{ asset('uploads/blogs') }}/{{$AllBlogs[0]->image}});">
-                    <!-- <img src="./images/homePage/blog/blog-1.webp" alt="blog image"> -->
-                  </div>
-                  <div class="blog_info">
-                    <h5 class="left_heading">
-                        <a href="{{ LaravelLocalization::localizeUrl('/single-blog/'.$AllBlogs[0]->id.'/'.$AllBlogs[0]->slug) }}">
-                            @if (LaravelLocalization::getCurrentLocale() === 'en')
-
-                            {!! $AllBlogs[0]->en_breif !!}
-                            @else
-                            {!! $AllBlogs[0]->ar_breif !!}
-                            @endif
-
-                        </a>
-                    </h5>
-                    <p>
-
-                        @if (LaravelLocalization::getCurrentLocale() === 'en')
-
-                        {!! strip_tags(\Illuminate\Support\Str::limit($AllBlogs[0]->en_breif ?? '', $limit = 800, $end = '...')) !!}
-                        @else
-                        {!! strip_tags(\Illuminate\Support\Str::limit($AllBlogs[0]->ar_breif ?? '', $limit = 800, $end = '...')) !!}
-                        @endif
-                    </p>
-                    <a href="{{ LaravelLocalization::localizeUrl('/single-blog/'.$AllBlogs[0]->id.'/'.$AllBlogs[0]->slug) }}"   >
-                        {{ __('links.readMore') }} <i class="fa-solid fa-angle-right"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-12 col-md-12 col-xl-6">
-                <div class="blog_side blog_side_right">
-                  <div class="row mx-0">
-                    @for ($i = 1; $i < $AllBlogs->count(); $i++)
-                    <div class="col-sm-12 col-xl-12">
-                        <div class="blog_side_right">
-                         <div class="blog_image ">
-                           <img width="150" src="{{ asset('uploads/blogs') }}/{{$AllBlogs[$i]->image}}" alt="blog image">
-                         </div>
-                         <div class="blog_info">
-                           <h5>
-                            <a href="{{ LaravelLocalization::localizeUrl('/single-blog/'.$AllBlogs[$i]->id.'/'.$AllBlogs[$i]->slug) }}">
-
-                                @if (LaravelLocalization::getCurrentLocale() === 'en')
-
-                                {!! $AllBlogs[$i]->en_title !!}
-                            @else
-                            {!! $AllBlogs[$i]->ar_title !!}
-                            @endif
-                            </a>
-                           </h5>
-                           <p>
-                            @if (LaravelLocalization::getCurrentLocale() === 'en')
-
-                            {{ strip_tags(\Illuminate\Support\Str::limit($AllBlogs[$i]->en_breif ?? '', $limit = 300, $end = '...')) }}
-                            @else
-                            {{ strip_tags(\Illuminate\Support\Str::limit($AllBlogs[$i]->ar_breif ?? '', $limit = 300, $end = '...')) }}
-                            @endif
-
-                            </p>
-                           <a href="{{ LaravelLocalization::localizeUrl('/single-blog/'.$AllBlogs[$i]->id.'/'.$AllBlogs[$i]->slug) }}" >
-                            {{ __('links.readMore') }} <i class="fa-solid fa-angle-right"></i>
-                           </a>
-                         </div>
-                        </div>
-
-                    </div>
-                    @endfor
-                  </div>
-                </div>
-              </div>
-            </div>
-        </div>
-        @endif
-          @foreach ($BlogsCategories as $Category)
-          <div class="tab-pane fade" id="pills-all{{$Category->id}}" role="tabpanel" aria-labelledby="pills-today-tab{{$Category->id}}">
-            <div class="row mx-0">
-            @if($Category->blogs->count())
-                @foreach ($Category->blogs as $k => $blog)
-                    @if ($k == 0)
-                    <div class="col-sm-12 col-md-12 col-xl-6">
-                        <div class="blog_side">
-                        <div class="blog_image left_image" style="background-image: url({{asset("/website_assets/images/homePage/blog/{$blog->image}")}});">
-
-                        </div>
-                        <div class="blog_info">
-                            <h5 class="left_heading">
-                                <a href="{{ LaravelLocalization::localizeUrl('/single-blog/'.$blog->id.'/'.$blog->slug) }}">
-                                    @if (LaravelLocalization::getCurrentLocale() === 'en')
-
-                                    {!! $blog->en_title !!}
-                @else
-                {!! $blog->ar_title !!}
-                @endif
-
-                                </a>
-                            </h5>
-                            <p>
-                                @if (LaravelLocalization::getCurrentLocale() === 'en')
-
-                            {{ strip_tags(\Illuminate\Support\Str::limit($blog->en_breif ?? '', $limit = 300, $end = '...')) }}
-                            @else
-                            {{ strip_tags(\Illuminate\Support\Str::limit($blog->ar_breif ?? '', $limit = 300, $end = '...')) }}
-                            @endif
-
-                            </p>
-                            <a href="{{ LaravelLocalization::localizeUrl('/single-blog/'.$blog->id.'/'.$blog->slug) }}" >
-                                {{ __('links.readMore') }}<i class="fa-solid fa-angle-right"></i>
-                            </a>
-                        </div>
-                        </div>
-                    </div>
-                    @endif
-                @endforeach
-              @endif
-              <div class="col-sm-12 col-md-12 col-xl-6">
-                <div class="blog_side blog_side_right">
-                  <div class="row mx-0">
-                    @foreach ($Category->blogs as $k => $category_blog)
-                    @if($k > 0)
-                    <div class="col-sm-12 col-xl-12">
-                        <div class="blog_side_right">
-                         <div class="blog_image">
-                            <img width="150" src="{{ asset('uploads/blogs') }}/{{$category_blog->image}}" alt="blog image">
-
-                         </div>
-                         <div class="blog_info">
-                           <h5>
-                            <a href="{{url('/single-blog/'.$category_blog->id) }}">
-                                @if (LaravelLocalization::getCurrentLocale() === 'en')
-                                {!! $category_blog->en_title !!}
-
-
-                @else
-                {!! $category_blog->ar_title !!}
-
-                @endif
-
-
-                            </a>
-                           </h5>
-                           <p>
-                            @if (LaravelLocalization::getCurrentLocale() === 'en')
-
-                            {{ strip_tags(\Illuminate\Support\Str::limit($category_blog->en_text ?? '', $limit = 300, $end = '...')) }}
-                            @else
-                            {{ strip_tags(\Illuminate\Support\Str::limit($category_blog->ar_text ?? '', $limit = 300, $end = '...')) }}
-                            @endif
-
-
-
-                            </p>
-                           <a href="{{ LaravelLocalization::localizeUrl('/single-blog/'.$category_blog->id.'/'.$category_blog->slug) }}" >
-                            {{ __('links.readMore') }} <i class="fa-solid fa-angle-right"></i>
-                           </a>
-                         </div>
-                        </div>
-
-                    </div>
-                    @endif
-                    @endforeach
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          @endforeach
-        </div>
-      </div>
-    </section>
 @endsection
 
 @section('adds_js')
