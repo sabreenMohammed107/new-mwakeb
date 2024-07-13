@@ -317,7 +317,7 @@
     <!-- footer -->
 
     <!-- copy right section -->
-    <div class="copyright">
+    <div class="copyright text-center text-white">
         <input type="hidden" id="chat_whatsapp" value="{{ $Company->chat_whatsapp }}" >
         @if (LaravelLocalization::getCurrentLocale() === 'en')
 
