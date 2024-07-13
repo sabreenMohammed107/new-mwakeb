@@ -131,7 +131,7 @@
            <div class=" col-xl-2 col-md-12 col-sm-12">
             <div class="title">
               <div class="info">
-                <h4>{{ __('links.explore') }} <br>{{ __('links.turkey') }} </h4>
+                <h4 class="text-end">{{ __('links.explore') }} <br>{{ __('links.turkey') }} </h4>
               </div>
             </div>
           </div>
