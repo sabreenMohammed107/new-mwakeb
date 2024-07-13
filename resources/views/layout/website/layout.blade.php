@@ -190,10 +190,10 @@
                                                                 href="{{ LaravelLocalization::localizeUrl('/terms') }}">{{ __('links.term_condation') }}</a></li>
                                                                 
                                                             <li><i class="fa-solid fa-angle-right"></i><a
-                                                                href="{{ LaravelLocalization::localizeUrl('/policies/refund') }}">سياسة الاستبدال</a></li>
+                                                                href="{{ LaravelLocalization::localizeUrl('/policies/replacement') }}">سياسة الاستبدال</a></li>
                                                                 
                                                             <li><i class="fa-solid fa-angle-right"></i><a
-                                                                href="{{ LaravelLocalization::localizeUrl('/policies/replacement') }}">سياسةالاسترجاع</a></li>
+                                                                href="{{ LaravelLocalization::localizeUrl('/policies/refund') }}">سياسةالاسترجاع</a></li>
 
                                                     </ul>
                                                 </div>
