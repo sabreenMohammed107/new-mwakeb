@@ -223,7 +223,7 @@
     <section class="details_office container" style="padding-top: 0">
         <div class="row mx-0  mb-3">
             @isset($branches[0])
-                <div class="col-sm-12 col-md-6">
+                <div class="col-sm-12 col-md-6" style="padding: 50px 0;">
                     <div class="offices_info">
                         <div class="help_info">
                             <h6 class="mb-3">
