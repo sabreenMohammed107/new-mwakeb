@@ -33,6 +33,6 @@ class AppServiceProvider extends ServiceProvider
         $comFooter=Company::where('id',1)->firstorfail();
         $localVar=LaravelLocalization::getCurrentLocale();
 
-        View::share(['comFooter'=>$comFooter,'localVar'=>$localVar]);
+        View::share(['comFooter'=>$comFooter,'localVar'=>$localVar,'master'=>$master]);
     }
 }
