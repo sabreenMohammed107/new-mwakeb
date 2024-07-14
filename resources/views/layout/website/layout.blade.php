@@ -225,6 +225,99 @@
                                     <a href="http://" class="pay-link "> <img
                                             src="{{ asset('img/payment/stripe.png') }}" alt="stripe"
                                             srcset=""></a>
+                                                    <a href="http://" class="pay-link "> <img
+                                                            src="{{ asset('img/payment/stripe.png') }}" alt="stripe"
+                                                            srcset=""></a>
+                                                    <a href="http://" class="pay-link "> <img
+                                                            src="{{ asset('img/payment/mada-logo.png') }}" alt="mada-logo"
+                                                            srcset=""></a>
+                                                    <a href="http://" class="pay-link "> <img
+                                                            src="{{ asset('img/payment/tabby.png') }}" alt="tabby"
+                                                            srcset=""></a>
+                                                    <a href="http://" class="pay-link "> <img
+                                                            src="{{ asset('img/payment/tamara.png') }}" alt="tamara"
+                                                            srcset=""></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- contact details -->
+                                    <div class="col-xl-4 col-md-6">
+                                        <div class="contact_details">
+                                            <h6>{{ __('links.contact_us') }}</h6>
+
+                                            <div class="contact_info" style="margin-bottom: 10px;">
+                                                <div class="info">
+                                                    <i class="fa-solid fa-phone"></i>
+                                                    @if (LaravelLocalization::getCurrentLocale() === 'en')
+
+                                                    <span>For individuals: </span>
+                                                    @else
+                                                    <span> للافراد :</span>
+                                                    @endif
+
+                                                </div>
+                                            </div>
+                                            <div class="contact_info" style="margin-bottom: 10px;">
+                                                <div class="info" style="margin-left: 25px;">
+
+                                                    <span >
+                                                        0556437988 - 0533372512 </span>
+                                                </div>
+                                            </div>
+                                             <div class="contact_info" style="margin-bottom: 10px;">
+                                                <div class="info">
+                                                    <i class="fa-solid fa-phone"></i>
+                                                    @if (LaravelLocalization::getCurrentLocale() === 'en')
+
+                                                    <span>
+                                                        For companies: 0533372512</span>
+                                                    @else
+                                                    <span>
+                                                        للشركات: 0533372512 </span>
+                                                    @endif
+
+                                                </div>
+                                            </div>
+                                            <div class="contact_info" style="margin-bottom: 10px;">
+                                                <div class="info">
+                                                    <i class="fa-solid fa-envelope"></i>
+                                                    <span>info@mwakeb.com</span>
+                                                </div>
+                                            </div>
+                                            <div class="contact_info" style="margin-bottom: 10px;">
+                                                <div class="info">
+                                                    <i class="fa-solid fa-location-dot"></i>
+                                                    @if (LaravelLocalization::getCurrentLocale() === 'en')
+
+                                                    <span>طريق ال 100 - مخرج 15 - الروابي - السعودية، الرياض</span>
+
+                                                    @else
+                                                    <span>
+                                                        طريق ال 100 - مخرج 15 - الروابي - السعودية، الرياض</span>
+                                                    @endif
+                                                </div>
+                                            </div>
+
+                                            <div class="contact_info" style="margin:0">
+
+                                                <div class="icons-container">
+                                                    <div class="social-icons spinned">
+                                                        <a class="item facebook" href="{{ $comFooter->facebook }}" target="_blank" ><i
+                                                                class="fa-brands fa-facebook-f"></i></a>
+                                                        <a class="item youtube" href="{{ $comFooter->youtube }}" target="_blank" ><i
+                                                                class="fa-brands fa-youtube"></i></a>
+                                                        <a class="item instagram" href="{{ $comFooter->instagram }}" target="_blank" ><i
+                                                                class="fa-brands fa-instagram"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+                                            </div>
+                                        </div>
+                                    </div>
 
                                 </div>
                             </div>
