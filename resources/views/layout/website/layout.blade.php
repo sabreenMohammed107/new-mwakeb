@@ -226,9 +226,6 @@
                                             src="{{ asset('img/payment/stripe.png') }}" alt="stripe"
                                             srcset=""></a>
                                                     <a href="http://" class="pay-link "> <img
-                                                            src="{{ asset('img/payment/stripe.png') }}" alt="stripe"
-                                                            srcset=""></a>
-                                                    <a href="http://" class="pay-link "> <img
                                                             src="{{ asset('img/payment/mada-logo.png') }}" alt="mada-logo"
                                                             srcset=""></a>
                                                     <a href="http://" class="pay-link "> <img
