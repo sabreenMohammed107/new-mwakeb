@@ -340,7 +340,7 @@
                                                                 class="fa-brands fa-whatsapp"></i></a>
                                                         @endif
                                                         @if($comFooter->email)
-                                                        <a class="item email" href="{{ $comFooter->email }}" target="_blank" ><i
+                                                        <a class="item email" href="mailto:{{ $comFooter->email }}" target="_blank" ><i
                                                             class="fa-regular fa-envelope"></i></a>
                                                         @endif
                                                     </div>
