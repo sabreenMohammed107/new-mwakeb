@@ -3483,19 +3483,36 @@ body { direction: rtl ; }
           color: #425F9C!important
       }
       .social-icons .twitter {
-          color: #00ACEE!important
+          color: #00ACEE!important;
       }
       .social-icons .google {
-          color: #c00!important
+          color: #c00!important;
       }
       .social-icons .linkedin {
-          color: #0073B2!important
+          color: #0073B2!important;
       }
       .social-icons .youtube {
-          color: #EB3E40!important
+          color: #EB3E40!important;
       }
       .social-icons .instagram {
-          color: #5E8AAC!important
+          color: #5E8AAC!important;
+      }
+      .social-icons .snapchat{
+          color: #FFFC00!important;
+      }      
+      footer .contact_details .contact_info .social-icons .email i{
+          color: var(--main-color)!important;
+          margin-right: 0;
+
+      }
+      footer .contact_details .contact_info .social-icons .item:hover.snapchat i.fa-brands{
+          color: #000!important;
+      }
+      .social-icons .tiktok{
+          color: #000!important
+      }      
+      .social-icons .x:hover svg{
+        fill: #fff !important;
       }
 
       .facebook:hover {
@@ -3516,7 +3533,18 @@ body { direction: rtl ; }
       .instagram:hover {
           background:  linear-gradient(-45deg, #f09433 15%,#e6683c 15%,#dc2743 35%,#cc2366 50%,#bc1888 70%);
       }
-
+      .snapchat:hover{
+          background-color: #FFFC00!important
+      }      
+      .tiktok:hover{
+          background-color: #000!important
+      }
+      .x:hover {
+          background-color: #000!important
+      }
+      .whatsapp:hover {
+          background-color: #25D366!important;
+      }
 
       @-webkit-keyframes Social-Icons-Flipping {
           0% {

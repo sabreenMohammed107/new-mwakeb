@@ -304,12 +304,45 @@
 
                                                 <div class="icons-container">
                                                     <div class="social-icons spinned">
+                                                        @if ($comFooter->facebook)
+                                                            
                                                         <a class="item facebook" href="{{ $comFooter->facebook }}" target="_blank" ><i
-                                                                class="fa-brands fa-twitter-f"></i></a>
+                                                                class="fa-brands fa-facebook-f"></i></a>
+                                                        @endif
+                                                        @if ($comFooter->youtube)
+                                                            
                                                         <a class="item youtube" href="{{ $comFooter->youtube }}" target="_blank" ><i
                                                                 class="fa-brands fa-youtube"></i></a>
+                                                        @endif
+                                                        @if($comFooter->instagram)
                                                         <a class="item instagram" href="{{ $comFooter->instagram }}" target="_blank" ><i
                                                                 class="fa-brands fa-instagram"></i></a>
+                                                        @endif
+                                                        @if($comFooter->x)
+                                                        <a class="item x" href="{{ $comFooter->x }}" target="_blank" >
+                                                            <svg style="width:40%;fill:var(--main-color);" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>
+                                                        </a>
+                                                        @endif
+                                                        @if($comFooter->snapchat)
+                                                        <a class="item snapchat" href="{{ $comFooter->snapchat }}" target="_blank" ><i
+                                                                class="fa-brands fa-snapchat-ghost"></i></a>
+                                                        @endif
+                                                        @if($comFooter->instagram)
+                                                        <a class="item whatsapp" href="{{ $comFooter->whatsapp }}" target="_blank" ><i
+                                                                class="fa-brands fa-whatsapp"></i></a>
+                                                        @endif
+                                                        @if($comFooter->tiktok)
+                                                        <a class="item tiktok" href="{{ $comFooter->tiktok }}" target="_blank" ><i
+                                                                class="fa-brands fa-tiktok"></i></a>
+                                                        @endif
+                                                        @if($comFooter->whatsapp)
+                                                        <a class="item whatsapp" href="{{ $comFooter->whatsapp }}" target="_blank" ><i
+                                                                class="fa-brands fa-whatsapp"></i></a>
+                                                        @endif
+                                                        @if($comFooter->email)
+                                                        <a class="item email" href="{{ $comFooter->email }}" target="_blank" ><i
+                                                            class="fa-regular fa-envelope"></i></a>
+                                                        @endif
                                                     </div>
                                                 </div>
                                             </div>
