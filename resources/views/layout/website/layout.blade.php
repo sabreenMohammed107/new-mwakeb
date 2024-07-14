@@ -262,7 +262,7 @@
                                                 <div class="info" style="margin-left: 25px;">
 
                                                     <span >
-                                                        0556437988 - 0533372512 </span>
+                                                        {!! $master->phone !!} </span>
                                                 </div>
                                             </div>
                                              <div class="contact_info" style="margin-bottom: 10px;">
@@ -271,10 +271,10 @@
                                                     @if (LaravelLocalization::getCurrentLocale() === 'en')
 
                                                     <span>
-                                                        For companies: 0533372512</span>
+                                                        For companies:  {!! $master->phone !!}</span>
                                                     @else
                                                     <span>
-                                                        للشركات: 0533372512 </span>
+                                                        للشركات:  0543998011 </span>
                                                     @endif
 
                                                 </div>
@@ -282,7 +282,7 @@
                                             <div class="contact_info" style="margin-bottom: 10px;">
                                                 <div class="info">
                                                     <i class="fa-solid fa-envelope"></i>
-                                                    <span>info@mwakeb.com</span>
+                                                    <span>{{ $master->email }}</span>
                                                 </div>
                                             </div>
                                             <div class="contact_info" style="margin-bottom: 10px;">
@@ -290,11 +290,12 @@
                                                     <i class="fa-solid fa-location-dot"></i>
                                                     @if (LaravelLocalization::getCurrentLocale() === 'en')
 
-                                                    <span>طريق ال 100 - مخرج 15 - الروابي - السعودية، الرياض</span>
+                                                    <span>
+                                                        {{ $master->detailed_address_ar }}                                                    </span>
 
                                                     @else
                                                     <span>
-                                                        طريق ال 100 - مخرج 15 - الروابي - السعودية، الرياض</span>
+                                                        {{ $master->detailed_address_ar }}                                                    </span>
                                                     @endif
                                                 </div>
                                             </div>
