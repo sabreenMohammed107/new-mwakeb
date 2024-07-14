@@ -501,40 +501,6 @@
 
                                         <!--begin::Input group-->
 
-
-                                        <!--begin::Input group-->
-                                        <div class="d-flex flex-wrap gap-5">
-
-                                            <!--begin::Input group-->
-                                            <div class="fv-row w-100 flex-md-root">
-                                                <!--begin::Label-->
-                                                <label class="form-label">Book Transport Desc</label>
-                                                <!--end::Label-->
-                                                <!--begin::Editor-->
-                                                <textarea class="form-select form-select-solid" id="kt_docs_tinymce_basic2" name="book_transport_ar_desc">{{ $company->book_transport_ar_desc }}</textarea>
-                                                <!--end::Editor-->
-
-                                            </div>
-                                            <!--end::Input group-->
-
-                                        </div>
-                                        <!--begin::Input group-->
-                                        <div class="d-flex flex-wrap gap-5 mt-4">
-
-                                            <!--begin::Input group-->
-                                            <div class="fv-row w-100 flex-md-root">
-                                                <!--begin::Label-->
-                                                <label class="required form-label">Book Transport Title</label>
-                                                <!--end::Label-->
-                                                <!--begin::Input-->
-                                                <input type="text" name="book_transport_ar_title"
-                                                    class="form-control mb-2" placeholder=" title"
-                                                    value="{{ $company->book_transport_ar_title }}" />
-
-
-                                            </div>
-                                        </div>
-
                                         <div class="d-flex flex-wrap gap-5">
 
                                         </div>

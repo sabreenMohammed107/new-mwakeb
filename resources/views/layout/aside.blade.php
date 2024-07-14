@@ -25,10 +25,10 @@
                 data-kt-scroll-activate="{default: false, lg: true}" data-kt-scroll-height="auto"
                 data-kt-scroll-wrappers="#kt_aside_menu" data-kt-scroll-offset="20px"
                 data-kt-scroll-dependencies="#kt_aside_logo, #kt_aside_footer">
-                <div data-kt-menu-trigger="click" class="menu-item here show menu-accordion">
-                    <span class="menu-link">
+                <div class="menu-item here">
+                    <a class="menu-link" href="{{ route('admin.home') }}">
                         <span class="menu-icon">
-                            <!--begin::Svg Icon | path: icons/duotune/general/gen025.svg-->
+                            <!--begin::Svg Icon | path: icons/duotune/general/gen014.svg-->
                             <span class="svg-icon svg-icon-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                     viewBox="0 0 24 24" fill="none">
@@ -45,47 +45,8 @@
                             <!--end::Svg Icon-->
                         </span>
                         <span class="menu-title">Dashboards</span>
-                        <span class="menu-arrow"></span>
-                    </span>
-                    {{-- <div class="menu-sub menu-sub-accordion menu-active-bg">
-                                <div class="menu-item">
-                                    <a class="menu-link active" href="../dist/index.html">
-                                        <span class="menu-bullet">
-                                            <span class="bullet bullet-dot"></span>
-                                        </span>
-                                        <span class="menu-title">Multipurpose</span>
-                                    </a>
-                                </div>
-                                <div class="menu-item">
-                                    <a class="menu-link" href="../dist/dashboards/store-analytics.html">
-                                        <span class="menu-bullet">
-                                            <span class="bullet bullet-dot"></span>
-                                        </span>
-                                        <span class="menu-title">Store Analytics</span>
-                                    </a>
-                                </div>
-                                <div class="menu-item">
-                                    <a class="menu-link" href="../dist/dashboards/logistics.html">
-                                        <span class="menu-bullet">
-                                            <span class="bullet bullet-dot"></span>
-                                        </span>
-                                        <span class="menu-title">Logistics</span>
-                                    </a>
-                                </div>
-                                <div class="menu-item">
-                                    <a class="menu-link" href="../dist/dashboards/projects.html">
-                                        <span class="menu-bullet">
-                                            <span class="bullet bullet-dot"></span>
-                                        </span>
-                                        <span class="menu-title">Projects</span>
-                                    </a>
-                                </div>
-                            </div> --}}
+                    </a>
                 </div>
-
-
-
-
                 <div class="menu-item pt-5">
                     <div class="menu-content">
                         <span class="fw-bold text-muted text-uppercase fs-7">Settings</span>
@@ -731,7 +692,7 @@
                                 </span>
                                 <!--end::Svg Icon-->
                             </span>
-                            <span class="menu-title">Contact Us</span>
+                            <span class="menu-title">Messages</span>
                         </a>
                     </div>
                     <div class="menu-item">
