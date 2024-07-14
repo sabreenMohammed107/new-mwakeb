@@ -305,7 +305,7 @@
                                                 <div class="icons-container">
                                                     <div class="social-icons spinned">
                                                         <a class="item facebook" href="{{ $comFooter->facebook }}" target="_blank" ><i
-                                                                class="fa-brands fa-facebook-f"></i></a>
+                                                                class="fa-brands fa-twitter-f"></i></a>
                                                         <a class="item youtube" href="{{ $comFooter->youtube }}" target="_blank" ><i
                                                                 class="fa-brands fa-youtube"></i></a>
                                                         <a class="item instagram" href="{{ $comFooter->instagram }}" target="_blank" ><i
@@ -341,7 +341,7 @@
             <h6>All copyrights reserved to mwakeb 2024 </h6>
         @else
             <span>
-                جميع حقوق النشر محفوظة لشركة مواكب 2024</span>
+                جميع حقوق النشر محفوظة لوكالة مواكب 2024</span>
         @endif
 
     </div>

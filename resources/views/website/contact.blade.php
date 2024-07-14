@@ -90,7 +90,7 @@
                         <div class="card-body socail_info">
                             <div class="card_info">
                                 <h6>
-                                    {{ __('links.email') }}
+                                    البريد الإلكتروني
                                 </h6>
                                 <span class="info">
                                     <a href="mailto:{{ $master->email }}"> {{ $master->email }}</a>
@@ -222,37 +222,40 @@
 
     <section class="details_office container" style="padding-top: 0">
         <div class="row mx-0  mb-3">
-            @isset($branches[0])
+            @isset($branches)
+            @foreach ($branches as $branch)
+
                 <div class="col-sm-12 col-md-6" style="padding: 50px 0;">
                     <div class="offices_info">
                         <div class="help_info">
                             <h6 class="mb-3">
                                 @if (LaravelLocalization::getCurrentLocale() === 'en')
-                                    {{ $branches[0]->branch_enname }}
+                                    {{ $branch->branch_enname }}
                                 @else
-                                    {{ $branches[0]->branch_arname }}
+                                    {{ $branch->branch_arname }}
                                 @endif
 
 
                             </h6>
                             <span>
                                 @if (LaravelLocalization::getCurrentLocale() === 'en')
-                                    {{ $branches[0]->detailed_address_en }}
+                                    {{ $branch->detailed_address_en }}
                                 @else
-                                    {{ $branches[0]->detailed_address_ar }}
+                                    {{ $branch->detailed_address_ar }}
                                 @endif
                             </span>
                             {{-- <span> new york NY 10010</span> --}}
-                            <span> phone :<br> {!! $branches[0]->phone !!}</span>
+                            <span> رقم الهاتف :<br> {!! $branch->phone !!}</span>
                             {{-- <span>fax: {{ $branches[0]->fax }}</span> --}}
-                            <span>email :<br> {{ $branches[0]->email }}</span>
+                            <span>البريد الإلكتروني :<br> {{ $branch->email }}</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-sm-12">
-                    <iframe src=" {{ $branches[0]->google_map }}" style="border:0;" allowfullscreen="" loading="lazy"
+                    <iframe src=" {{ $branch->google_map }}" style="border:0;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
+                @endforeach
             @endisset
 
 
