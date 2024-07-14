@@ -382,42 +382,42 @@
     <script>
         $(document).ready(function() {
             $(document).on("click", "#send-it", function() {
-                var chatInput = document.getElementById("chat-input");
-                var chatWhatsapp = document.getElementById("chat_whatsapp").value;
-                if (chatInput.value !== "") {
-                    var baseUrl = "https://web.whatsapp.com/send";
-                    var message = encodeURIComponent(chatInput.value);
-                    var url = baseUrl + "?phone=" + chatWhatsapp + "&text=" + message;
+        var chatInput = document.getElementById("chat-input");
+        var chatWhatsapp = document.getElementById("chat_whatsapp").value;
+        if (chatInput.value !== "") {
+            var message = encodeURIComponent(chatInput.value);
+            console.log(message,chatWhatsapp)
+            var url = "https://web.whatsapp.com/send?phone=1274077377&text=" + message;
 
-                    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator
-                            .userAgent)) {
-                        url = "whatsapp://send?phone=" + chatWhatsapp + "&text=" + message;
-                    }
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                url = "whatsapp://send?phone=" + chatWhatsapp + "&text=" + message;
+            }
 
-                    window.open(url, "_blank");
-                }
-            });
+            window.open(url, "_blank");
+        }
+    });
 
-            $(document).on("click", ".informasi", function() {
-                var getNumber = $(this).children(".my-number").text();
-                var getNama = $(this).children(".info-chat").children(".chat-nama").text();
-                var getLabel = $(this).children(".info-chat").children(".chat-label").text();
 
-                $("#get-number").text(getNumber);
-                $("#get-nama").text(getNama);
-                $("#get-label").text(getLabel);
+    // $(document).on("click", ".informasi", function() {
+    //     var getNumber = $(this).children(".my-number").text();
+    //     var getNama = $(this).children(".info-chat").children(".chat-nama").text();
+    //     var getLabel = $(this).children(".info-chat").children(".chat-label").text();
 
-                $(".start-chat,.get-new").addClass("show").removeClass("hide");
-                $(".home-chat,.head-home").addClass("hide").removeClass("show");
-            });
+    //     $("#get-number").text(getNumber);
+    //     $("#get-nama").text(getNama);
+    //     $("#get-label").text(getLabel);
 
-            $(document).on("click", ".close-chat", function() {
-                $("#whatsapp-chat").addClass("hide").removeClass("show");
-            });
+    //     $(".start-chat,.get-new").addClass("show").removeClass("hide");
+    //     $(".home-chat,.head-home").addClass("hide").removeClass("show");
+    // });
 
-            $(document).on("click", ".blantershow-chat", function() {
-                $("#whatsapp-chat").addClass("show").removeClass("hide");
-            });
+    $(document).on("click", ".close-chat", function() {
+        $("#whatsapp-chat").addClass("hide").removeClass("show");
+    });
+
+    $(document).on("click", ".blantershow-chat", function() {
+        $("#whatsapp-chat").addClass("show").removeClass("hide");
+    });
             $(".owl-carousel").owlCarousel({
                 items: 4,
                 loop: true,

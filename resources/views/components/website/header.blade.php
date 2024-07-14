@@ -180,6 +180,9 @@ $localVar=LaravelLocalization::getCurrentLocale();
     Chat with Us
 </a>
 
+
+
+
 <!--Start Social Icon-->
 {{-- <div class="fixed-icon">
 	<div class="f-icon f1"><a href="https://www.facebook.com/Safer4Free/" target="_blank" ><i class="fab fa-facebook-f"></i></a></div>
