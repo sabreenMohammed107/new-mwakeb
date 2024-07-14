@@ -125,23 +125,6 @@
                                     <!--end::Card header-->
                                     <!--begin::Card body-->
                                     <div class="card-body pt-0">
-                                        <!--begin::Input group-->
-                                        <div class="d-flex flex-wrap gap-5">
-
-
-                                            <!--begin::Input group-->
-                                            <div class="fv-row w-100 flex-md-root">
-                                                <!--begin::Label-->
-                                                <label class="required form-label"> Title</label>
-                                                <!--end::Label-->
-                                                <!--begin::Input-->
-                                                <input type="text" name="overview_artitle" class="form-control mb-2"
-                                                    placeholder=" title" value="{{ $company->overview_artitle }}" />
-
-
-                                            </div>
-                                        </div>
-                                        <!--end::Input-->
 
                                         <!--begin::Input group-->
                                         <div class="d-flex flex-wrap gap-5">
@@ -150,12 +133,11 @@
                                             <!--begin::Input group-->
                                             <div class="fv-row w-100 flex-md-root">
                                                 <!--begin::Label-->
-                                                <label class="required form-label"> Sub Title</label>
+                                                <label class="required form-label">Title</label>
                                                 <!--end::Label-->
                                                 <!--begin::Input-->
                                                 <input type="text" name="overview_arsubtitle" class="form-control mb-2"
-                                                    placeholder=" Sub title"
-                                                    value="{{ $company->overview_arsubtitle }}" />
+                                                    placeholder=" Sub title" value="{{ $company->overview_arsubtitle }}" />
 
 
                                             </div>
@@ -163,45 +145,9 @@
                                         <!--end::Input-->
 
 
-{{-- login --}}
- <!--begin::Input group-->
- <div class="d-flex flex-wrap gap-5">
+                                        {{-- login --}}
 
-
-    <!--begin::Input group-->
-    <div class="fv-row w-100 flex-md-root">
-        <!--begin::Label-->
-        <label class="required form-label">Login  Title</label>
-        <!--end::Label-->
-        <!--begin::Input-->
-        <input type="text" name="login_ar_title" class="form-control mb-2"
-            placeholder="  title"
-            value="{{ $company->login_ar_title }}" />
-
-
-    </div>
-</div>
-<!--end::Input-->
- <!--begin::Input group-->
- <div class="d-flex flex-wrap gap-5">
-
-
-    <!--begin::Input group-->
-    <div class="fv-row w-100 flex-md-root">
-        <!--begin::Label-->
-        <label class="required form-label"> Login Sub Title</label>
-        <!--end::Label-->
-        <!--begin::Input-->
-        <input type="text" name="login_ar_sub_title" class="form-control mb-2"
-            placeholder=" Sub title"
-            value="{{ $company->login_ar_sub_title }}" />
-
-
-    </div>
-</div>
-<!--end::Input-->
-
-{{-- endlogin --}}
+                                        {{-- endlogin --}}
 
 
                                         <!--begin::Input group-->
@@ -328,25 +274,25 @@
 
 
                                         <!--begin::checkbox-->
-   <!--begin::Input group-->
-   <div class="d-flex flex-wrap gap-5">
-    <!--begin::Input group-->
-    <div class="fv-row w-100 flex-md-root">
-        <!--begin::Label-->
-        <label class="required form-label"> chat whatsapp</label>
-        <!--end::Label-->
-        <!--begin::Input-->
-        <input type="text" required name="chat_whatsapp"
-            class="form-control mb-2" placeholder=" chat whatsapp"
-            value="{{ $company->chat_whatsapp}}" />
+                                        <!--begin::Input group-->
+                                        <div class="d-flex flex-wrap gap-5">
+                                            <!--begin::Input group-->
+                                            <div class="fv-row w-100 flex-md-root">
+                                                <!--begin::Label-->
+                                                <label class="required form-label"> chat whatsapp</label>
+                                                <!--end::Label-->
+                                                <!--begin::Input-->
+                                                <input type="text" required name="chat_whatsapp"
+                                                    class="form-control mb-2" placeholder=" chat whatsapp"
+                                                    value="{{ $company->chat_whatsapp }}" />
 
 
-    </div>
-    <!--end::Input-->
+                                            </div>
+                                            <!--end::Input-->
 
 
-</div>
-<!--end::Input-->
+                                        </div>
+                                        <!--end::Input-->
 
 
                                     </div>
@@ -484,42 +430,6 @@
                                     <!--end::Card header-->
                                     <!--begin::Card body-->
                                     <div class="card-body pt-0">
-
-                                        <!--begin::Input group-->
-                                        <div class="d-flex flex-wrap gap-5">
-
-                                            <!--begin::Input group-->
-                                            <div class="fv-row w-100 flex-md-root">
-                                                <!--begin::Label-->
-                                                <label class="form-label">Limit Offer Ardesc</label>
-                                                <!--end::Label-->
-                                                <!--begin::Editor-->
-                                                <textarea class="form-select form-select-solid" id="kt_docs_tinymce_basic2" name="limit_offer_ardesc">{{ $company->limit_offer_ardesc }}</textarea>
-                                                <!--end::Editor-->
-
-                                            </div>
-                                            <!--end::Input group-->
-
-                                        </div>
-
-
-                                        <!--begin::Input group-->
-                                        <div class="d-flex flex-wrap gap-5">
-
-                                            <!--begin::Input group-->
-                                            <div class="fv-row w-100 flex-md-root">
-                                                <!--begin::Label-->
-                                                <label class="form-label">Best Hotels Desc</label>
-                                                <!--end::Label-->
-                                                <!--begin::Editor-->
-                                                <textarea class="form-select form-select-solid" id="kt_docs_tinymce_basic2" name="best_hotels_ar_desc">{{ $company->best_hotels_ar_desc }}</textarea>
-                                                <!--end::Editor-->
-
-                                            </div>
-                                            <!--end::Input group-->
-
-                                        </div>
-
                                         <!--begin::Input group-->
                                         <div class="d-flex flex-wrap gap-5">
 
@@ -552,85 +462,16 @@
 
                                             </div>
                                         </div>
-
-
-                                        {{-- ABOUT NEW --}}
-                                         <!--begin::Input group-->
-                                         <div class="d-flex flex-wrap gap-5">
-
-                                            <!--begin::Input group-->
-                                            <div class="fv-row w-100 flex-md-root">
-                                                <!--begin::Label-->
-                                                <label class="form-label">Why Us Desc</label>
-                                                <!--end::Label-->
-                                                <!--begin::Editor-->
-                                                <textarea class="form-select form-select-solid" id="kt_docs_tinymce_basic2" name="why_us_artext">{{ $company->why_us_artext }}</textarea>
-                                                <!--end::Editor-->
-
-                                            </div>
-                                            <!--end::Input group-->
-
-                                        </div>
-                                        <!--begin::Input group-->
-                                        <div class="d-flex flex-wrap gap-5 mt-4">
-
-
-                                            <!--begin::Input group-->
-                                            <div class="fv-row w-100 flex-md-root">
-                                                <!--begin::Label-->
-                                                <label class="required form-label">Why Us Title</label>
-                                                <!--end::Label-->
-                                                <!--begin::Input-->
-                                                <input type="text" name="why_us_artitle" class="form-control mb-2"
-                                                    placeholder=" title" value="{{ $company->why_us_artitle }}" />
-
-
-                                            </div>
-                                        </div>
-                                        {{-- END ABOUT --}}
-                                        {{-- visa data --}}
-                                         <!--begin::Input group-->
-                                         <div class="d-flex flex-wrap gap-5 mt-4">
-
-
-                                            <!--begin::Input group-->
-                                            <div class="fv-row w-100 flex-md-root">
-                                                <!--begin::Label-->
-                                                <label class="required form-label">Visa video Title</label>
-                                                <!--end::Label-->
-                                                <!--begin::Input-->
-                                                <input type="text" name="visa_ar_title" class="form-control mb-2"
-                                                    placeholder=" title" value="{{ $company->visa_ar_title }}" />
-
-
-                                            </div>
-                                        </div>
-                                         <!--begin::Input group-->
-                                         <div class="d-flex flex-wrap gap-5">
-
-                                            <!--begin::Input group-->
-                                            <div class="fv-row w-100 flex-md-root">
-                                                <!--begin::Label-->
-                                                <label class="form-label">Visa video Desc</label>
-                                                <!--end::Label-->
-                                                <!--begin::Editor-->
-                                                <textarea class="form-select form-select-solid" id="kt_docs_tinymce_basic2" name="visa_ar_text">{{ $company->visa_ar_text }}</textarea>
-                                                <!--end::Editor-->
-
-                                            </div>
-                                            <!--end::Input group-->
-
-                                        </div>
                                         <div class="d-flex flex-wrap gap-5">
                                             <!--begin::Input group-->
                                             <div class="fv-row w-100 flex-md-root">
                                                 <!--begin::Label-->
-                                                <label class="required form-label"> Visa video (embed youtube)</label>
+                                                <label class="required form-label"> Book Tour Vedio</label>
                                                 <!--end::Label-->
                                                 <!--begin::Input-->
-                                                <input type="text" required name="visa_vedio"
-                                                    class="form-control mb-2" placeholder="  Visa video embed youtube"
-                                                    value="{{ $company->visa_vedio }}" />
+                                                <input type="text" required name="book_tour_vedio"
+                                                    class="form-control mb-2" placeholder=" En Title"
+                                                    value="{{ $company->book_tour_vedio }}" />
 
 
                                             </div>
@@ -644,12 +485,12 @@
                                             <!--begin::Input group-->
                                             <div class="fv-row w-100 flex-md-root">
                                                 <!--begin::Label-->
-                                                <label for="book_img" class="btn btn-danger"> Book image  </label>
+                                                <label for="book_img" class="btn btn-danger"> Book image </label>
                                                 <!--end::Label-->
                                                 <!--begin::Input-->
                                                 {{ $company->book_img }}
-                                                <input type="file" id="book_img" style="visibility: hidden" name="book_img"
-                                                    class="form-control mb-2" placeholder=""
+                                                <input type="file" id="book_img" style="visibility: hidden"
+                                                    name="book_img" class="form-control mb-2" placeholder=""
                                                     value="{{ $company->book_img }}" />
 
 
@@ -686,8 +527,9 @@
                                                 <label class="required form-label">Book Transport Title</label>
                                                 <!--end::Label-->
                                                 <!--begin::Input-->
-                                                <input type="text" name="book_transport_ar_title" class="form-control mb-2"
-                                                    placeholder=" title" value="{{ $company->book_transport_ar_title }}" />
+                                                <input type="text" name="book_transport_ar_title"
+                                                    class="form-control mb-2" placeholder=" title"
+                                                    value="{{ $company->book_transport_ar_title }}" />
 
 
                                             </div>
@@ -702,12 +544,12 @@
                                             <!--begin::Input group-->
                                             <div class="fv-row w-100 flex-md-root">
                                                 <!--begin::Label-->
-                                                <label for="book_img2" class="btn btn-danger"> Transport image  </label>
+                                                <label for="book_img2" class="btn btn-danger"> Transport image </label>
                                                 <!--end::Label-->
                                                 <!--begin::Input-->
                                                 {{ $company->transport_img }}
-                                                <input type="file" id="book_img2" style="visibility: hidden" name="transport_img"
-                                                    class="form-control mb-2" placeholder=""
+                                                <input type="file" id="book_img2" style="visibility: hidden"
+                                                    name="transport_img" class="form-control mb-2" placeholder=""
                                                     value="{{ $company->transport_img }}" />
 
 

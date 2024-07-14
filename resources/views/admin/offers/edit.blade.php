@@ -31,53 +31,53 @@
         <!--begin::Container-->
         <div class="container-xxl">
             <form id="kt_ecommerce_add_category_form" class="form d-flex flex-column flex-lg-row"
-            action="{{ route('offers.update', $offer->id) }}" method="post" enctype="multipart/form-data">
-            @csrf
-            @method('PUT')
- <!--begin::Aside column-->
- <div class="d-flex flex-column gap-7 gap-lg-10 w-100 w-lg-300px mb-7 me-lg-10">
-     <!--begin::Thumbnail settings-->
-     <div class="card card-flush py-4">
-        <!--begin::Card header-->
-        <div class="card-header">
-            <!--begin::Card title-->
-            <div class="card-title">
-                <h2> Edit Thumbnail</h2>
-            </div>
-            <!--end::Card title-->
-        </div>
-        <!--end::Card header-->
-        <!--begin::Image input wrapper-->
-        <div class="card-body text-center pt-0">
-            <!--begin::Image input-->
-            <div class="image-input image-input-empty image-input-outline mb-3" data-kt-image-input="true"
-                style="background-image: url('{{ asset('uploads/offers') }}/{{ $offer->image }}')">
-                <div class="image-input-wrapper w-150px h-150px"
-                    style="background-image: url(' {{ asset('uploads/offers') }}/{{ $offer->image }}')">
+                action="{{ route('offers.update', $offer->id) }}" method="post" enctype="multipart/form-data">
+                @csrf
+                @method('PUT')
+                <!--begin::Aside column-->
+                <div class="d-flex flex-column gap-7 gap-lg-10 w-100 w-lg-300px mb-7 me-lg-10">
+                    <!--begin::Thumbnail settings-->
+                    <div class="card card-flush py-4">
+                        <!--begin::Card header-->
+                        <div class="card-header">
+                            <!--begin::Card title-->
+                            <div class="card-title">
+                                <h2> Edit Thumbnail</h2>
+                            </div>
+                            <!--end::Card title-->
+                        </div>
+                        <!--end::Card header-->
+                        <!--begin::Image input wrapper-->
+                        <div class="card-body text-center pt-0">
+                            <!--begin::Image input-->
+                            <div class="image-input image-input-empty image-input-outline mb-3" data-kt-image-input="true"
+                                style="background-image: url('{{ asset('uploads/offers') }}/{{ $offer->image }}')">
+                                <div class="image-input-wrapper w-150px h-150px"
+                                    style="background-image: url(' {{ asset('uploads/offers') }}/{{ $offer->image }}')">
+
+                                </div>
+                                <!--end::Preview existing avatar-->
+                                <!--begin::Edit-->
+                                <label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
+                                    data-kt-image-input-action="change" data-bs-toggle="tooltip" title="Change avatar">
+                                    <i class="bi bi-pencil-fill fs-7"></i>
+                                    <!--begin::Inputs-->
+                                    <input type="file" name="image" accept=".png, .jpg, .jpeg" />
+                                    <input type="hidden" name="avatar_remove" />
+                                    <!--end::Inputs-->
+                                </label>
+                                <!--end::Edit-->
+
+                            </div>
+                            <!--end::Image input-->
+                        </div>
+                        <!--end::Image input wrapper-->
+                    </div>
+                    <!--end::Thumbnail settings-->
+
 
                 </div>
-                <!--end::Preview existing avatar-->
-                <!--begin::Edit-->
-                <label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
-                    data-kt-image-input-action="change" data-bs-toggle="tooltip" title="Change avatar">
-                    <i class="bi bi-pencil-fill fs-7"></i>
-                    <!--begin::Inputs-->
-                    <input type="file" name="image" accept=".png, .jpg, .jpeg" />
-                    <input type="hidden" name="avatar_remove" />
-                    <!--end::Inputs-->
-                </label>
-                <!--end::Edit-->
-
-            </div>
-            <!--end::Image input-->
-        </div>
-        <!--end::Image input wrapper-->
-    </div>
-    <!--end::Thumbnail settings-->
-
-
-</div>
-<!--end::Aside column-->
+                <!--end::Aside column-->
                 <!--begin::Main column-->
                 <div class="d-flex flex-column flex-row-fluid gap-7 gap-lg-10">
                     <!--begin::General options-->
@@ -92,14 +92,14 @@
                         <!--begin::Card body-->
                         <div class="card-body pt-0">
 
-                               <!--begin::Input group-->
-                               <div class="mb-10 fv-row">
+                            <!--begin::Input group-->
+                            <div class="mb-10 fv-row">
                                 <!--begin::Label-->
-                                <label class="required form-label">  Title</label>
+                                <label class="required form-label"> Title</label>
                                 <!--end::Label-->
                                 <!--begin::Input-->
-                                <input type="text" value="{{$offer->subtitle_ar}}" name="subtitle_ar" class="form-control mb-2" placeholder=" Ar title"
-                                    value="" />
+                                <input type="text" value="{{ $offer->subtitle_ar }}" name="subtitle_ar"
+                                    class="form-control mb-2" placeholder=" Ar title" value="" />
 
 
                             </div>
@@ -111,8 +111,7 @@
 
                                 </label>
 
-                                <select name="city_id" required aria-label="Select a City"
-                                    data-control="select2"
+                                <select name="city_id" required aria-label="Select a City" data-control="select2"
                                     data-placeholder="Select a Country..."
                                     data-dropdown-parent="#kt_modal_new_targetEdit{{ $offer->id }}"
                                     class="form-select form-select-solid fw-bolder">
@@ -126,31 +125,25 @@
                                 </select>
                             </div>
                             <!--end::Input group-->
-       <!--begin::Input group-->
-       <div class="mb-10 fv-row">
-        <!--begin::Label-->
-        <label class="required form-label"> Cost</label>
-        <!--end::Label-->
-        <!--begin::Input-->
-        <input type="text" name="cost" class="form-control mb-2" placeholder=" cost"
-            value="{{$offer->cost}}" />
+                            <!--begin::Input group-->
+                            {{-- <div class="mb-10 fv-row">
+                                <label class="required form-label"> Cost</label>
+                                <input type="text" name="cost" class="form-control mb-2" placeholder=" cost"
+                                    value="{{ $offer->cost }}" />
+                            </div> --}}
+                            <!--end::Input-->
 
+                            <!--begin::Input group-->
+                            <div>
+                                <!--begin::Label-->
+                                <label class="form-label"> Text</label>
+                                <!--end::Label-->
+                                <!--begin::Editor-->
+                                <textarea class="tox-target" id="kt_docs_tinymce_basic2" name="offer_aroverview">{!! $offer->offer_aroverview !!}</textarea>
+                                <!--end::Editor-->
 
-    </div>
-    <!--end::Input-->
-
-<!--begin::Input group-->
-<div>
-    <!--begin::Label-->
-    <label class="form-label"> Text</label>
-    <!--end::Label-->
-    <!--begin::Editor-->
-    <textarea class="tox-target" id="kt_docs_tinymce_basic2"  name="offer_aroverview"
-        >{!! $offer->offer_aroverview !!}</textarea>
-    <!--end::Editor-->
-
-</div>
-<!--end::Input group-->
+                            </div>
+                            <!--end::Input group-->
 
 
 
@@ -220,33 +213,32 @@
     <!--end::Post-->
 @endsection
 @section('scripts')
-<script src="{{asset('dist/assets/plugins/custom/tinymce/tinymce.bundle.js')}}"></script>
+    <script src="{{ asset('dist/assets/plugins/custom/tinymce/tinymce.bundle.js') }}"></script>
     <script>
+        tinymce.init({
+            selector: '#kt_docs_tinymce_basic',
+            menubar: false,
 
-tinymce.init({
-    selector: '#kt_docs_tinymce_basic',
-    menubar: false,
-
-    toolbar: ["styleselect fontselect fontsizeselect",
+            toolbar: ["styleselect fontselect fontsizeselect",
                 "undo redo | cut copy paste | bold italic | link image | alignleft aligncenter alignright alignjustify",
                 "bullist numlist | outdent indent | blockquote subscript superscript | advlist | autolink | lists charmap | print preview |  code forecolor | backcolor"
             ],
             plugins: "advlist autolink link image lists charmap print preview code textcolor colorpicker",
             color_picker_callback: function(callback, value) {
-    callback('#FF00FF');
-  }
-});
-tinymce.init({
-    selector: '#kt_docs_tinymce_basic2',
-    menubar: false,
-    toolbar: ["styleselect fontselect fontsizeselect",
+                callback('#FF00FF');
+            }
+        });
+        tinymce.init({
+            selector: '#kt_docs_tinymce_basic2',
+            menubar: false,
+            toolbar: ["styleselect fontselect fontsizeselect",
                 "undo redo | cut copy paste | bold italic | link image | alignleft aligncenter alignright alignjustify",
                 "bullist numlist | outdent indent | blockquote subscript superscript | advlist | autolink | lists charmap | print preview |  code forecolor | backcolor"
             ],
             plugins: "advlist autolink link image lists charmap print preview code textcolor colorpicker",
             color_picker_callback: function(callback, value) {
-    callback('#FF00FF');
-  }
-});
+                callback('#FF00FF');
+            }
+        });
     </script>
 @endsection

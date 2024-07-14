@@ -26,7 +26,6 @@
 @endsection
 
 @section('content')
-
     <!--begin::Post-->
     <div class="post fs-6 d-flex flex-column-fluid" id="kt_post">
         <!--begin::Container-->
@@ -62,7 +61,7 @@
                         <!--begin::Add customer-->
                         {{-- <a href="#" class="btn btn-sm btn-primary me-3" data-bs-toggle="modal"
                             data-bs-target="#kt_modal_new_target">Add Offer</a> --}}
-                            <a href="{{ route('offers.create') }}" class="btn btn-primary">Add Offer</a>
+                        <a href="{{ route('offers.create') }}" class="btn btn-primary">Add Offer</a>
 
                         <!--end::Add customer-->
                     </div>
@@ -87,7 +86,7 @@
                                 <th class="min-w-150px">image</th>
                                 <th class="min-w-250px">city</th>
                                 <th class="min-w-150px">Sub Title</th>
-                                <th class="min-w-150px">cost </th>
+                                {{-- <th class="min-w-150px">cost </th> --}}
                                 <th class="text-end min-w-70px">Actions</th>
                             </tr>
                             <!--end::Table row-->
@@ -141,16 +140,11 @@
                                         </div>
 
                                     </td>
-                                    <td>
-
+                                    {{-- <td>
                                         <div class="d-flex">
-
-
                                             <span class="symbol-label">{{ $row->cost }}</span>
-
                                         </div>
-
-                                    </td>
+                                    </td> --}}
                                     <!--end::Type=-->
                                     <!--begin::Action=-->
                                     <td class="text-end">
@@ -175,9 +169,9 @@
                                                 {{-- <a data-bs-toggle="modal"
                                                     data-bs-target="#kt_modal_new_targetEdit{{ $row->id }}"
                                                     class="menu-link px-3">Edit</a> --}}
-                                                    <a href="{{ route('offers.edit', $row->id) }}"
-                                                        class="menu-link px-3">Edit</a>
-                                                </div>
+                                                <a href="{{ route('offers.edit', $row->id) }}"
+                                                    class="menu-link px-3">Edit</a>
+                                            </div>
 
                                             <!--end::Menu item-->
                                             <!--begin::Menu item-->
@@ -219,12 +213,12 @@
                                                         <span class="svg-icon svg-icon-1">
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="24"
                                                                 height="24" viewBox="0 0 24 24" fill="none">
-                                                                <rect opacity="0.5" x="6" y="17.3137"
-                                                                    width="16" height="2" rx="1"
-                                                                    transform="rotate(-45 6 17.3137)" fill="black" />
-                                                                <rect x="7.41422" y="6" width="16"
+                                                                <rect opacity="0.5" x="6" y="17.3137" width="16"
                                                                     height="2" rx="1"
-                                                                    transform="rotate(45 7.41422 6)" fill="black" />
+                                                                    transform="rotate(-45 6 17.3137)" fill="black" />
+                                                                <rect x="7.41422" y="6" width="16" height="2"
+                                                                    rx="1" transform="rotate(45 7.41422 6)"
+                                                                    fill="black" />
                                                             </svg>
                                                         </span>
                                                         <!--end::Svg Icon-->
@@ -395,8 +389,8 @@
                         <span class="svg-icon svg-icon-1">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none">
-                                <rect opacity="0.5" x="6" y="17.3137" width="16" height="2"
-                                    rx="1" transform="rotate(-45 6 17.3137)" fill="black" />
+                                <rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1"
+                                    transform="rotate(-45 6 17.3137)" fill="black" />
                                 <rect x="7.41422" y="6" width="16" height="2" rx="1"
                                     transform="rotate(45 7.41422 6)" fill="black" />
                             </svg>
@@ -493,15 +487,12 @@
 
                                 </label>
 
-                                <select name="city_id" required aria-label="Select a City"
-                                    data-control="select2"
-                                    data-placeholder="Select a City..."
-                                    data-dropdown-parent="#xx"
+                                <select name="city_id" required aria-label="Select a City" data-control="select2"
+                                    data-placeholder="Select a City..." data-dropdown-parent="#xx"
                                     class="form-select form-select-solid fw-bolder">
                                     <option value=""></option>
                                     @foreach ($cities as $city)
-                                        <option value="{{ $city->id }}"
-                                           >
+                                        <option value="{{ $city->id }}">
                                             {{ $city->ar_city }}
                                         </option>
                                     @endforeach
@@ -510,31 +501,27 @@
                             <!--end::Input group-->
                             <!--begin::Input group-->
                             <div class="d-flex flex-column mb-8">
-                                <div
-                                    class="form-check form-switch form-check-custom form-check-solid">
-                                    <input class="form-check-input" type="checkbox"
-                                        name="active[]" value="1"
-                                        id="flexSwitchDefault2"
-                                        checked />
-                                    <label class="form-check-label"
-                                        for="flexSwitchDefault2">
+                                <div class="form-check form-switch form-check-custom form-check-solid">
+                                    <input class="form-check-input" type="checkbox" name="active[]" value="1"
+                                        id="flexSwitchDefault2" checked />
+                                    <label class="form-check-label" for="flexSwitchDefault2">
                                         Active
                                     </label>
                                 </div>
                             </div>
                             <!--end::Input group-->
 
-                        <!--begin::Actions-->
-                        <div class="text-center">
-                            <button type="reset" id="kt_modal_new_target_cancel"
-                                class="btn btn-light me-3">Cancel</button>
-                            <button type="submit" id="kt_modal_new_target_submit" class="btn btn-primary">
-                                <span class="indicator-label">Submit</span>
-                                <span class="indicator-progress">Please wait...
-                                    <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
-                            </button>
-                        </div>
-                        <!--end::Actions-->
+                            <!--begin::Actions-->
+                            <div class="text-center">
+                                <button type="reset" id="kt_modal_new_target_cancel"
+                                    class="btn btn-light me-3">Cancel</button>
+                                <button type="submit" id="kt_modal_new_target_submit" class="btn btn-primary">
+                                    <span class="indicator-label">Submit</span>
+                                    <span class="indicator-progress">Please wait...
+                                        <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+                                </button>
+                            </div>
+                            <!--end::Actions-->
                     </form>
                     <!--end:Form-->
                 </div>

@@ -136,16 +136,11 @@
                                 </select>
                             </div>
                              <!--begin::Input group-->
-                             <div class="mb-10 fv-row">
-                                <!--begin::Label-->
+                             {{-- <div class="mb-10 fv-row">
                                 <label class="required form-label"> Cost</label>
-                                <!--end::Label-->
-                                <!--begin::Input-->
                                 <input type="text" name="cost" class="form-control mb-2" placeholder=" cost"
                                     value="" />
-
-
-                            </div>
+                            </div> --}}
                             <!--end::Input-->
                             <!--begin::Input group-->
                             <div>
