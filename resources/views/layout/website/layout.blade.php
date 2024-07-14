@@ -302,12 +302,12 @@
                                                 <div class="icons-container">
                                                     <div class="social-icons spinned">
                                                         @if ($comFooter->facebook)
-                                                            
+
                                                         <a class="item facebook" href="{{ $comFooter->facebook }}" target="_blank" ><i
                                                                 class="fa-brands fa-facebook-f"></i></a>
                                                         @endif
                                                         @if ($comFooter->youtube)
-                                                            
+
                                                         <a class="item youtube" href="{{ $comFooter->youtube }}" target="_blank" ><i
                                                                 class="fa-brands fa-youtube"></i></a>
                                                         @endif
@@ -435,20 +435,21 @@
     <script>
         $(document).ready(function() {
             $(document).on("click", "#send-it", function() {
-        var chatInput = document.getElementById("chat-input");
-        var chatWhatsapp = document.getElementById("chat_whatsapp").value;
-        if (chatInput.value !== "") {
-            var message = encodeURIComponent(chatInput.value);
-            console.log(message,chatWhatsapp)
-            var url = "https://web.whatsapp.com/send?phone=1274077377&text=" + message;
+    var chatInput = document.getElementById("chat-input");
+    var chatWhatsapp = "+966533372512"; // Replaced 00 with + and removed leading zeros
+    if (chatInput.value !== "") {
+        var message = encodeURIComponent(chatInput.value);
+        console.log(message, chatWhatsapp);
+        var url = "https://web.whatsapp.com/send?phone=" + chatWhatsapp + "&text=" + message;
 
-            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-                url = "whatsapp://send?phone=" + chatWhatsapp + "&text=" + message;
-            }
-
-            window.open(url, "_blank");
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            url = "whatsapp://send?phone=" + chatWhatsapp + "&text=" + message;
         }
-    });
+
+        window.open(url, "_blank");
+    }
+});
+
 
 
     // $(document).on("click", ".informasi", function() {
