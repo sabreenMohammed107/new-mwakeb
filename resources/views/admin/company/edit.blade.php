@@ -504,26 +504,6 @@
                                         <div class="d-flex flex-wrap gap-5">
 
                                         </div>
-                                        <!--end::Input-->
-
-                                        <div class="d-flex flex-wrap gap-5">
-                                            <!--begin::Input group-->
-                                            <div class="fv-row w-100 flex-md-root">
-                                                <!--begin::Label-->
-                                                <label for="book_img2" class="btn btn-danger"> Transport image </label>
-                                                <!--end::Label-->
-                                                <!--begin::Input-->
-                                                {{ $company->transport_img }}
-                                                <input type="file" id="book_img2" style="visibility: hidden"
-                                                    name="transport_img" class="form-control mb-2" placeholder=""
-                                                    value="{{ $company->transport_img }}" />
-
-
-
-                                            </div>
-                                            <!--end::Input-->
-                                        </div>
-
                                     </div>
                                     <!--end::Card header-->
                                 </div>
