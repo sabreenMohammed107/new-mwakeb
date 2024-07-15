@@ -64,7 +64,7 @@
                                     @if (LaravelLocalization::getCurrentLocale() === 'en')
                                         phone number
                                     @else
-                                        رقم التليفون
+                                        رقم الجوال
                                     @endif
                                 </h6>
                                 <span class="info">
