@@ -60,7 +60,10 @@ class Company extends Model
     'visa_ar_title',
     'visa_en_text',
     'visa_ar_text',
-
+'snapchat',
+'x',
+'tiktok',
+'email'
 
     ];
 }

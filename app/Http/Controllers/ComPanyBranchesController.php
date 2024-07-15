@@ -65,9 +65,11 @@ class ComPanyBranchesController extends Controller
      * @param  \App\Models\Company  $company
      * @return \Illuminate\Http\Response
      */
-    public function show(Company_branch $company)
+    public function show($id)
     {
-        return view($this->viewName . 'show', compact(['company']));
+        $companyBranch = Company_branch::find($id);
+
+        return view($this->viewName . 'show', compact('companyBranch'));
     }
 
     /**
@@ -93,7 +95,13 @@ class ComPanyBranchesController extends Controller
         $companyBranch = Company_branch::find($id);
 
         $companyBranch->update($input);
-        return redirect()->route($this->routeName. 'edit',$companyBranch->id)->with('flash_success', 'Successfully Saved!');    }
+        if($id ==1){
+            return redirect()->route($this->routeName. 'edit',$companyBranch->id)->with('flash_success', 'Successfully Saved!');
+        }else{
+            return redirect()->route($this->routeName. 'show',$companyBranch->id)->with('flash_success', 'Successfully Saved!');
+         }
+
+        }
 
 
     /**

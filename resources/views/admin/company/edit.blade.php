@@ -205,12 +205,6 @@
                                         </div>
                                         <!--begin::Social options-->
                                         <div class="card card-flush py-4">
-                                            <!--begin::Card header-->
-                                            <div class="card-header">
-                                                <div class="card-title">
-                                                    <h2>Social links</h2>
-                                                </div>
-                                                <!--begin::Row-->
 
                                                 <div class="row row-cols-1 row-cols-md-3 row-cols-lg-1 row-cols-xl-3 g-9"
                                                     data-kt-buttons="true"
@@ -263,6 +257,59 @@
                                                 </div>
                                                 <!--end::Row-->
 
+                                                   <!--begin::Row-->
+
+                                                   <div class="row row-cols-1 row-cols-md-3 row-cols-lg-1 row-cols-xl-3 g-9"
+                                                   data-kt-buttons="true"
+                                                   data-kt-buttons-target="[data-kt-button='true']">
+
+
+                                                   <!--begin::Col-->
+                                                   <div class="col">
+                                                       <!--begin::Option-->
+                                                       <!--begin::Label-->
+                                                       <label class="form-label">Snapchat</label>
+                                                       <!--end::Label-->
+                                                       <!--begin::Input-->
+                                                       <input type="text" class="form-control mb-2" name="snapchat"
+                                                           placeholder="snapchat"
+                                                           value="{{ $company->snapchat }}" />
+                                                       <!--end::Input-->
+                                                       <!--end::Option-->
+                                                   </div>
+
+                                                   <!--begin::Tax-->
+                                                   <div class="col">
+                                                       <!--begin::Input group-->
+                                                       <div class="fv-row w-100 flex-md-root">
+                                                           <label class=" form-label">Twitter</label>
+                                                           <!--end::Label-->
+                                                           <!--begin::Input-->
+                                                           <input type="text" name="x"
+                                                               class="form-control mb-2" placeholder="twitter"
+                                                               value="{{ $company->x }}" />
+                                                           <!--end::Input-->
+                                                       </div>
+                                                   </div>
+                                                   <!--end::Input group-->
+                                                   <!--begin::Input group-->
+                                                   <div class="col">
+                                                       <div class="fv-row w-100 flex-md-root">
+                                                           <!--begin::Label-->
+                                                           <label class=" form-label">Tiktok</label>
+                                                           <!--end::Label-->
+                                                           <!--begin::Input-->
+                                                           <input type="text" name="tiktok"
+                                                               class="form-control mb-2" placeholder="tiktok"
+                                                               value="{{ $company->tiktok }}" />
+                                                           <!--end::Input-->
+                                                       </div>
+                                                       <!--end::Input group-->
+                                                   </div>
+                                                   <!--end:Tax-->
+                                               </div>
+                                               <!--end::Row-->
+
                                             </div>
                                             <!--end::Card header-->
 
@@ -290,7 +337,17 @@
                                             </div>
                                             <!--end::Input-->
 
+                                            <div class="fv-row w-100 flex-md-root">
+                                                <!--begin::Label-->
+                                                <label class="required form-label"> email</label>
+                                                <!--end::Label-->
+                                                <!--begin::Input-->
+                                                <input type="text" required name="email"
+                                                    class="form-control mb-2" placeholder="email"
+                                                    value="{{ $company->email }}" />
 
+
+                                            </div>
                                         </div>
                                         <!--end::Input-->
 
