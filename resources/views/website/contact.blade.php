@@ -245,7 +245,8 @@
                                 @endif
                             </span>
                             {{-- <span> new york NY 10010</span> --}}
-                            <span> رقم الهاتف :<br> {!! $branch->phone !!}</span>
+                            <span> رقم الجوال :<br> {!! $branch->phone !!}</span>
+                            <span> رقم الهاتف :<br> {!! $branch->ar_phone !!}</span>
                             {{-- <span>fax: {{ $branches[0]->fax }}</span> --}}
                             <span>البريد الإلكتروني :<br> {{ $branch->email }}</span>
                         </div>
