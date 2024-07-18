@@ -323,7 +323,7 @@
                                                                 class="fa-brands fa-snapchat-ghost"></i></a>
                                                         @endif
                                                         @if($comFooter->chat_whatsapp)
-                                                        <a class="item whatsapp" href="{{ $comFooter->chat_whatsapp }}" target="_blank" ><i
+                                                        <a class="item whatsapp"  href="https://{{ $comFooter->chat_whatsapp }}" target="_blank" ><i
                                                                 class="fa-brands fa-whatsapp"></i></a>
                                                         @endif
                                                         @if($comFooter->tiktok)
