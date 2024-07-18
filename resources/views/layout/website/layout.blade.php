@@ -300,12 +300,12 @@
                                                 <div class="icons-container">
                                                     <div class="social-icons spinned">
                                                         @if ($comFooter->facebook)
-                                                            
+
                                                         <a class="item facebook" href="{{ $comFooter->facebook }}" target="_blank" ><i
                                                                 class="fa-brands fa-facebook-f"></i></a>
                                                         @endif
                                                         @if ($comFooter->youtube)
-                                                            
+
                                                         <a class="item youtube" href="{{ $comFooter->youtube }}" target="_blank" ><i
                                                                 class="fa-brands fa-youtube"></i></a>
                                                         @endif
@@ -322,17 +322,13 @@
                                                         <a class="item snapchat" href="{{ $comFooter->snapchat }}" target="_blank" ><i
                                                                 class="fa-brands fa-snapchat-ghost"></i></a>
                                                         @endif
-                                                        @if($comFooter->instagram)
-                                                        <a class="item whatsapp" href="{{ $comFooter->whatsapp }}" target="_blank" ><i
+                                                        @if($comFooter->chat_whatsapp)
+                                                        <a class="item whatsapp" href="{{ $comFooter->chat_whatsapp }}" target="_blank" ><i
                                                                 class="fa-brands fa-whatsapp"></i></a>
                                                         @endif
                                                         @if($comFooter->tiktok)
                                                         <a class="item tiktok" href="{{ $comFooter->tiktok }}" target="_blank" ><i
                                                                 class="fa-brands fa-tiktok"></i></a>
-                                                        @endif
-                                                        @if($comFooter->whatsapp)
-                                                        <a class="item whatsapp" href="{{ $comFooter->whatsapp }}" target="_blank" ><i
-                                                                class="fa-brands fa-whatsapp"></i></a>
                                                         @endif
                                                         @if($comFooter->email)
                                                         <a class="item email" href="mailto:{{ $comFooter->email }}" target="_blank" ><i
