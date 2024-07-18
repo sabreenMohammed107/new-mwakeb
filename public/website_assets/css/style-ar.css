@@ -17,16 +17,21 @@ body { direction: rtl ; }
   }
   .back-to-top{
     position: fixed;
-    bottom: 26px;
-    right: 185px;
-    color: #1C4482;
-    background-color: #fff;
+    right: 30px;
+    bottom: 85px;
+    background-color: #1C4482;
+    box-shadow: 0px 0px 5px #2e2e2e;
+    color: #fff;
     width: 40px;
     height: 40px;
     text-align: center;
     line-height: 40px;
     border-radius: 50%;
     z-index: 1000;
+  }
+  .back-to-top:hover{
+    background-color: #2761b8;
+    color: #fff;
   }
   .cartbox{
       position: fixed;
