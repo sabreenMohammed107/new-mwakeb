@@ -33,9 +33,9 @@
                             {{$offer->city->ar_city ?? ""}}
                             @endif
                              -
-                             {{-- <span>
+                             <span>
                                 {{$offer->cost}} $
-                            </span> --}}
+                            </span>
 
                 </div>
             </div>

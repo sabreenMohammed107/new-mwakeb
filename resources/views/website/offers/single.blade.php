@@ -1,4 +1,4 @@
-@extends('layout.website.layout', ['Company' => $Company, 'title' => 'مواكب | {{$offer->subtitle_ar}}'])
+@extends('layout.website.layout', ['Company' => $Company, 'title' => "مواكب | $offer->subtitle_ar"])
 
 @section('adds_css')
     <meta name="csrf-token" content="{{ csrf_token() }}">
