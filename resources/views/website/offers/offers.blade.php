@@ -44,11 +44,11 @@
                                 alt="latest blog image">
                             <div class="blog_info">
                                 <h6 style="margin-bottom: 0;font-size: 16px" >
-                                        @if (LaravelLocalization::getCurrentLocale() === 'en')
-                                            {{ strip_tags(Str::limit($obj->subtitle_en ?? '', $limit = 50, $end = '')) }}
-                                        @else
-                                            {{ strip_tags(Str::limit($obj->subtitle_ar ?? '', $limit = 50, $end = '')) }}
-                                        @endif
+                                    @if (LaravelLocalization::getCurrentLocale() === 'en')
+                                        {{ strip_tags(Str::words($obj->subtitle_en ?? '', $words = 10, $end = '...')) }}
+                                    @else
+                                        {{ strip_tags(Str::words($obj->subtitle_ar ?? '', $words = 10, $end = '...')) }}
+                                    @endif
 
                                     </h6>
                                 <p>
