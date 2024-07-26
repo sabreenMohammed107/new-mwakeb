@@ -105,32 +105,33 @@
                             </div>
                             <!--end::Input-->
 
-                            <div>
+                            <div id="xx">
                                 <label class="fs-6 fw-bold form-label mt-3">
                                     <option value="">Select a City...</option>
 
                                 </label>
+                                <select name="city_id" required aria-label="Select a City"
+                                data-control="select2"
+                                data-placeholder="Select a City..."
+                                data-dropdown-parent="#xx"
+                                class="form-select form-select-solid fw-bolder">
+                                <option value=""></option>
+                                @foreach ($cities as $city)
+                                    <option value="{{ $city->id }}"
+                                        {{ $offer->city_id == $city->id ? 'selected' : '' }} >
+                                        {{ $city->ar_city }}
+                                    </option>
+                                @endforeach
+                            </select>
 
-                                <select name="city_id" required aria-label="Select a City" data-control="select2"
-                                    data-placeholder="Select a Country..."
-                                    data-dropdown-parent="#kt_modal_new_targetEdit{{ $offer->id }}"
-                                    class="form-select form-select-solid fw-bolder">
-                                    <option value=""></option>
-                                    @foreach ($cities as $city)
-                                        <option value="{{ $city->id }}"
-                                            {{ $offer->city_id == $city->id ? 'selected' : '' }}>
-                                            {{ $city->ar_city }}
-                                        </option>
-                                    @endforeach
-                                </select>
                             </div>
                             <!--end::Input group-->
                             <!--begin::Input group-->
-                            {{-- <div class="mb-10 fv-row">
+                            <div class="mb-10 fv-row">
                                 <label class="required form-label"> Cost</label>
                                 <input type="text" name="cost" class="form-control mb-2" placeholder=" cost"
                                     value="{{ $offer->cost }}" />
-                            </div> --}}
+                            </div>
                             <!--end::Input-->
 
                             <!--begin::Input group-->
@@ -170,8 +171,7 @@
 
                             </div>
                             <!--end:checkbox-->
-                            <div class="d-flex flex-wrap gap-5 mt-4">
-                                <!--begin::Input group-->
+                            {{-- <div class="d-flex flex-wrap gap-5 mt-4">
                                 <div class="fv-row w-100 flex-md-root">
                                     <div class="form-check form-switch form-check-custom form-check-solid">
                                         <input class="form-check-input" type="checkbox" name="status[]" value="main"
@@ -181,9 +181,7 @@
                                         </label>
                                     </div>
                                 </div>
-                                <!--end::Input group-->
-
-                            </div>
+                            </div> --}}
                             <!--end:checkbox-->
                         </div>
                         <!--end::Card header-->
