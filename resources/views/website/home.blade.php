@@ -104,7 +104,7 @@
                                                             {{ $City->subtitle_ar }}
                                                         @endif
                                                     </span>
-                                                    <div class="explore_links">
+                                                    {{-- <div class="explore_links">
                                                         <button class="btn ">
                                                             <a
                                                                 href="{{ LaravelLocalization::getLocalizedURL($localVar, route('hotelByCity', $City->city->id)) }}">
@@ -117,7 +117,7 @@
                                                                 <i class="fa-solid fa-plane"></i>
                                                             </a>
                                                         </button>
-                                                    </div>
+                                                    </div> --}}
                                                 </div>
                                             </div>
                                         </div>
