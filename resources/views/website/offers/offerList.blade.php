@@ -3,18 +3,19 @@
     @foreach ($offers as $offer)
     <div class="col-sm-12 col-md-6 ">
         <div class="card-content">
+            <a href="{{ LaravelLocalization::localizeUrl('/single-offer/'.$offer->id.'/'.$offer->slug) }}" >
             <div class=" card  tours_card hotels_card">
                 <img class="w-100" src="{{ asset('uploads/offers') }}/{{ $offer->image }}" alt=" blogimage">
                 <div class="card-body hotel_card_info"  style="height: 115px; max-height: 115px; overflow: hidden;">
                     <div class="card_info">
-                        <h5 style="text-align: center;text-align-last:center"><a href="{{ LaravelLocalization::localizeUrl('/single-offer/'.$offer->id.'/'.$offer->slug) }}" >
+                        <h5 style="text-align: center;text-align-last:center">
                             @if (LaravelLocalization::getCurrentLocale() === 'en')
                        {{$offer->subtitle_en}}
 
                         @else
                       {{$offer->subtitle_ar}}
                         @endif
-                    </a> </h5>
+                     </h5>
                 </div>
                     <span>
                         @if (LaravelLocalization::getCurrentLocale() === 'en')
@@ -33,12 +34,13 @@
                             {{$offer->city->ar_city ?? ""}}
                             @endif
                              -
-                             {{-- <span>
-                                {{$offer->cost}} $
-                            </span> --}}
+                             <span>
+                                {{$offer->cost}} رس
+                            </span>
 
                 </div>
             </div>
+        </a>
         </div>
     </div>
 
@@ -46,6 +48,8 @@
 
 
 </div>
+@if ($offers->lastPage() > 1)
+
 <nav aria-label="Page navigation page_pagination example">
     <ul class="pagination">
         <!-- a Tag for previous page -->
@@ -60,3 +64,4 @@
     </ul>
 
 </nav>
+@endif

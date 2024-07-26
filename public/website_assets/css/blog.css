@@ -5,7 +5,7 @@
     flex-direction: column;
 }
 .filtrered_cards .tours_card img {
-    max-height: 257px;
+    /* max-height: 257px; */
 }
 .hotels .hotels_card .hotel_card_info h5 a {
     margin-bottom: 20px;

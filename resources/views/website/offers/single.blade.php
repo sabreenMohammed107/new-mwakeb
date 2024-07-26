@@ -1,4 +1,4 @@
-@extends('layout.website.layout', ['Company' => $Company, 'title' => 'مواكب | {{$offer->subtitle_ar}}'])
+@extends('layout.website.layout', ['Company' => $Company, 'title' => "مواكب | $offer->subtitle_ar"])
 
 @section('adds_css')
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -39,15 +39,15 @@
                                             @else
                                             {{$offer->city->ar_city ?? ""}}
                                             @endif
-                                            - {{ $offer->cost }} $
+                                            - {{ $offer->cost }} رس
 
                                         </p>
                                     <p>
                                         @if (LaravelLocalization::getCurrentLocale() === 'en')
 
-                                        {!! $blog->offer_enoverview ?? '' !!}
+                                        {!! $offer->offer_enoverview ?? '' !!}
                                         @else
-                                        {!! $blog->offer_aroverview ?? '' !!}
+                                        {!! $offer->offer_aroverview ?? '' !!}
                                         @endif
                                      </p>
 

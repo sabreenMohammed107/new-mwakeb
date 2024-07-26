@@ -50,7 +50,7 @@
                                                         {{ $City->subtitle_ar }}
                                                     @endif
                                                 </span>
-                                                <div class="explore_links">
+                                                {{-- <div class="explore_links">
                                                     <button class="btn ">
                                                         <a
                                                             href="{{ LaravelLocalization::getLocalizedURL($localVar, route('hotelByCity', $City->city->id)) }}">
@@ -63,7 +63,7 @@
                                                             <i class="fa-solid fa-plane"></i>
                                                         </a>
                                                     </button>
-                                                </div>
+                                                </div> --}}
                                             </div>
                                         </div>
                                     </div>
@@ -104,7 +104,7 @@
                                                             {{ $City->subtitle_ar }}
                                                         @endif
                                                     </span>
-                                                    <div class="explore_links">
+                                                    {{-- <div class="explore_links">
                                                         <button class="btn ">
                                                             <a
                                                                 href="{{ LaravelLocalization::getLocalizedURL($localVar, route('hotelByCity', $City->city->id)) }}">
@@ -117,7 +117,7 @@
                                                                 <i class="fa-solid fa-plane"></i>
                                                             </a>
                                                         </button>
-                                                    </div>
+                                                    </div> --}}
                                                 </div>
                                             </div>
                                         </div>
@@ -170,18 +170,14 @@
                             <div class="card-body explore_card adventure_mind">
                                 <div class="header_info">
                                     <h5>
-                                        @if (LaravelLocalization::getCurrentLocale() === 'en')
-                                            {{ $mainOffer->subtitle_en }}
-                                        @else
-                                            {{ $mainOffer->subtitle_ar }}
-                                        @endif
+                                        عروض مبهرة وأسعار ماتتفوت مع وكالة مواكب للسياحة
                                     </h5>
                                     <p>
-                                        @if (LaravelLocalization::getCurrentLocale() === 'en')
+                                        {{-- @if (LaravelLocalization::getCurrentLocale() === 'en')
                                             {{ $mainOffer->offer_enoverview }}
                                         @else
                                             {{ $mainOffer->offer_aroverview }}
-                                        @endif
+                                        @endif --}}
                                     </p>
                                     <div class="start">
                                         <span></span>
@@ -193,7 +189,7 @@
                       @endif</h6> --}}
                                         <span></span>
                                     </div>
-                                    {{-- <span> {{$mainOffer->cost}} $</span> --}}
+                                    <span>أسعار تبدأ من 100 رس</span>
                                     <button class="btn">
                                         <a href="{{ LaravelLocalization::localizeUrl('/offers') }}">
                                             @if (LaravelLocalization::getCurrentLocale() === 'en')
@@ -216,7 +212,7 @@
                                     <div class=" card">
                                         <div class="card-body offers_card offer_place_1" onmouseenter="darkBG(this)"
                                             onmouseleave="rmvDarkBG(this)"
-                                            style="background-image: linear-gradient(hsla(0, 0%, 0%, 0.3),hsla(0, 0%, 0%, 0.3)) , url({{ asset('uploads/offers') }}/{{ $offer->image }});">
+                                            style="background-image: linear-gradient(hsla(0, 0%, 0%, 0.3),hsla(0, 0%, 0%, 0.3)) , url({{ asset('uploads/offers/' . str_replace(' ', '%20', $offer->image)) }});">
                                             <div class="header_info">
                                                 <h5><a href="{{ LaravelLocalization::localizeUrl('/single-offer/' . $offer->id . '/' . $offer->slug) }}"
                                                         class="stretched-link">
@@ -234,6 +230,8 @@
                                                         {{ $offer->subtitle_ar }}
                                                     @endif
                                                 </span>
+                                                <span> {{$offer->cost}} رس</span>
+
                                             </div>
 
                                         </div>
