@@ -170,11 +170,7 @@
                             <div class="card-body explore_card adventure_mind">
                                 <div class="header_info">
                                     <h5>
-                                        @if (LaravelLocalization::getCurrentLocale() === 'en')
-                                            {{ $mainOffer->subtitle_en }}
-                                        @else
-                                            {{ $mainOffer->subtitle_ar }}
-                                        @endif
+                                        عروض مبهرة وأسعار ماتتفوت مع وكالة مواكب للسياحة
                                     </h5>
                                     <p>
                                         {{-- @if (LaravelLocalization::getCurrentLocale() === 'en')
@@ -193,7 +189,7 @@
                       @endif</h6> --}}
                                         <span></span>
                                     </div>
-                                    <span>أسعار تبدأ من {{$mainOffer->cost}} رس</span>
+                                    <span>أسعار تبدأ من 100 رس</span>
                                     <button class="btn">
                                         <a href="{{ LaravelLocalization::localizeUrl('/offers') }}">
                                             @if (LaravelLocalization::getCurrentLocale() === 'en')
