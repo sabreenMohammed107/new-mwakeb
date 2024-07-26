@@ -216,7 +216,7 @@
                                     <div class=" card">
                                         <div class="card-body offers_card offer_place_1" onmouseenter="darkBG(this)"
                                             onmouseleave="rmvDarkBG(this)"
-                                            style="background-image: linear-gradient(hsla(0, 0%, 0%, 0.3),hsla(0, 0%, 0%, 0.3)) , url({{ asset('uploads/offers') }}/{{ $offer->image }});">
+                                            style="background-image: linear-gradient(hsla(0, 0%, 0%, 0.3),hsla(0, 0%, 0%, 0.3)) , url({{ asset("uploads/offers/$offer->image") }});">
                                             <div class="header_info">
                                                 <h5><a href="{{ LaravelLocalization::localizeUrl('/single-offer/' . $offer->id . '/' . $offer->slug) }}"
                                                         class="stretched-link">
