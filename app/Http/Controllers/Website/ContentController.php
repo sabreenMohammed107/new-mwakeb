@@ -105,7 +105,7 @@ $whyUss=Why_us::all();
   {
       $BreadCrumb = [["url" => "/", "name" => Lang::get('links.home')]];
       $Company = Company::first();
-      $offers = Offer::where('active','=',1)->paginate(20);
+      $offers = Offer::where('active','=',1)->orderBy('created_at', 'desc')->paginate(20);
       $latest = Offer::where('active','=',1)->take(5)->orderBy("created_at", "Desc")->get();
       return view("website.offers.offers",
           [
