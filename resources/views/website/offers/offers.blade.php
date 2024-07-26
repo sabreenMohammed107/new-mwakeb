@@ -37,19 +37,20 @@
                         @endif
                     </h6>
                     @foreach ($latest as $obj)
+                    <a href="{{ LaravelLocalization::localizeUrl('/single-offer/' . $obj->id . '/' . $obj->slug) }}"
+                        class="stretched-link">
                         <div class="blog_details">
                             <img class="mx-2" style="height: 100px;width:130px" src="{{ asset('uploads/offers') }}/{{ $obj->image }}"
                                 alt="latest blog image">
                             <div class="blog_info">
-                                <h6 style="margin-bottom: 0;font-size: 16px" > <a href="{{ LaravelLocalization::localizeUrl('/single-offer/' . $obj->id . '/' . $obj->slug) }}"
-                                        class="stretched-link">
+                                <h6 style="margin-bottom: 0;font-size: 16px" >
                                         @if (LaravelLocalization::getCurrentLocale() === 'en')
                                             {{ strip_tags(Str::limit($obj->subtitle_en ?? '', $limit = 50, $end = '')) }}
                                         @else
                                             {{ strip_tags(Str::limit($obj->subtitle_ar ?? '', $limit = 50, $end = '')) }}
                                         @endif
 
-                                    </a></h6>
+                                    </h6>
                                 <p>
                                     @if (LaravelLocalization::getCurrentLocale() === 'en')
                                         {{ $obj->city->en_city ?? '' }}
@@ -63,6 +64,7 @@
                                 {{-- <span> {{ $obj->cost }} $</span> --}}
                             </div>
                         </div>
+                    </a>
                     @endforeach
 
 
