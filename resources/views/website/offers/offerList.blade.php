@@ -46,6 +46,8 @@
 
 
 </div>
+@if ($offers->lastPage() > 1)
+
 <nav aria-label="Page navigation page_pagination example">
     <ul class="pagination">
         <!-- a Tag for previous page -->
@@ -60,3 +62,4 @@
     </ul>
 
 </nav>
+@endif
