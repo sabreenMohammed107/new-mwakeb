@@ -1039,7 +1039,7 @@ body { direction: rtl ; }
 
   }
 
-  .offers_details .offers_card.offer_place_1{
+  /* .offers_details .offers_card.offer_place_1{
     background-image: linear-gradient(hsla(0, 0%, 0%, 0.3),hsla(0, 0%, 0%, 0.3)) , url("./../images/homePage/places_offer/offer-place-1.webp");
   }
   .offers_details .offers_card.offer_place_2{
@@ -1050,7 +1050,7 @@ body { direction: rtl ; }
   }
   .offers_details .offers_card.offer_place_4{
     background-image: linear-gradient(hsla(0, 0%, 0%, 0.3),hsla(0, 0%, 0%, 0.3)) , url("./../images/homePage/places_offer/offer-place-3.webp");
-  }
+  } */
   /* .card:hover .offers_card.offer_place_1 {
     background-image: linear-gradient(hsla(0, 0%, 0%, 0),hsla(0, 0%, 0%, 0)), url("./../images/homePage/places_offer/offer-place-1.webp");
 
