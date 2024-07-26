@@ -915,7 +915,7 @@ body { direction: rtl ; }
       }
     }
   .offers_details .adventure_mind {
-    background-image: linear-gradient(hsla(216, 65%, 31%, 0.781),hsla(216, 65%, 31%, 0.781)) , url("./../images/homePage/places_offer/offer-place.webp");
+    background-image: linear-gradient(hsla(216, 65%, 31%, 0.781),hsla(216, 65%, 31%, 0.781)) , url("./../images/homePage/indonesia.jpg");
     background-size:cover;
     background-repeat: no-repeat;
     position:relative;
