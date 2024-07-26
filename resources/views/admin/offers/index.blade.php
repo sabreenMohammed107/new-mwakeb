@@ -86,7 +86,7 @@
                                 <th class="min-w-150px">image</th>
                                 <th class="min-w-250px">city</th>
                                 <th class="min-w-150px">Sub Title</th>
-                                {{-- <th class="min-w-150px">cost </th> --}}
+                                <th class="min-w-150px">cost </th>
                                 <th class="text-end min-w-70px">Actions</th>
                             </tr>
                             <!--end::Table row-->
@@ -140,11 +140,11 @@
                                         </div>
 
                                     </td>
-                                    {{-- <td>
+                                    <td>
                                         <div class="d-flex">
                                             <span class="symbol-label">{{ $row->cost }}</span>
                                         </div>
-                                    </td> --}}
+                                    </td>
                                     <!--end::Type=-->
                                     <!--begin::Action=-->
                                     <td class="text-end">
@@ -294,7 +294,7 @@
                                                                 <textarea class="form-control form-control-solid" rows="3" name="subtitle_ar" placeholder="Type Ar Sub Tilte">{{ $row->subtitle_ar }}</textarea>
                                                             </div>
                                                             {{-- select --}}
-                                                            <div>
+                                                            <div id="yy">
                                                                 <label class="fs-6 fw-bold form-label mt-3">
                                                                     <option value="">Select a City...</option>
 
@@ -303,7 +303,7 @@
                                                                 <select name="city_id" required aria-label="Select a City"
                                                                     data-control="select2"
                                                                     data-placeholder="Select a Country..."
-                                                                    data-dropdown-parent="#kt_modal_new_targetEdit{{ $row->id }}"
+                                                                    data-dropdown-parent="#yy"
                                                                     class="form-select form-select-solid fw-bolder">
                                                                     <option value=""></option>
                                                                     @foreach ($cities as $city)
