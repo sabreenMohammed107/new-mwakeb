@@ -34,7 +34,7 @@
                             @endif
                              -
                              <span>
-                                {{$offer->cost}} $
+                                {{$offer->cost}} رس
                             </span>
 
                 </div>

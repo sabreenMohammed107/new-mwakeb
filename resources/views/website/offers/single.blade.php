@@ -39,7 +39,7 @@
                                             @else
                                             {{$offer->city->ar_city ?? ""}}
                                             @endif
-                                            - {{ $offer->cost }} $
+                                            - {{ $offer->cost }} رس
 
                                         </p>
                                     <p>

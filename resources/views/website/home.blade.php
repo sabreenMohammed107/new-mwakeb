@@ -177,11 +177,11 @@
                                         @endif
                                     </h5>
                                     <p>
-                                        @if (LaravelLocalization::getCurrentLocale() === 'en')
+                                        {{-- @if (LaravelLocalization::getCurrentLocale() === 'en')
                                             {{ $mainOffer->offer_enoverview }}
                                         @else
                                             {{ $mainOffer->offer_aroverview }}
-                                        @endif
+                                        @endif --}}
                                     </p>
                                     <div class="start">
                                         <span></span>
@@ -193,7 +193,7 @@
                       @endif</h6> --}}
                                         <span></span>
                                     </div>
-                                    <span>أسعار تبدأ من {{$mainOffer->cost}} $</span>
+                                    <span>أسعار تبدأ من {{$mainOffer->cost}} رس</span>
                                     <button class="btn">
                                         <a href="{{ LaravelLocalization::localizeUrl('/offers') }}">
                                             @if (LaravelLocalization::getCurrentLocale() === 'en')
@@ -234,7 +234,7 @@
                                                         {{ $offer->subtitle_ar }}
                                                     @endif
                                                 </span>
-                                                <span> {{$offer->cost}} $</span>
+                                                <span> {{$offer->cost}} رس</span>
 
                                             </div>
 
