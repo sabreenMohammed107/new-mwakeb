@@ -189,7 +189,7 @@
                       @endif</h6> --}}
                                         <span></span>
                                     </div>
-                                    <span>أسعار تبدأ من 100 رس</span>
+                                    <span>أسعار تبدأ من 1799 رس</span>
                                     <button class="btn">
                                         <a href="{{ LaravelLocalization::localizeUrl('/offers') }}">
                                             @if (LaravelLocalization::getCurrentLocale() === 'en')
