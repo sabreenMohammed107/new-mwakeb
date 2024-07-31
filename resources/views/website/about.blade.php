@@ -63,7 +63,7 @@
         <div class="adventure container">
             <div class="row mx-0">
               <div class=" col-xl-5 col- md-5 col-sm-12">
-                <img src="{{ asset("/website_assets/images/homePage/$Company->image") }}" alt="why us image">
+                <img src="{{ asset('uploads/company') }}/{{$Company->image}}" alt="why us image">
               </div>
 
               <div class=" col-xl-7 col- md-7 col-sm-12">
