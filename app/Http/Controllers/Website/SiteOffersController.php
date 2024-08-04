@@ -38,7 +38,7 @@ public function bookOffer(Request $request)
 
             \Log::info(\Session::get('cartItem'));
         }else{
-            return redirect("/safer/login");
+            return redirect("/mwakeb/login");
         }
         $CartItem = new Cart();
         $CartItem->user_id = session()->get("SiteUser")["ID"];

@@ -324,10 +324,10 @@
                                     <label class="form-check-label" for="flexCheckChecked">
                                         @if (LaravelLocalization::getCurrentLocale() === 'en')
                                             I agree to all <a href="{{ url('/terms') }}" target="_blank">Terms and
-                                                Conditions</a> of Safer
+                                                Conditions</a> of Mwakeb
                                         @else
                                             أوافق على جميع <a href="{{ url('/terms') }}" target="_blank"> بنود وشروط
-                                            </a> Safer
+                                            </a> Mwakeb
                                         @endif
                                     </label>
                                 </div>

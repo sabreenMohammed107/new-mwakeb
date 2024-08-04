@@ -291,7 +291,7 @@ class ToursController extends Controller
             return redirect()->back();
         }else{
             session()->put("AddFavTour", $id);
-            return redirect("/safer/login");
+            return redirect("/mwakeb/login");
         }
     }
 
@@ -307,7 +307,7 @@ class ToursController extends Controller
         }else{
             session()->put("RemFavTour", $id);
             return session()->get("RemFavTour");
-            return redirect("/safer/login");
+            return redirect("/mwakeb/login");
         }
     }
 

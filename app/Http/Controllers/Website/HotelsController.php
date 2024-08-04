@@ -418,7 +418,7 @@ class HotelsController extends Controller
             return redirect()->back();
         }else{
             session()->put("AddFavHotel", $id);
-            return redirect("/safer/login");
+            return redirect("/mwakeb/login");
         }
     }
 
@@ -434,7 +434,7 @@ class HotelsController extends Controller
         }else{
             session()->put("RemFavHotel", $id);
             return session()->get("RemFavHotel");
-            return redirect("/safer/login");
+            return redirect("/mwakeb/login");
         }
     }
 

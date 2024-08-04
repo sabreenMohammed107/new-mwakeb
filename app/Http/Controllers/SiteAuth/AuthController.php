@@ -203,7 +203,7 @@ class AuthController extends Controller
             }
         }
 
-        return redirect()->to(LaravelLocalization::localizeUrl('/safer/login'));
+        return redirect()->to(LaravelLocalization::localizeUrl('/mwakeb/login'));
 
     }
 

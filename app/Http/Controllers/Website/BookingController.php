@@ -543,7 +543,7 @@ class BookingController extends Controller
                     $OfferElem->offer_id = (int) $request->offer_id[$i];
                     $OfferElem->offer_title = $refOffer->subtitle_ar;
                     $OfferElem->offer_image = $refOffer->image;
-                    $OfferElem->total_cost = (float) $refOffer->offer_cost[$i] ; // Before Tax
+                    $OfferElem->total_cost = (float) $request->offer_cost[$i] ; // Before Tax
                     $OfferElem->offer_cost = ((float) $request->offer_cost[$i]); // Before Tax
                     $OfferElem->save();
                 }

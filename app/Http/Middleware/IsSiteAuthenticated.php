@@ -26,7 +26,7 @@ class IsSiteAuthenticated extends LaravelLocalizationMiddlewareBase
         if(!session()->get("SiteUser"))
         {
             Carbon::setLocale(app('laravellocalization')->getCurrentLocale());
-            return redirect()->to(LaravelLocalization::localizeUrl("/safer/login"));
+            return redirect()->to(LaravelLocalization::localizeUrl("/mwakeb/login"));
         }
 
         Carbon::setLocale(app('laravellocalization')->getCurrentLocale());

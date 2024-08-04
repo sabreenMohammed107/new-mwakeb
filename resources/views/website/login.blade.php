@@ -46,16 +46,16 @@
                 {{ session('session-info') }}
             </div>
         @endif
-                <h5> @if (LaravelLocalization::getCurrentLocale() === 'en')
+                <h5 style="text-align: right"> @if (LaravelLocalization::getCurrentLocale() === 'en')
 
                     Sign in To SAFER
                     @else
 
-                    سجّل الدخول إلى سافر
+                    سجّل الدخول إلي مواكب
 
 
                     @endif </h5>
-                <a href="{{ LaravelLocalization::getLocalizedURL($localVar, route("siteRegister"))}}"> {{ __('links.dontHaveAccount') }}<span>{{ __('links.signin_up2') }} </span>   </a>
+                <a style="text-align: right" href="{{ LaravelLocalization::getLocalizedURL($localVar, route("siteRegister"))}}"> {{ __('links.dontHaveAccount') }}<span>{{ __('links.signin_up2') }} </span>   </a>
                 <form action="{{ LaravelLocalization::getLocalizedURL($localVar, route("ProceedLogin"))}}" method="POST">
                     @csrf
                     @if ($errors->any())
@@ -68,7 +68,7 @@
                   <input type="text" class="form-control" name="email" id="exampleFormControlInput1" placeholder="{{ __('links.email') }}*" required>
                   <input type="password" class="form-control" name="password" id="exampleFormControlInput1" placeholder=" {{ __('links.password') }}*" required>
                   <button type="submit" class="btn sign_button">{{ __('links.signin') }} </button>
-                  <div class="remember">
+                  {{-- <div class="remember">
                     <input class="form-check-input" type="checkbox" class="checked_input" value="" id="flexCheckDefault">
                     <label class="form-check-label" for="flexCheckDefault">
 
@@ -82,9 +82,9 @@
 
                       @endif
                       </label>
-                  </div>
+                  </div> --}}
                 </form>
-                <span class="or_title">
+                {{-- <span class="or_title">
                     @if (LaravelLocalization::getCurrentLocale() === 'en')
                     or sign up with
                     @else
@@ -93,12 +93,12 @@
 
                     @endif
 
-                </span>
-                <section class="sign_socail">
+                </span> --}}
+                {{-- <section class="sign_socail">
                     <button class="btn">
                     <img src="{{ asset('/website_assets/images/signin-up/socail-logins/facebook.webp')}}" alt="facebook logo">
                         <a href="{{ route('facebook.login') }}" class="btn btn-facebook btn-user btn-block">
-                        {{-- <i class="fab fa-facebook-f fa-fw"></i> --}}
+                        <i class="fab fa-facebook-f fa-fw"></i>
                         @if (LaravelLocalization::getCurrentLocale() === 'en')
                         Login with Facebook
                         @else
@@ -114,7 +114,7 @@
                       <img src="{{ asset('/website_assets/images/signin-up/socail-logins/google.webp')}}" alt="google logo">
 
                         <a href="{{ route('google.login') }}" class="btn btn-google btn-user btn-block">
-                            {{-- <i class="fab fa-google fa-fw"></i>  --}}
+                            <i class="fab fa-google fa-fw"></i>
                             @if (LaravelLocalization::getCurrentLocale() === 'en')
                             Login with Google
                             @else
@@ -124,7 +124,7 @@
                             @endif
                         </a>
                     </button>
-                </section>
+                </section> --}}
       </div>
     </div>
  </div>

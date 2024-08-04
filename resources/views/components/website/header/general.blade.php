@@ -5,7 +5,14 @@
        <div class="tabs">
         @foreach ($breadcrumb as $item)
           <span>
-            <a href="{{url($item["url"])}}">{{$item["name"]}}</a>
+            <a href="{{url($item["url"])}}">
+                @if($item["name"] == "Home")
+                الرئيسية
+                @else
+                {{$item["name"]}}
+                @endif
+
+            </a>
         </span>
         <span> <i class="fa-solid fa-angle-right"></i></span>
         @endforeach

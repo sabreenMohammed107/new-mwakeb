@@ -24,7 +24,7 @@ $localVar=LaravelLocalization::getCurrentLocale();
         <!-- offcanvas nav bar    -->
         <button class="btn canvase_button" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
             aria-controls="offcanvasRight">
-            <span>{{ __('links.menu') }}</span> <i class="fas fa-bars"></i>
+            <span></span> <i class="fas fa-bars"></i>
         </button>
         <div class="offcanvas offcanvas-end canvase_section" tabindex="-1" id="offcanvasRight"
             aria-labelledby="offcanvasRightLabel">

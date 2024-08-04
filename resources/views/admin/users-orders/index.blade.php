@@ -89,8 +89,6 @@
                             {{-- <th class="text-end min-w-100px">Date</th> --}}
                             {{-- <th class="text-end min-w-100px">Time</th> --}}
                             <th class="text-end min-w-70px">User ID</th>
-                            <th class="text-end min-w-100px">Type</th>
-                            <th class="text-end min-w-100px">pickup_point</th>
                             <th class="text-end min-w-100px">Created Date</th>
                             <th class="text-end min-w-100px">Grand Total</th>
                             <th class="text-end min-w-100px">Status</th>
@@ -141,38 +139,7 @@
         <input type="hidden" name="" id=""  data-kt-ecommerce-category-filter="category_id" value="{{$row->id}}" >
         <span class="fw-bolder ms-3">{{ $row->order->user->id ?? '' }}</span>
     </td>
-    <!--end::Qty=-->
-    <!--begin::Price=-->
-    <td class="text-center pe-0">
-        <span class="fw-bolder text-dark">
 
-            @if ($row->detail_type == 0)
-                Booking Room
-            @endif
-
-            @if ($row->detail_type == 1)
-
-                Booking Tours
-            @endif
-
-            @if ($row->detail_type == 2)
-                Booking Transfer
-            @endif
-
-            @if ($row->detail_type == 3)
-            <?php
-             $visaDetail= App\Models\VisaDetails::where('order_details_id',$row->id)->first();
-             ?>
-
-                Booking Visa / {{ $visaDetail->visa->country->en_country ?? ''}}
-                {{-- {{$visaDetail->visa->nationality->en_nationality  }} --}}
-            @endif
-           </span>
-    </td>
-    <td class="text-end pe-0">
-
-        <span class="fw-bolder text-dark">{{ $row->pickup_point ?? '' }}</span>
-    </td>
     <td class="text-end pe-0">
 
         <span class="fw-bolder text-dark">{{ $row->order->created_at ?? '' }}</span>
@@ -190,11 +157,11 @@
 
         @endif
 
-        @if ($row->detail_type == 1)
+        @if ($row->detail_type == 5)
         <?php
 
-        $taxVal=($row->tours_details->sum('total_cost')* ($row->order->tax_percentage))/100;
-        $grandTotal=$row->tours_details->sum('total_cost')+$taxVal;
+        $taxVal=($row->offers_details->sum('total_cost')* ($row->order->tax_percentage))/100;
+        $grandTotal=$row->offers_details->sum('total_cost')+$taxVal;
                 ?>
             {{number_format((float)$grandTotal, 2, '.', '')}}$
         @endif

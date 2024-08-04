@@ -165,8 +165,8 @@ Route::group([
     });
     Route::middleware(['prevent-relogin'])->group(function () {
         //site-login
-        Route::get("/safer/login", [ContentController::class, 'loginSite'])->name("siteLogin");
-        Route::post("/safer/login", [AuthController::class, 'Login'])->name("ProceedLogin");
+        Route::get("/mwakeb/login", [ContentController::class, 'loginSite'])->name("siteLogin");
+        Route::post("/mwakeb/login", [AuthController::class, 'Login'])->name("ProceedLogin");
 
         //signupSite
         Route::get("/safer/register", [ContentController::class, 'signupSite'])->name("siteRegister");

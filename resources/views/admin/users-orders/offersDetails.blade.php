@@ -114,7 +114,6 @@
                             </div>
                         </th>
 
-                        <th class="min-w-200px">salutation</th>
                         <th class="min-w-100px">holder name</th>
                         <th class="text-end min-w-70px">mobile</th>
                         <th class="text-end min-w-100px">notes</th>
@@ -136,19 +135,7 @@
                             </div>
                         </td>
                         <!--end::Checkbox-->
-                        <!--begin::Category=-->
-                        <td>
-                            <div class="d-flex align-items-center">
 
-                                <div class="ms-5">
-                                    <!--begin::Title-->
-
-                                    <a href="#" class="text-gray-800 text-hover-primary fs-5 fw-bolder mb-1"
-                                        data-kt-ecommerce-category-filter="category_name">{{ $order->holder_salutation ?? '' }}</a>
-                                    <!--end::Title-->
-                                </div>
-                            </div>
-                        </td>
 
                         <!--begin::Qty=-->
                         <td class="text-strt pe-0" data-order="15">
