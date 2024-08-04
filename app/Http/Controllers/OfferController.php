@@ -2,12 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Offer;
 use App\Http\Requests\StoreOfferRequest;
 use App\Http\Requests\UpdateOfferRequest;
+use App\Models\Cart;
 use App\Models\City;
-use Illuminate\Database\QueryException;
+use App\Models\Offer;
 use File;
+use Illuminate\Database\QueryException;
+use Illuminate\Http\Request;
+
 class OfferController extends Controller
 {
     protected $object;
@@ -48,7 +51,7 @@ class OfferController extends Controller
     public function create()
     {
         $cities = City::get();
-        return view($this->viewName . 'add',compact(['cities']));
+        return view($this->viewName . 'add', compact(['cities']));
     }
 
     /**
@@ -59,7 +62,7 @@ class OfferController extends Controller
      */
     public function store(StoreOfferRequest $request)
     {
-        $input = $request->except(['_token','image']);
+        $input = $request->except(['_token', 'image']);
         if ($request->hasFile('image')) {
             $attach_image = $request->file('image');
 
@@ -78,7 +81,8 @@ class OfferController extends Controller
             $input['status'] = 'basic';
         }
         Offer::create($input);
-        return redirect()->route($this->routeName.'index')->with('flash_success', 'Successfully Saved!');    }
+        return redirect()->route($this->routeName . 'index')->with('flash_success', 'Successfully Saved!');
+    }
 
     /**
      * Display the specified resource.
@@ -100,7 +104,7 @@ class OfferController extends Controller
     public function edit(Offer $offer)
     {
         $cities = City::get();
-        return view($this->viewName . 'edit', compact(['offer','cities']));
+        return view($this->viewName . 'edit', compact(['offer', 'cities']));
     }
 
     /**
@@ -112,7 +116,7 @@ class OfferController extends Controller
      */
     public function update(UpdateOfferRequest $request, Offer $offer)
     {
-        $input = $request->except(['_token','offer_id','image']);
+        $input = $request->except(['_token', 'offer_id', 'image']);
         if ($request->hasFile('image')) {
             $attach_image = $request->file('image');
 
@@ -132,7 +136,8 @@ class OfferController extends Controller
         }
         // Tour::findOrFail($request->get('tour_id'))->update($input);
         $offer->update($input);
-        return redirect()->route($this->routeName.'index')->with('flash_success', 'Successfully Saved!');    }
+        return redirect()->route($this->routeName . 'index')->with('flash_success', 'Successfully Saved!');
+    }
 
     /**
      * Remove the specified resource from storage.
@@ -159,26 +164,27 @@ class OfferController extends Controller
         }
     }
 
+    /* uplaud image
+     */
+    public function UplaodImage($file_request)
+    {
+        //  This is Image Info..
+        $file = $file_request;
+        $name = $file->getClientOriginalName();
+        $ext = $file->getClientOriginalExtension();
+        $size = $file->getSize();
+        $path = $file->getRealPath();
+        $mime = $file->getMimeType();
 
-     /* uplaud image
-       */
-      public function UplaodImage($file_request)
-      {
-          //  This is Image Info..
-          $file = $file_request;
-          $name = $file->getClientOriginalName();
-          $ext = $file->getClientOriginalExtension();
-          $size = $file->getSize();
-          $path = $file->getRealPath();
-          $mime = $file->getMimeType();
+        // Rename The Image ..
+        $imageName = $name;
+        $uploadPath = public_path('uploads/offers');
 
-          // Rename The Image ..
-          $imageName = $name;
-          $uploadPath = public_path('uploads/offers');
+        // Move The image..
+        $file->move($uploadPath, $imageName);
 
-          // Move The image..
-          $file->move($uploadPath, $imageName);
+        return $imageName;
+    }
 
-          return $imageName;
-      }
+
 }

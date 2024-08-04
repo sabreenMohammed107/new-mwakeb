@@ -37,34 +37,36 @@
                         @endif
                     </h6>
                     @foreach ($latest as $obj)
-                    <a href="{{ LaravelLocalization::localizeUrl('/single-offer/' . $obj->id . '/' . $obj->slug) }}"
-                        class="stretched-link">
-                        <div class="blog_details">
-                            <img class="mx-2" style="height: 100px;width:130px" src="{{ asset('uploads/offers') }}/{{ $obj->image }}"
-                                alt="latest blog image">
-                            <div class="blog_info">
-                                <h6 style="margin-bottom: 0;font-size: 16px" >
-                                    @if (LaravelLocalization::getCurrentLocale() === 'en')
-                                        {{ strip_tags(Str::words($obj->subtitle_en ?? '', $words = 10, $end = '...')) }}
-                                    @else
-                                        {{ strip_tags(Str::words($obj->subtitle_ar ?? '', $words = 10, $end = '...')) }}
-                                    @endif
+
+                            <div class="blog_details">
+                                <a href="{{ LaravelLocalization::localizeUrl('/single-offer/' . $obj->id . '/' . $obj->slug) }}"
+                                    class="stretched-link">
+                                <img class="mx-2" style="height: 100px;width:130px"
+                                    src="{{ asset('uploads/offers') }}/{{ $obj->image }}" alt="latest blog image">
+                                <div class="blog_info">
+                                    <h6 style="margin-bottom: 0;font-size: 16px">
+                                        @if (LaravelLocalization::getCurrentLocale() === 'en')
+                                            {{ strip_tags(Str::words($obj->subtitle_en ?? '', $words = 10, $end = '...')) }}
+                                        @else
+                                            {{ strip_tags(Str::words($obj->subtitle_ar ?? '', $words = 10, $end = '...')) }}
+                                        @endif
 
                                     </h6>
-                                <p>
-                                    @if (LaravelLocalization::getCurrentLocale() === 'en')
-                                        {{ $obj->city->en_city ?? '' }}
-                                    @else
-                                        {{ $obj->city->ar_city ?? '' }}
-                                    @endif
+                                    <p>
+                                        @if (LaravelLocalization::getCurrentLocale() === 'en')
+                                            {{ $obj->city->en_city ?? '' }}
+                                        @else
+                                            {{ $obj->city->ar_city ?? '' }}
+                                        @endif
 
 
 
-                                </p>
-                                {{-- <span> {{ $obj->cost }} $</span> --}}
+                                    </p>
+                                    {{-- <span> {{ $obj->cost }} $</span> --}}
+                                </div>
+                            </a>
                             </div>
-                        </div>
-                    </a>
+
                     @endforeach
 
 

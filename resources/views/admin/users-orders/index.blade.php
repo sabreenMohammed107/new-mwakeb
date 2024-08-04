@@ -256,17 +256,17 @@
                     class="menu-link px-3">show</a>
             </div>
             <!--end::Menu item-->
-            <div class="menu-item px-3">
+            {{-- <div class="menu-item px-3">
                 <a href="{{ route('users-orders.edit', $row->id ) }}"
                     class="menu-link px-3">edit</a>
-            </div>
+            </div> --}}
 
              <!--begin::Menu item-->
-             <div class="menu-item px-3">
+             {{-- <div class="menu-item px-3">
                 <a data-bs-toggle="modal"
                     data-bs-target="#kt_modal_new_targetEdit{{$row->id}}"
                     class="menu-link px-3">Assign</a>
-            </div>
+            </div> --}}
             <!--end::Menu item-->
         </div>
         <!--end::Menu-->

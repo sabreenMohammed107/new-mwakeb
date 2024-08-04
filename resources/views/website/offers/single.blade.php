@@ -24,6 +24,9 @@
                                 <div class="  hotels_card">
                                   <img  src="{{ asset('uploads/offers') }}/{{ $offer->image }}" class="w-100" alt=" single blogimage">
                                   <div class="card-body hotel_card_info">
+                                    <form action="{{ LaravelLocalization::localizeUrl('/bookOffer') }}" method="POST">
+                                        @csrf
+                                        <input type="hidden" name="offer_id" value="{{ $offer->id }}">
                                     <div class="card_info">
 
                                       <h5>  @if (LaravelLocalization::getCurrentLocale() === 'en')
@@ -50,7 +53,10 @@
                                         {!! $offer->offer_aroverview ?? '' !!}
                                         @endif
                                      </p>
-
+                                     <button class="btn mx-1 btn-primary" type="submit">
+                                        {{ __('links.book') }}
+                                    </button>
+                            </form>
                                   </div>
                               </div>
                               </div>

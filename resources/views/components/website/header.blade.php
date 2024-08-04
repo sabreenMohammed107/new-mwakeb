@@ -73,7 +73,7 @@ $localVar=LaravelLocalization::getCurrentLocale();
                     <a href="{{ LaravelLocalization::localizeUrl('/contact') }}" class="{{ Request::segment(1)=='contact' ? 'links hybrid active' : 'links hybrid' }}">{{ __('links.contact_us') }}</a>
                 </li>
 
-                {{-- <div class="register">
+                 <div class="register">
 
 
                     <ul>
@@ -111,7 +111,7 @@ $localVar=LaravelLocalization::getCurrentLocale();
 
 
                     </ul>
-                </div> --}}
+                </div>
             </ul>
         </div>
         <!-- end of navigation links  -->

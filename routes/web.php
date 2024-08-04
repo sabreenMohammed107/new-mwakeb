@@ -41,6 +41,7 @@ use App\Http\Controllers\Website\BookingController;
 use App\Http\Controllers\Website\ContentController;
 use App\Http\Controllers\Website\HotelsController;
 use App\Http\Controllers\Website\MainController;
+use App\Http\Controllers\Website\SiteOffersController;
 use App\Http\Controllers\Website\SiteTransferController;
 use App\Http\Controllers\Website\ToursController;
 use App\Http\Controllers\Website\VisaDataController;
@@ -131,6 +132,10 @@ Route::group([
     Route::post("/tours/retrieve", [ToursController::class, 'fetch']);
     Route::get("/tours/{id}/{slug?}", [ToursController::class, 'profile']);
     Route::post("/bookTours", [ToursController::class, 'bookTours']);
+    Route::post("/bookOffer", [SiteOffersController::class, 'bookOffer']);
+
+
+
     //getTourByCity
     Route::get("/tourByCity/{id}", [ToursController::class, 'getTourByCity'])->name("tourByCity");
     //removeFavouriteTours

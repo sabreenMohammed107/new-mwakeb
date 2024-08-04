@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Assign_order;
 use App\Models\Country;
 use App\Models\Nationality;
+use App\Models\OfferDetails;
 use App\Models\OrderDetails;
 use App\Models\OrderPersons;
 use App\Models\RoomDetails;
@@ -51,12 +52,13 @@ class UsersOrderController extends Controller
 
         $sellersIds = Users_role::where('role_id', 2)->pluck('user_id');
         $sellers = User::whereIn('id', $sellersIds)->get();
-        if (Auth::check() && Auth::user()->hasRole('admin')) {
-            $rows = OrderDetails::orderBy("created_at", "Desc")->get();
-        } else{
-            $ordersIds = Assign_order::where('user_id', Auth::user()->id)->pluck('order_details_id');
-            $rows = OrderDetails::whereIn('id', $ordersIds)->get();
-        }
+        // if (Auth::check() && Auth::user()->hasRole('admin')) {
+        //     $rows = OrderDetails::orderBy("created_at", "Desc")->get();
+        // } else{
+        //     $ordersIds = Assign_order::where('user_id', Auth::user()->id)->pluck('order_details_id');
+        //     $rows = OrderDetails::whereIn('id', $ordersIds)->get();
+        // }
+        $rows = OrderDetails::orderBy("created_at", "Desc")->get();
 
         return view($this->viewName . 'index', compact(['rows', 'sellers']));
     }
@@ -128,6 +130,16 @@ class UsersOrderController extends Controller
                 ->where('order_details.detail_type', 3)->where('order_details.id', $id)->select('visa_details.*')->get();
             $totalCost = 50;
             return view($this->viewName . 'showvisaDetails', compact(['order', 'visaDetails', 'persons', 'totalCost']));
+        }
+
+        if ($order->detail_type == 5) {
+
+            $persons = OrderPersons::where('order_details_id', $id)->get();
+            $offerDetails = OfferDetails::join("order_details", "offer_details.order_details_id", "=", "order_details.id")
+                ->where('order_details.detail_type', 5)->where('order_details.id', $id)->select('offer_details.*')->get();
+            $totalCost = 50;
+            return view($this->viewName . 'showofferDetails', compact(['order'
+                , 'offerDetails', 'persons', 'totalCost']));
         }
 
     }

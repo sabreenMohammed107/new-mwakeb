@@ -120,7 +120,7 @@ $whyUss=Why_us::all();
   {
 
       if ($request->ajax()) {
-        $offers = Offer::where('active','=',1)->paginate(10);
+        $offers = Offer::where('active','=',1)->paginate(20);
         return view("website.offers.offerList",
               [
 

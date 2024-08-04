@@ -137,6 +137,10 @@ class OrderDetails extends Model
         return $this->hasMany(VisaDetails::class, 'order_details_id');
     }
 
+    public function offers_details()
+    {
+        return $this->hasMany(OfferDetails::class, 'order_details_id');
+    }
     public function users()
     {
         return $this->belongsToMany(User::class, 'assign_orders');

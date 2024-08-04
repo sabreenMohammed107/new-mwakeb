@@ -1,8 +1,7 @@
-@extends('layout.website.layout', ['Company' => $Company, 'title' => 'Safer | Profile'])
+@extends('layout.website.layout', ['Company' => $Company, 'title' => 'مواكب | الملف الشخصي'])
 
 @section('adds_css')
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
     <link rel="stylesheet" href="{{ asset('/website_assets/css/about.css') }}">
     <link rel="stylesheet" href="{{ asset('/website_assets/css/tours.css') }}">
     <link rel="stylesheet" href="{{ asset('/website_assets/css/hotel.css') }}">
@@ -22,25 +21,24 @@
                 <div class="profile_tabs">
                     <div class="nav  faq_tabs flex-column nav-pills me-3" id="v-pills-tab" role="tablist"
                         aria-orientation="vertical">
-                        <button class="nav-link active"  @if (LaravelLocalization::getCurrentLocale() === 'ar')
+                        <button class="nav-link active"
+                            @if (LaravelLocalization::getCurrentLocale() === 'ar') style="text-align: right !important" @endif
+                            id="v-pills-account-tab" data-bs-toggle="pill" data-bs-target="#v-pills-account" type="button"
+                            role="tab" aria-controls="v-pills-account" aria-selected="true"> <i
+                                class="fa-solid fa-user account_icon"></i> {{ __('links.myAccount') }} </button>
+                        {{-- <button class="nav-link"
+                            @if (LaravelLocalization::getCurrentLocale() === 'ar') style="text-align: right !important" @endif
+                            id="v-pills-favorite-tab" data-bs-toggle="pill" data-bs-target="#v-pills-favorite"
+                            type="button" role="tab" aria-controls="v-pills-favorite" aria-selected="false"> <i
+                                class="fa-regular fa-heart"></i>{{ __('links.myFavorite') }} </button>
+                        <button class="nav-link"
+                            @if (LaravelLocalization::getCurrentLocale() === 'ar') style="text-align: right !important" @endif
+                            id="v-pills-orders-tab" data-bs-toggle="pill" data-bs-target="#v-pills-orders" type="button"
+                            role="tab" aria-controls="v-pills-orders" aria-selected="false"><i
+                                class="fa-regular fa-file-lines"></i> {{ __('links.myOrder') }} </button> --}}
 
-                        style="text-align: right !important"
-                        @endif  id="v-pills-account-tab" data-bs-toggle="pill"
-                            data-bs-target="#v-pills-account" type="button" role="tab" aria-controls="v-pills-account"
-                            aria-selected="true"> <i class="fa-solid fa-user account_icon"></i> {{ __('links.myAccount') }}  </button>
-                        <button class="nav-link" @if (LaravelLocalization::getCurrentLocale() === 'ar')
 
-                        style="text-align: right !important"
-                        @endif  id="v-pills-favorite-tab" data-bs-toggle="pill"
-                            data-bs-target="#v-pills-favorite" type="button" role="tab"
-                            aria-controls="v-pills-favorite" aria-selected="false"> <i
-                                class="fa-regular fa-heart"></i>{{ __('links.myFavorite') }}  </button>
-                        <button class="nav-link" @if (LaravelLocalization::getCurrentLocale() === 'ar')
 
-                        style="text-align: right !important"
-                        @endif  id="v-pills-orders-tab" data-bs-toggle="pill"
-                            data-bs-target="#v-pills-orders" type="button" role="tab" aria-controls="v-pills-orders"
-                            aria-selected="false"><i class="fa-regular fa-file-lines"></i> {{ __('links.myOrder') }}  </button>
                         {{-- <button class="nav-link" id="v-pills-payment-tab" data-bs-toggle="pill"
                             data-bs-target="#v-pills-payment" type="button" role="tab" aria-controls="v-pills-payment"
                             aria-selected="false"><i class="fa-regular fa-file-lines"></i> My payment method </button> --}}
@@ -50,7 +48,7 @@
                             <i class="fa-solid fa-arrow-right-from-bracket"></i> Log out
                         </button> --}}
 
-                            {{-- <button type="submit" onclick="" class="btn logout_button" >
+                        {{-- <button type="submit" onclick="" class="btn logout_button" >
                             <i class="fa-solid fa-arrow-right-from-bracket"></i> Log out
                         </button> --}}
 
@@ -58,7 +56,7 @@
 
                         <!-- Modal -->
                         @if (session()->get('SiteUser'))
-                            <form action="{{ LaravelLocalization::getLocalizedURL($localVar, route('siteLogout'))}}">
+                            <form action="{{ LaravelLocalization::getLocalizedURL($localVar, route('siteLogout')) }}">
                                 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
                                     data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
                                     aria-hidden="true">
@@ -67,19 +65,19 @@
                                             <div class="modal-header">
 
 
-                                                <h5 class="modal-title log_title" id="staticBackdropLabel">{{ __('links.logout') }}  </h5>
+                                                <h5 class="modal-title log_title" id="staticBackdropLabel">
+                                                    {{ __('links.logout') }} </h5>
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                     aria-label="Close"></button>
                                             </div>
 
                                             <div class="modal-body log_popup_info">
                                                 @if (LaravelLocalization::getCurrentLocale() === 'en')
-
-                                                Oh no! You are leaving... <br>
-                                                Are you Sure ?
+                                                    Oh no! You are leaving... <br>
+                                                    Are you Sure ?
                                                 @else
-                                                أوه لا! أنت تغادر ... <br>
-                                                هل أنت متأكد ؟
+                                                    أوه لا! أنت تغادر ... <br>
+                                                    هل أنت متأكد ؟
                                                 @endif
 
                                             </div>
@@ -100,7 +98,8 @@
                 <div class="tab-content" id="v-pills-tabContent">
                     <div class="tab-pane fade show active" id="v-pills-account" role="tabpanel"
                         aria-labelledby="v-pills-account-tab" tabindex="0">
-                        <form action="{{ LaravelLocalization::getLocalizedURL($localVar, route('updateProfile'))}}" method="post">
+                        <form action="{{ LaravelLocalization::getLocalizedURL($localVar, route('updateProfile')) }}"
+                            method="post">
                             @csrf
                             <input type="hidden" name="userId" value="{{ session()->get('SiteUser')['ID'] ?? '' }}" <div
                                 class="account_info">
@@ -127,7 +126,8 @@
                                     <div class="col-sm-12 col-md-6">
                                         <label for="lastname">{{ __('links.lastName') }} </label>
                                         <input type="text" name="last_name" value="{{ $userSite->last_name }}"
-                                            class="form-control" id="lastname" placeholder="{{ __('links.lastName') }} ">
+                                            class="form-control" id="lastname"
+                                            placeholder="{{ __('links.lastName') }} ">
                                     </div>
                                     <div class="col-sm-12 col-md-6">
                                         <label for="email">{{ __('links.email') }}</label>
@@ -137,15 +137,18 @@
                                     <div class="col-sm-12 col-md-6">
                                         <label for="phonenumber">{{ __('links.mobile') }}</label>
                                         <input type="number" name="phone" class="form-control"
-                                            value="{{ $userSite->phone }}" id="phonenumber" placeholder="{{ __('links.mobile') }}">
+                                            value="{{ $userSite->phone }}" id="phonenumber"
+                                            placeholder="{{ __('links.mobile') }}">
                                     </div>
                                     <div class="col-12">
                                         <label for="address">{{ __('links.address') }}</label>
                                         <input type="text" name="address" class="form-control"
-                                            value="{{ $userSite->address }}" id="address" placeholder="{{ __('links.address') }}">
+                                            value="{{ $userSite->address }}" id="address"
+                                            placeholder="{{ __('links.address') }}">
                                     </div>
                                 </div>
-                                <button type="submit" class="btn submit_button mb-4">{{ __('links.submitProfile') }} </button>
+                                <button type="submit" class="btn submit_button mb-4">{{ __('links.submitProfile') }}
+                                </button>
 
 
                             </div>
@@ -166,13 +169,15 @@
                         aria-labelledby="v-pills-favorite-tab" tabindex="0">
                         <div class="favorite">
                             <div class="heading">
-                                <h6 class="profile_heading"><i class="fa-regular fa-heart"></i> {{ __('links.myFavorite') }}  </h6>
+                                <h6 class="profile_heading"><i class="fa-regular fa-heart"></i>
+                                    {{ __('links.myFavorite') }} </h6>
                                 <div class="left_filter">
                                     <ul class="nav nav-pills " id="pills-tab" role="tablist">
                                         <li class="nav-item" role="presentation">
                                             <button class="nav-link active" id="pills-hotels-tab" data-bs-toggle="pill"
                                                 data-bs-target="#pills-hotels" type="button" role="tab"
-                                                aria-controls="pills-hotels" aria-selected="true">{{ __('links.hotels') }} </button>
+                                                aria-controls="pills-hotels"
+                                                aria-selected="true">{{ __('links.hotels') }} </button>
                                         </li>
                                         {{-- <li class="nav-item" role="presentation">
                                         <button class="nav-link" id="pills-tours-tab" data-bs-toggle="pill"
@@ -199,72 +204,73 @@
 
                                                     ?>
                                                     @foreach ($data as $fav)
-                                                    @if($fav->hotel)
-                                                        <div class="card-content">
-                                                            <div class=" card setted_tour_cards ">
-                                                                <div class="card_image">
-                                                                    <div class="image_overlay">
-                                                                        <img src="{{ asset('uploads/hotels') }}/{{ $fav->hotel->hotel_banner ?? '' }}"
-                                                                            alt=" blogimage">
+                                                        @if ($fav->hotel)
+                                                            <div class="card-content">
+                                                                <div class=" card setted_tour_cards ">
+                                                                    <div class="card_image">
+                                                                        <div class="image_overlay">
+                                                                            <img src="{{ asset('uploads/hotels') }}/{{ $fav->hotel->hotel_banner ?? '' }}"
+                                                                                alt=" blogimage">
+                                                                        </div>
                                                                     </div>
-                                                                </div>
-                                                                <div class="card-body  setted_info">
-                                                                    <div class="card_info">
-                                                                        <h6> @if (LaravelLocalization::getCurrentLocale() === 'en')
-                                                                            {{ $fav->hotel->hotel_enname ?? '' }}
-
-                                                                            @else
-                                                                            {{ $fav->hotel->hotel_arname ?? '' }}
-                                                                            @endif –
-                                                                            {{ $fav->hotel->hotel_stars ?? ''}} Stars</h6>
-                                                                        <span>
-                                                                            <i class="fa-regular fa-heart"></i>
-                                                                        </span>
-                                                                    </div>
-                                                                    @if (LaravelLocalization::getCurrentLocale() === 'en')
-
-                                                                    <span> <i class="fa-solid fa-location-dot"></i>
-                                                                        {{ $fav->hotel->city->country->en_country ?? '' }}
-                                                                        <span>|</span>
-                                                                        {{ $fav->hotel->city->en_city ?? '' }}</span>
-                                                                    <p>
-                                                                        {!! \Illuminate\Support\Str::limit($fav->hotel->hotel_enoverview ?? '', $limit = 200, $end = '') !!}
-
-                                                                    </p>
-                                                                    @else
-                                                                    <span> <i class="fa-solid fa-location-dot"></i>
-                                                                        {{ $fav->hotel->city->country->ar_country ?? '' }}
-                                                                        <span>|</span>
-                                                                        {{ $fav->hotel->city->ar_city ?? '' }}</span>
-                                                                    <p>
-                                                                        {!! \Illuminate\Support\Str::limit($fav->hotel->hotel_aroverview ?? '', $limit = 200, $end = '') !!}
-
-                                                                    </p>
-                                                                    @endif
-
-                                                                    <div class="price">
-                                                                        <div class="rating">
-
-                                                                            @for ($i = 0; $i < $fav->hotel->hotel_stars; $i++)
-                                                                                <i class="fa-solid fa-star"></i>
-                                                                            @endfor
-                                                                            @for ($i = 5; $i > $fav->hotel->hotel_stars; $i--)
-                                                                                <i class="fa-regular fa-star"></i>
-                                                                            @endfor
-
-                                                                            <span> ({{ $fav->hotel->totalreviews }} {{ __('links.review') }})
+                                                                    <div class="card-body  setted_info">
+                                                                        <div class="card_info">
+                                                                            <h6>
+                                                                                @if (LaravelLocalization::getCurrentLocale() === 'en')
+                                                                                    {{ $fav->hotel->hotel_enname ?? '' }}
+                                                                                @else
+                                                                                    {{ $fav->hotel->hotel_arname ?? '' }}
+                                                                                @endif –
+                                                                                {{ $fav->hotel->hotel_stars ?? '' }} Stars
+                                                                            </h6>
+                                                                            <span>
+                                                                                <i class="fa-regular fa-heart"></i>
                                                                             </span>
                                                                         </div>
-                                                                        {{-- <span class="hotels_price"> $ 140</span> --}}
+                                                                        @if (LaravelLocalization::getCurrentLocale() === 'en')
+                                                                            <span> <i class="fa-solid fa-location-dot"></i>
+                                                                                {{ $fav->hotel->city->country->en_country ?? '' }}
+                                                                                <span>|</span>
+                                                                                {{ $fav->hotel->city->en_city ?? '' }}</span>
+                                                                            <p>
+                                                                                {!! \Illuminate\Support\Str::limit($fav->hotel->hotel_enoverview ?? '', $limit = 200, $end = '') !!}
+
+                                                                            </p>
+                                                                        @else
+                                                                            <span> <i class="fa-solid fa-location-dot"></i>
+                                                                                {{ $fav->hotel->city->country->ar_country ?? '' }}
+                                                                                <span>|</span>
+                                                                                {{ $fav->hotel->city->ar_city ?? '' }}</span>
+                                                                            <p>
+                                                                                {!! \Illuminate\Support\Str::limit($fav->hotel->hotel_aroverview ?? '', $limit = 200, $end = '') !!}
+
+                                                                            </p>
+                                                                        @endif
+
+                                                                        <div class="price">
+                                                                            <div class="rating">
+
+                                                                                @for ($i = 0; $i < $fav->hotel->hotel_stars; $i++)
+                                                                                    <i class="fa-solid fa-star"></i>
+                                                                                @endfor
+                                                                                @for ($i = 5; $i > $fav->hotel->hotel_stars; $i--)
+                                                                                    <i class="fa-regular fa-star"></i>
+                                                                                @endfor
+
+                                                                                <span> ({{ $fav->hotel->totalreviews }}
+                                                                                    {{ __('links.review') }})
+                                                                                </span>
+                                                                            </div>
+                                                                            {{-- <span class="hotels_price"> $ 140</span> --}}
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
 
-                                                        @php
-                                                            $last_id = $fav->id;
+                                                            @php
+                                                                $last_id = $fav->id;
 
-                                                        @endphp
+                                                            @endphp
                                                         @endif
                                                     @endforeach
 
@@ -706,7 +712,8 @@
                     <div class="tab-pane fade" id="v-pills-orders" role="tabpanel" aria-labelledby="v-pills-orders-tab"
                         tabindex="0">
                         <div class="orders">
-                            <h6 class="profile_heading"><i class="fa-regular fa-file-lines"></i>{{ __('links.myOrder') }}  </h6>
+                            <h6 class="profile_heading"><i class="fa-regular fa-file-lines"></i>{{ __('links.myOrder') }}
+                            </h6>
 
                             <div class="orders_info">
                                 <div class="passenger_info">
@@ -714,53 +721,54 @@
                                         <div class="row mx-0">
                                             <table class="table">
                                                 <thead class="table-light">
-                                            {{-- <table class="table table-light table-striped">
+                                                    {{-- <table class="table table-light table-striped">
                                                 <thead> --}}
                                                     <tr>
 
 
-                                                      @if (LaravelLocalization::getCurrentLocale() === 'en')
-
-                                                      <th scope="col">Hotel Name</th>
-                                                      <th scope="col">Start Date / End Date</th>
-                                                      <th scope="col">Room Type</th>
-                                                      <th scope="col">Adults</th>
-                                                      <th scope="col">Children</th>
-                                                      <th scope="col">Room Count</th>
-                                                      <th scope="col">Total Order Cost</th>
-                                                      @else
-                                                      <th scope="col">اسم الفندق</th>
-                                                      <th scope="col">تاريخ البداية / تاريخ النهاية</th>
-                                                      <th scope="col">نوع الغرفة</th>
-                                                      <th scope="col">بالغين</th>
-                                                      <th scope="col">اطفال</th>
-                                                      <th scope="col">تكلفة الغرفة</th>
-                                                      <th scope="col">تكلفة الطلب</th>
-                                                      @endif
+                                                        @if (LaravelLocalization::getCurrentLocale() === 'en')
+                                                            <th scope="col">Hotel Name</th>
+                                                            <th scope="col">Start Date / End Date</th>
+                                                            <th scope="col">Room Type</th>
+                                                            <th scope="col">Adults</th>
+                                                            <th scope="col">Children</th>
+                                                            <th scope="col">Room Count</th>
+                                                            <th scope="col">Total Order Cost</th>
+                                                        @else
+                                                            <th scope="col">اسم الفندق</th>
+                                                            <th scope="col">تاريخ البداية / تاريخ النهاية</th>
+                                                            <th scope="col">نوع الغرفة</th>
+                                                            <th scope="col">بالغين</th>
+                                                            <th scope="col">اطفال</th>
+                                                            <th scope="col">تكلفة الغرفة</th>
+                                                            <th scope="col">تكلفة الطلب</th>
+                                                        @endif
                                                     </tr>
-                                                  </thead>
-                                                  <tbody>
+                                                </thead>
+                                                <tbody>
                                                     @foreach ($orderData as $order)
-                                                    <tr>
+                                                        <tr>
 
-                                                        <td> @if (LaravelLocalization::getCurrentLocale() === 'en')
-                                                            {{$order->hotel->hotel_enname ?? ''}}
-
-                                                            @else
-                                                            {{$order->hotel->hotel_arname ?? ''}}
-                                                            @endif</td>
-                                                        <td>{{ $order->order->from_date }} / {{ $order->order->to_date }}</td>
-                                                        <td>{{ $order->room_type }}</td>
-                                                        <td>{{ $order->order->adults_count }}</td>
-                                                        <td>{{ $order->order->children_count }}</td>
-                                                        <td>{{ $order->order->rooms_count }}</td>
-                                                        <td>{{ $order->total_cost }}</td>
-                                                      </tr>
+                                                            <td>
+                                                                @if (LaravelLocalization::getCurrentLocale() === 'en')
+                                                                    {{ $order->hotel->hotel_enname ?? '' }}
+                                                                @else
+                                                                    {{ $order->hotel->hotel_arname ?? '' }}
+                                                                @endif
+                                                            </td>
+                                                            <td>{{ $order->order->from_date }} /
+                                                                {{ $order->order->to_date }}</td>
+                                                            <td>{{ $order->room_type }}</td>
+                                                            <td>{{ $order->order->adults_count }}</td>
+                                                            <td>{{ $order->order->children_count }}</td>
+                                                            <td>{{ $order->order->rooms_count }}</td>
+                                                            <td>{{ $order->total_cost }}</td>
+                                                        </tr>
                                                     @endforeach
 
 
-                                                  </tbody>
-                                              </table>
+                                                </tbody>
+                                            </table>
                                             {{-- <div class=" col p-0 info_edit">
                                                 <div class="info">
                                                     <span class="name main_row"> reservation no </span>
