@@ -69,11 +69,11 @@
                                 </div>
                             </td>
                             <td class="text-center pe-0" data-order="15">
-                                <span class="fw-bolder ms-3"><?php echo number_format($detail->offer_cost, 2) . '$'; ?></span>
+                                <span class="fw-bolder ms-3"><?php echo number_format($detail->offer_cost, 2) . 'ر.س'; ?></span>
                             </td>
                             <!--begin::Status=-->
                             <td class="text-end pe-0">
-                                <span class="fw-bolder text-dark"><?php echo number_format($detail->total_cost, 2) . '$'; ?> </span>
+                                <span class="fw-bolder text-dark"><?php echo number_format($detail->total_cost, 2) . 'ر.س'; ?> </span>
                             </td>
                             <!--end::Status=-->
                         </tr>

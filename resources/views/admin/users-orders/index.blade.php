@@ -163,7 +163,7 @@
         $taxVal=($row->offers_details->sum('total_cost')* ($row->order->tax_percentage))/100;
         $grandTotal=$row->offers_details->sum('total_cost')+$taxVal;
                 ?>
-            {{number_format((float)$grandTotal, 2, '.', '')}}$
+           ر.س {{number_format((float)$grandTotal, 2, '.', '')}}
         @endif
 
         @if ($row->detail_type == 2)

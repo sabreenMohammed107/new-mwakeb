@@ -644,9 +644,9 @@ if(isset($arrayData['result'])){
 
                         <div class="col-xl-2 col-sm-12 col-md-6 p-0">
                             @if(!$HasRoom)
-                            <button class="btn rooms_button"> <a href="{{url("/safer/room/$Room->id/book/1")}}">{{ __('links.book') }}</a> </button>
+                            <button class="btn rooms_button"> <a href="{{url("/mwakeb/room/$Room->id/book/1")}}">{{ __('links.book') }}</a> </button>
                             @else
-                            <button class="btn rooms_button"><a href="{{url("/safer/room/$Room->id/book/1/exchange")}}">{{ __('links.replaceCart') }}</a> </button>
+                            <button class="btn rooms_button"><a href="{{url("/mwakeb/room/$Room->id/book/1/exchange")}}">{{ __('links.replaceCart') }}</a> </button>
                             @endif
                         </div>
 
@@ -725,9 +725,9 @@ if(isset($arrayData['result'])){
 
                         <div class="col-xl-2 col-sm-12 col-md-6 p-0">
                             @if(!$HasRoom)
-                            <button class="btn rooms_button"> <a href="{{url("/safer/room/$Room->id/book/2")}}">{{ __('links.book') }}</a> </button>
+                            <button class="btn rooms_button"> <a href="{{url("/mwakeb/room/$Room->id/book/2")}}">{{ __('links.book') }}</a> </button>
                             @else
-                            <button class="btn rooms_button"> <a href="{{url("/safer/room/$Room->id/book/2/exchange")}}">{{ __('links.replaceCart') }}</a> </button>
+                            <button class="btn rooms_button"> <a href="{{url("/mwakeb/room/$Room->id/book/2/exchange")}}">{{ __('links.replaceCart') }}</a> </button>
                             @endif
                         </div>
 
@@ -805,9 +805,9 @@ if(isset($arrayData['result'])){
 
                         <div class="col-xl-2 col-sm-12 col-md-6 p-0">
                         @if(!$HasRoom)
-                        <button class="btn rooms_button"> <a href="{{url("/safer/room/$Room->id/book/3")}}">{{ __('links.book') }}</a> </button>
+                        <button class="btn rooms_button"> <a href="{{url("/mwakeb/room/$Room->id/book/3")}}">{{ __('links.book') }}</a> </button>
                         @else
-                        <button class="btn rooms_button"> <a href="{{url("/safer/room/$Room->id/book/3/exchange")}}">{{ __('links.replaceCart') }}</a> </button>
+                        <button class="btn rooms_button"> <a href="{{url("/mwakeb/room/$Room->id/book/3/exchange")}}">{{ __('links.replaceCart') }}</a> </button>
                         @endif
                         </div>
 

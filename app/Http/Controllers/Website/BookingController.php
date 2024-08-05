@@ -47,7 +47,7 @@ class BookingController extends Controller
         $CartItem = Cart::where([["user_id", '=', session()->get("SiteUser")["ID"]], ["item_type", '=', 0]])->first();
 
         if ($CartItem) { // Has Room ?
-            return redirect()->to("/safer/room/$id/book/$cap")->with("session-warning", Lang::get('links.purchase'));
+            return redirect()->to("/mwakeb/room/$id/book/$cap")->with("session-warning", Lang::get('links.purchase'));
         }
 
         $CartItem = new Cart();
@@ -566,7 +566,7 @@ class BookingController extends Controller
             return redirect()->back()->with("session-danger", Lang::get('links.contpurchase'));
         }
 
-        return redirect()->to("/Safer/OrderPlacement/$order->id");
+        return redirect()->to("/mwakeb/OrderPlacement/$order->id");
     }
 
     public function SuccessOrder(int $id)

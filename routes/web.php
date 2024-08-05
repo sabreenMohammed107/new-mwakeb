@@ -153,7 +153,7 @@ Route::group([
     Route::post("/bookTransfer", [SiteTransferController::class, 'bookTransfer']);
     //visa
     Route::get("/visa", [VisaDataController::class, 'all_visa']);
-    Route::post("/Safer/BookVisa", [VisaDataController::class, 'bookVisas']);
+    Route::post("/mwakeb/BookVisa", [VisaDataController::class, 'bookVisas']);
     //dynamicvisatype.fetch
     Route::get('dynamicvisatype/fetch', [VisaDataController::class, 'fetchCat'])->name('dynamicvisatype.fetch');
     //dynamicnationality.fetch
@@ -169,20 +169,20 @@ Route::group([
         Route::post("/mwakeb/login", [AuthController::class, 'Login'])->name("ProceedLogin");
 
         //signupSite
-        Route::get("/safer/register", [ContentController::class, 'signupSite'])->name("siteRegister");
+        Route::get("/mwakeb/register", [ContentController::class, 'signupSite'])->name("siteRegister");
 
-        Route::post("/safer/register", [AuthController::class, 'Register'])->name("ProceedRegister");
+        Route::post("/mwakeb/register", [AuthController::class, 'Register'])->name("ProceedRegister");
 
     });
-    Route::get('/safer/reload-captcha-register', [ContentController::class, 'reloadCaptcha']);
+    Route::get('/mwakeb/reload-captcha-register', [ContentController::class, 'reloadCaptcha']);
 
     // Logout
-    Route::get("/safer/logout", [AuthController::class, 'Logout'])->name("siteLogout");
+    Route::get("/mwakeb/logout", [AuthController::class, 'Logout'])->name("siteLogout");
     // user profile
 
-    Route::get("/safer/profile/{id}", [AuthController::class, 'profile'])->name("siteProfile");
+    Route::get("/mwakeb/profile/{id}", [AuthController::class, 'profile'])->name("siteProfile");
     //updateProfile
-    Route::post("/safer/updateProfile", [AuthController::class, 'updateProfile'])->name("updateProfile");
+    Route::post("/mwakeb/updateProfile", [AuthController::class, 'updateProfile'])->name("updateProfile");
 
     Route::get('load-rooms-data', [AuthController::class, 'loadMoreData'])->name('load-rooms-data');
 
@@ -192,8 +192,8 @@ Route::group([
     //dynamicSearchCity.fetch
     Route::get('dynamicSearchCity/fetch', [MainController::class, 'fetchCity'])->name('dynamicSearchCity.fetch');
 
-    Route::get("/safer/room/{id}/book/{cap}", [BookingController::class, 'BookRoom'])->name("bookRoom");
-    Route::get("/safer/room/{id}/book/{cap}/exchange", [BookingController::class, 'ExBookRoom'])->name("exBookRoom");
+    Route::get("/mwakeb/room/{id}/book/{cap}", [BookingController::class, 'BookRoom'])->name("bookRoom");
+    Route::get("/mwakeb/room/{id}/book/{cap}/exchange", [BookingController::class, 'ExBookRoom'])->name("exBookRoom");
     Route::get("/terms", [MainController::class, 'terms'])->name("terms");
     Route::get("/policies/refund", [MainController::class, 'refund'])->name("refund");
     Route::get("/policies/replacement", [MainController::class, 'replacement'])->name("replacement");
@@ -220,7 +220,7 @@ Route::group([
         Route::post("/Book", [BookingController::class, 'MakeOrder']);
         Route::get("/cart/visa", [BookingController::class, 'DeleteVisa'])->name("deleteVisa");
         Route::get("/cart/{id}", [BookingController::class, 'DeleteCartItem'])->name("deleteCartItem");
-        Route::get("/Safer/OrderPlacement/{id}", [BookingController::class, 'SuccessOrder'])->name("successOrder");
+        Route::get("/mwakeb/OrderPlacement/{id}", [BookingController::class, 'SuccessOrder'])->name("successOrder");
 
     });
 });

@@ -42,12 +42,12 @@
         @if (LaravelLocalization::getCurrentLocale() === 'en')
         <h3 class="my-2"><strong>Congratulations!</strong> You've Purchased your Order Successfully</h3>
         <h5 class="my-2">Order Number : <span class="badge bg-success"> {{$Order->id}}</span></h5>
-        <h4 class="fw-bold my-2">Total Cost (After Tax): ${{number_format($Cost * (1 + (float)$Order->tax_percentage/100),2,'.','')}}</h4>
+        <h4 class="fw-bold my-2">Total Cost (After Tax): {{number_format($Cost * (1 + (float)$Order->tax_percentage/100),2,'.','')}} ر.س</h4>
 
         @else
         <h3 class="my-2"><strong>تهانينا! </ strong> لقد تم طلبك بنجاح </ h3>
         <h5 class="my-2">طلب رقم : <span class="badge bg-success"> {{$Order->id}}</span></h5>
-        <h4 class="fw-bold my-2">التكلفة اجمالي (بعد الضريبة): ${{number_format($Cost * (1 + (float)$Order->tax_percentage/100),2,'.','')}}</h4>
+        <h4 class="fw-bold my-2">التكلفة اجمالي : {{number_format($Cost * (1 + (float)$Order->tax_percentage/100),2,'.','')}} ر.س</h4>
         @endif
 
     </div>

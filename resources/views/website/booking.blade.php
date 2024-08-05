@@ -224,8 +224,8 @@
 
                                                     <p class="mb-0 pb-0">التكلفة <span
                                                             class=" text-end">
-                                                            ${{ $Offer->cost }}<br><span
-                                                                class="fw-bold">${{  $Offer->cost }}</span></span>
+                                                           {{ $Offer->cost }} ر.س<br><span
+                                                                class="fw-bold">{{  $Offer->cost }} ر.س</span></span>
                                                     </p>
                                                     <br>
                                                     <br>
@@ -233,7 +233,7 @@
                                                     <br>
                                                     <p class="mb-0 pb-0" style="border-top: 1px solid rgb(184, 184, 184)">
                                                         <span
-                                                            class=" text-end fw-bold">${{ $TotalPaidPersons[$index] * $Offer->cost }}</span><br>
+                                                            class=" text-end fw-bold">{{ $TotalPaidPersons[$index] * $Offer->cost }} ر.س</span><br>
                                                     </p>
                                                     <br>
                                                     <div class="grand_total">
@@ -245,7 +245,7 @@
                                                             @endif
                                                         </h6>
                                                         <span class="h6">
-                                                            ${{ $TotalPaidPersons[$index] *  $Offer->cost }}</span></span>
+                                                            {{ $TotalPaidPersons[$index] *  $Offer->cost }} ر.س</span></span>
                                                     </div>
 
                                                     <br>
@@ -278,13 +278,13 @@
                                     @if (LaravelLocalization::getCurrentLocale() === 'en')
                                         Before Tax
                                     @else
-                                        قبل ضريبة القيمة المضافة
+                                        شامل ضريبة القيمة المضافة
                                     @endif <span
-                                        class="float-end text-end BeforeT_txt">${{ number_format( $TotalOffersCost, 2, '.', '') }}
+                                        class="float-end text-end BeforeT_txt">{{ number_format( $TotalOffersCost, 2, '.', '') }} ر.س
                                     </span><br>
                                 </p>
                                 <br>
-                                <p class="mb-0 pb-0">
+                                {{-- <p class="mb-0 pb-0">
                                     @if (LaravelLocalization::getCurrentLocale() === 'en')
                                         After VAT
                                     @else
@@ -294,11 +294,11 @@
                                         <span
                                             class="BeforeT_txt">${{ number_format($TotalOffersCost, 2, '.', '') }}</span>
                                         X {{ (float) $tax_percentage / 100 }} <br> <span
-                                            class="fw-bold AfterT_txt">${{ number_format((float) ($TotalOffersCost) * (1 + (float) $tax_percentage / 100), 2, '.', '') }}</span></span><br>
+                                            class="fw-bold AfterT_txt">{{ number_format((float) ($TotalOffersCost) * (1 + (float) $tax_percentage / 100), 2, '.', '') }} ر.س</span></span><br>
                                     <input type="hidden" name="BeforeT"
                                         value="{{ number_format((float) ($TotalOffersCost), 2, '.', '') }}" />
                                 </p>
-                                <br />
+                                <br /> --}}
                             </div>
                             <div class="grand_total final">
                                 <h5>
@@ -309,7 +309,9 @@
                                     @endif
                                 </h5>
                                 <span id="gt" class="AfterT_txt">
-                                    <span>$</span>{{ number_format(($TotalOffersCost) * (1 + (float) $tax_percentage / 100), 2, '.', '') }}
+                                    {{ number_format( $TotalOffersCost, 2, '.', '') }}
+                                   {{-- {{ number_format(($TotalOffersCost) * (1 + (float) $tax_percentage / 100), 2, '.', '') }}  --}}
+                                   <span> ر.س</span>
                                 </span>
                             </div>
                         </div>

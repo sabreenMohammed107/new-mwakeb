@@ -95,7 +95,7 @@
 @endsection
 @section('content')
 
-    <form action="{{ LaravelLocalization::localizeUrl('/Safer/BookVisa') }}" method="POST" enctype="multipart/form-data">
+    <form action="{{ LaravelLocalization::localizeUrl('/mwakeb/BookVisa') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <section class="passenger_section container pt-5" id="passenger_section">
             <p class="receipt-title">

@@ -62,7 +62,7 @@ class AuthController extends Controller
     {
         $redirect_url =LaravelLocalization::localizeUrl('/');
         // $redirect_url = "/cart";
-        if (session()->get("cartItem")) {
+        if (session()->get("cartItem")  && isset(session()->get('cartItem')['itemType'])) {
             if(session()->get("cartItem")["itemType"] == ItemType::ROOM) {
                 $CartItem = Cart::where([["user_id", '=', $User->id],['item_type','=',ItemType::ROOM]])->first();
                 if ($CartItem) {
@@ -195,10 +195,10 @@ class AuthController extends Controller
         } catch (\Illuminate\Database\QueryException$e) {
             $Count = SiteUser::where("Email", '=', $request['email'])->count();
             if ($Count) {
-                return redirect()->to(LaravelLocalization::localizeUrl('/safer/register'))->with("session-danger" , "Email Address is Already in-use")
+                return redirect()->to(LaravelLocalization::localizeUrl('/mwakeb/register'))->with("session-danger" , "Email Address is Already in-use")
                 ->with('Data', $data);
             } else {
-                return redirect()->to(LaravelLocalization::localizeUrl('/safer/register'))->with("session-danger", "Can't Register with this data please try again later")
+                return redirect()->to(LaravelLocalization::localizeUrl('/mwakeb/register'))->with("session-danger", "Can't Register with this data please try again later")
                 ->with('Data', $data);
             }
         }
