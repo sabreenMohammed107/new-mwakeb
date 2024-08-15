@@ -74,11 +74,11 @@
                     </div> --}}
                 </div>
                 {{-- <div class="form-group mb-4"> --}}
-                    <input id="captcha" type="text" class="form-control" required placeholder="{{ __('links.enterCapcha') }}" name="captcha">
+                    {{-- <input id="captcha" type="text" class="form-control" required placeholder="{{ __('links.enterCapcha') }}" name="captcha">
                     @if ($errors->has('captcha'))
                     <div class="error">
                         {{ $errors->first('captcha') }}
-                    </div>
+                    </div> --}}
                 @endif
                 {{-- </div> --}}
 
