@@ -66,12 +66,12 @@
                   <input type="text" name="email" value="{{session('Data')? session('Data')['email'] : ""}}" class="form-control" id="exampleFormControlInput3" placeholder="{{ __('links.email') }}  *" required>
                   <input type="password" name="password" class="form-control" id="exampleFormControlInput4" placeholder=" {{ __('links.password') }}*" required>
                   <div class="form-group mb-4">
-                    <div class="captcha">
+                    {{-- <div class="captcha">
                         <span>{!! captcha_img() !!}</span>
                         <button type="button" class="btn btn-danger" class="reload" id="reload">
                             &#x21bb;
                         </button>
-                    </div>
+                    </div> --}}
                 </div>
                 {{-- <div class="form-group mb-4"> --}}
                     <input id="captcha" type="text" class="form-control" required placeholder="{{ __('links.enterCapcha') }}" name="captcha">

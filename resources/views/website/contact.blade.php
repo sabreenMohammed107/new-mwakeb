@@ -192,14 +192,14 @@
                             @endif
                         </div>
                     </div>
-                    <div class="form-group mb-4">
+                    {{-- <div class="form-group mb-4">
                         <div class="captcha">
                             <span>{!! captcha_img() !!}</span>
                             <button type="button" class="btn btn-danger" class="reload" id="reload">
                                 &#x21bb;
                             </button>
                         </div>
-                    </div>
+                    </div> --}}
                     <div class="form-group mb-4">
                         <input id="captcha" type="text" class="form-control" required
                             placeholder="{{ __('links.enterCapcha') }}" name="captcha">

@@ -317,12 +317,12 @@ class ToursController extends Controller
         $validator = Validator::make($request->all(), [
 
             'review_text' => 'required',
-            'captcha' => 'required|captcha',
+            // 'captcha' => 'required|captcha',
 
 
         ], [
 
-            'captcha.captcha' => Lang::get('links.captcha_captcha'),
+            // 'captcha.captcha' => Lang::get('links.captcha_captcha'),
         ]);
 
         if ($validator->fails())

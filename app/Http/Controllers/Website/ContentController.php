@@ -170,12 +170,12 @@ $whyUss=Why_us::all();
             'name' => 'required',
             'email' => 'required',
             'phone' => 'required',
-            'captcha' => 'required|captcha',
+            // 'captcha' => 'required|captcha',
             'message' => 'required',
 
         ], [
 
-            'captcha.captcha' => Lang::get('links.captcha_captcha'),
+            // 'captcha.captcha' => Lang::get('links.captcha_captcha'),
         ]);
         if ($validator->fails()) {
 

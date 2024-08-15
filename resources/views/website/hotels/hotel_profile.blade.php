@@ -899,14 +899,14 @@ if(isset($arrayData['result'])){
                                 @endif"
                                    style="height: 100px"></textarea>
                             </div>
-                            <div class="form-floating my-1">
+                            {{-- <div class="form-floating my-1">
                                 <div class="captcha">
                                     <span>{!! captcha_img() !!}</span>
                                     <button type="button" class="btn btn-danger" class="reload" id="reload">
                                         &#x21bb;
                                     </button>
                                 </div>
-                            </div>
+                            </div> --}}
                             <div class="form-floating my-1">
                                 <input id="captcha" type="text" class="form-control" required placeholder="{{ __('links.enterCapcha') }}" name="captcha">
                                 @if ($errors->has('captcha'))
