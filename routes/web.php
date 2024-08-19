@@ -203,15 +203,25 @@ Route::group([
      */
     //
     // Facebook
-    Route::prefix('facebook')->name('facebook.')->group(function () {
-        Route::get('auth', [FaceBookController::class, 'loginUsingFacebook'])->name('login');
+    // Route::prefix('facebook')->name('facebook.')->group(function () {
+    //     Route::get('auth', [FaceBookController::class, 'loginUsingFacebook'])->name('login');
+    //     Route::get('callback', [FaceBookController::class, 'callbackFromFacebook'])->name('callback');
+    // });
+    Route::prefix('auth/facebook')->name('facebook.')->group(function () {
+        Route::get('login', [FaceBookController::class, 'loginUsingFacebook'])->name('login');
         Route::get('callback', [FaceBookController::class, 'callbackFromFacebook'])->name('callback');
     });
-    // Google
-    Route::prefix('google')->name('google.')->group(function () {
+
+    // // Google
+    // Route::prefix('google')->name('google.')->group(function () {
+    //     Route::get('login', [GoogleController::class, 'loginWithGoogle'])->name('login');
+    //     Route::any('callback', [GoogleController::class, 'callbackFromGoogle'])->name('callback');
+    // });
+    Route::prefix('auth/google')->name('google.')->group(function () {
         Route::get('login', [GoogleController::class, 'loginWithGoogle'])->name('login');
         Route::any('callback', [GoogleController::class, 'callbackFromGoogle'])->name('callback');
     });
+
     // End Social Media Login
 
     Route::middleware(['is-site-auth'])->group(function () {
