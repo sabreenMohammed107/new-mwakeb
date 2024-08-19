@@ -79,7 +79,7 @@
                     <div class="error">
                         {{ $errors->first('captcha') }}
                     </div> --}}
-                @endif
+                {{-- @endif --}}
                 {{-- </div> --}}
 
                   <button type="submit" class="btn sign_button">{{ __('links.signin_up2') }} </button>
