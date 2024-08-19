@@ -39,7 +39,7 @@ return [
     'google' => [
         'client_id' => env('GOOGLE_CLIENT_ID'), //USE FROM Google DEVELOPER ACCOUNT
         'client_secret' => env('GOOGLE_CLIENT_SECRET'), //USE FROM Google DEVELOPER ACCOUNT
-        'redirect' => 'https://mwakeb.com/google/callback'
+        'redirect' => 'https://mwakeb.com/auth/google/callback'
     ],
 
 ];
