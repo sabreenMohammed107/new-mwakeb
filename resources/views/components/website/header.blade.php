@@ -47,7 +47,25 @@ $localVar=LaravelLocalization::getCurrentLocale();
                     <a href="{{ LaravelLocalization::localizeUrl('/contact') }}">{{ __('links.contact_us') }}</a>
                 </button>
 
+                @if (session()->get('SiteUser'))
+                <button class="offcan_buttons">
+                    <a href="#">{{ session()->get('SiteUser')['Name'] }}</a>
+                </button>
+                <button class="offcan_buttons">
+                <a  href="{{ route('siteLogout') }}">{{ __('links.logout') }}</a>
+                            </button>
 
+                </ul>
+            @else
+                <button class="offcan_buttons">
+                    <a
+                        href="{{ LaravelLocalization::getLocalizedURL($localVar, route('siteRegister')) }}">{{ __('links.signin') }}</a>
+                </button>
+                <button class="offcan_buttons">
+                    <a
+                        href="{{ LaravelLocalization::getLocalizedURL($localVar, route('siteRegister')) }}">{{ __('links.signin_up2') }}</a>
+                </button>
+            @endif
 
 
 

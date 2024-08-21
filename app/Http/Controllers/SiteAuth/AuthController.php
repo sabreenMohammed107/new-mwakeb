@@ -168,7 +168,6 @@ class AuthController extends Controller
             'email' => ['required', 'string', 'email', 'max:255'],
             'phone' => ['numeric'],
             'password' => ['required', 'string', 'min:8'],
-            'captcha' => ['required','captcha'],
         ]);
 
 
