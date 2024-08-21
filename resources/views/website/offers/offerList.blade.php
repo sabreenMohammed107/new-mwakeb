@@ -38,7 +38,7 @@
                                 {{-- <span> --}}
                                 {{ $newOffer->cost }} رس
                                 {{-- </span> --}}
-                                <button class="btn mx-1 btn-primary" type="submit">
+                                <button class="btn mx-1 btn-primary mb-3" type="submit">
                                     {{ __('links.book') }}
                                 </button>
                         </form>
