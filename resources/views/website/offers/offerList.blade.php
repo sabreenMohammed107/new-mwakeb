@@ -20,13 +20,13 @@
                                     @endif
                                 </h5>
                             </div>
-                            <span>
+                            {{-- <span>
                                 @if (LaravelLocalization::getCurrentLocale() === 'en')
                                     {{ strip_tags(Str::limit($newOffer->offer_enoverview ?? '', $limit = 300, $end = '...')) }}
                                 @else
                                     {{ strip_tags(Str::limit($newOffer->offer_aroverview ?? '', $limit = 300, $end = '...')) }}
                                 @endif
-                            </span>
+                            </span> --}}
 
                             <p style="display: flex;justify-content: space-between;align-items: center;">
                                 @if (LaravelLocalization::getCurrentLocale() === 'en')
