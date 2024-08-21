@@ -94,7 +94,7 @@
                     @endif
 
                 </span> --}}
-                {{-- <section class="sign_socail">
+                <section class="sign_socail">
                     <button class="btn">
                     <img src="{{ asset('/website_assets/images/signin-up/socail-logins/facebook.webp')}}" alt="facebook logo">
                         <a href="{{ route('facebook.login') }}" class="btn btn-facebook btn-user btn-block">
@@ -124,7 +124,7 @@
                             @endif
                         </a>
                     </button>
-                </section> --}}
+                </section>
       </div>
     </div>
  </div>
