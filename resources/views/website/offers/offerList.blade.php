@@ -7,7 +7,7 @@
                     <a href="{{ LaravelLocalization::localizeUrl('/single-offer/' . $newOffer->id . '/' . $newOffer->slug) }}">
                         <img class="w-100" src="{{ asset('uploads/offers') }}/{{ $newOffer->image }}" alt=" blogimage">
                     </a>
-                    <div class="card-body hotel_card_info" style="height: 115px; max-height: 115px; overflow: hidden;">
+                    <div class="card-body hotel_card_info" style="height: 160px; max-height: 160px; overflow: hidden;">
                         <form action="{{ LaravelLocalization::localizeUrl('/bookOffer') }}" method="POST">
                             @csrf
                             <input type="hidden" name="offer_id" value="{{ $newOffer->id }}">
@@ -38,7 +38,7 @@
                                 {{-- <span> --}}
                                 {{ $newOffer->cost }} رس
                                 {{-- </span> --}}
-                                <button class="btn mx-1 btn-primary mb-3" type="submit">
+                                <button class="btn mx-1 btn-primary " type="submit">
                                     {{ __('links.book') }}
                                 </button>
                         </form>
