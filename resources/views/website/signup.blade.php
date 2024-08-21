@@ -85,14 +85,14 @@
                   <button type="submit" class="btn sign_button">{{ __('links.signin_up2') }} </button>
                   <div class="remember">
                     <input required class="form-check-input" type="checkbox" class="checked_input" value="" id="flexCheckDefault">
-                    <label class="form-check-label confirmed" for="flexCheckDefault">
+                    <label class="form-check-label confirmed" for="flexCheckDefault">&nbsp;
                         @if (LaravelLocalization::getCurrentLocale() === 'en')
                         I confirmed that I have read and accepted the <a href="#" class="privacy">privacy policy </a>
 
                         @else
 
 
-لقد أكدت أنني قد قرأت ووافقت على <a href="#" class="privacy">سياسة الخصوصية </a>
+                        لقد أكدت أنني قد قرأت ووافقت على&nbsp;<a href="#" class="privacy">سياسة الخصوصية</a>
 
                         @endif
 
